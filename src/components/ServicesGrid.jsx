@@ -35,127 +35,130 @@ const ServicesGrid = () => {
     <section
       id="services"
       className="w-full bg-black relative"
-      style={{ padding: '80px 0 96px', overflowX: 'clip' }}
+      style={{ padding: 'clamp(60px, 8vw, 120px) 0 clamp(80px, 12vw, 160px)', overflowX: 'clip' }}
     >
-      <div className="w-full flex flex-col lg:flex-row lg:items-start items-start justify-between gap-10">
-          <h2
-            className="text-white font-body leading-tight"
+      <div
+        className="w-full flex flex-col lg:flex-row lg:items-center items-start justify-between gap-6 lg:gap-10"
+        style={{ paddingBottom: '32px' }}
+      >
+        <h2
+          className="text-white font-body leading-tight"
+          style={{
+            fontSize: 'clamp(30px, 3.6vw, 52px)',
+            letterSpacing: '-0.03em',
+            fontWeight: 600,
+          }}
+        >
+          Elevate your
+          <br />
+          digital footprint.
+        </h2>
+
+        <div
+          className="flex items-center gap-4 pt-2"
+          style={{ paddingBottom: 8 }}
+        >
+          <button
+            type="button"
+            className="rounded-full font-semibold transition-all duration-300 active:scale-95"
             style={{
-              fontSize: 'clamp(30px, 3.6vw, 52px)',
-              letterSpacing: '-0.03em',
-              fontWeight: 600,
+              padding: '12px 22px',
+              fontSize: '13px',
+              background: '#fff',
+              color: '#000',
+              border: '1px solid rgba(255,255,255,0.15)',
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.transform = 'translateY(-2px)';
+              e.currentTarget.style.boxShadow = '0 16px 36px rgba(255,255,255,0.18)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.transform = 'translateY(0)';
+              e.currentTarget.style.boxShadow = 'none';
             }}
           >
-            Elevate your
-            <br />
-            digital footprint.
-          </h2>
-
-          <div
-            className="flex items-center gap-4 pt-2"
-            style={{ paddingBottom: 8 }}
+            Start a project
+          </button>
+          <button
+            type="button"
+            className="rounded-full font-semibold transition-all duration-300 active:scale-95"
+            style={{
+              padding: '12px 22px',
+              fontSize: '13px',
+              background: 'rgba(255,255,255,0.08)',
+              color: '#fff',
+              border: '1px solid rgba(255,255,255,0.15)',
+              backdropFilter: 'blur(12px)',
+              WebkitBackdropFilter: 'blur(12px)',
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.transform = 'translateY(-2px)';
+              e.currentTarget.style.background = 'rgba(255,255,255,0.14)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.transform = 'translateY(0)';
+              e.currentTarget.style.background = 'rgba(255,255,255,0.08)';
+            }}
           >
-            <button
-              type="button"
-              className="rounded-full font-semibold transition-all duration-300 active:scale-95"
-              style={{
-                padding: '12px 22px',
-                fontSize: '13px',
-                background: '#fff',
-                color: '#000',
-                border: '1px solid rgba(255,255,255,0.15)',
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.transform = 'translateY(-2px)';
-                e.currentTarget.style.boxShadow = '0 16px 36px rgba(255,255,255,0.18)';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.transform = 'translateY(0)';
-                e.currentTarget.style.boxShadow = 'none';
-              }}
-            >
-              Start a project
-            </button>
-            <button
-              type="button"
-              className="rounded-full font-semibold transition-all duration-300 active:scale-95"
-              style={{
-                padding: '12px 22px',
-                fontSize: '13px',
-                background: 'rgba(255,255,255,0.08)',
-                color: '#fff',
-                border: '1px solid rgba(255,255,255,0.15)',
-                backdropFilter: 'blur(12px)',
-                WebkitBackdropFilter: 'blur(12px)',
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.transform = 'translateY(-2px)';
-                e.currentTarget.style.background = 'rgba(255,255,255,0.14)';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.transform = 'translateY(0)';
-                e.currentTarget.style.background = 'rgba(255,255,255,0.08)';
-              }}
-            >
-              See our work
-            </button>
-          </div>
+            See our work
+          </button>
         </div>
+      </div>
 
-        <div className="mt-14 grid gap-4 sm:gap-5 grid-cols-2 sm:grid-cols-2 lg:grid-cols-5 w-full">
-          {services.map(({ title, Icon }, idx) => {
-            const isHovered = hovered === idx;
-            return (
+      <div className="grid gap-3 sm:gap-5 grid-cols-2 sm:grid-cols-2 lg:grid-cols-5 w-full">
+        {services.map(({ title, Icon }, idx) => {
+          const isHovered = hovered === idx;
+          return (
+            <div
+              key={`${title}-${idx}`}
+              className="flex justify-center"
+            >
               <div
-                key={`${title}-${idx}`}
-                className="flex justify-center"
+                className="relative overflow-hidden"
+                onMouseEnter={() => setHovered(idx)}
+                onMouseLeave={() => setHovered(null)}
+                style={{
+                  height: 168,
+                  width: '100%',
+                  maxWidth: 260,
+                  borderRadius: 18,
+                  border: '1px solid rgba(255,255,255,0.10)',
+                  background: 'rgba(255,255,255,0.02)',
+                  boxShadow: isHovered ? '0 40px 80px -40px rgba(255,255,255,0.18)' : 'none',
+                  transform: isHovered ? 'translateY(-4px)' : 'translateY(0)',
+                  transition: 'transform 260ms ease, box-shadow 260ms ease, border-color 260ms ease, background 260ms ease',
+                }}
               >
                 <div
-                  className="relative overflow-hidden"
-                  onMouseEnter={() => setHovered(idx)}
-                  onMouseLeave={() => setHovered(null)}
+                  className="absolute inset-0 pointer-events-none"
                   style={{
-                    height: 168,
-                    width: '100%',
-                    maxWidth: 260,
-                    borderRadius: 18,
-                    border: '1px solid rgba(255,255,255,0.10)',
-                    background: 'rgba(255,255,255,0.02)',
-                    boxShadow: isHovered ? '0 40px 80px -40px rgba(255,255,255,0.18)' : 'none',
-                    transform: isHovered ? 'translateY(-4px)' : 'translateY(0)',
-                    transition: 'transform 260ms ease, box-shadow 260ms ease, border-color 260ms ease, background 260ms ease',
+                    opacity: isHovered ? 1 : 0,
+                    transition: 'opacity 260ms ease',
+                    background:
+                      'radial-gradient(60% 65% at 50% 35%, rgba(255,255,255,0.12) 0%, rgba(255,255,255,0.06) 28%, rgba(255,255,255,0) 70%)',
                   }}
-                >
-                  <div
-                    className="absolute inset-0 pointer-events-none"
-                    style={{
-                      opacity: isHovered ? 1 : 0,
-                      transition: 'opacity 260ms ease',
-                      background:
-                        'radial-gradient(60% 65% at 50% 35%, rgba(255,255,255,0.12) 0%, rgba(255,255,255,0.06) 28%, rgba(255,255,255,0) 70%)',
-                    }}
-                  />
+                />
 
-                  <div className="relative h-full w-full flex flex-col items-center justify-center gap-5 px-6 text-center">
-                    <Icon size={26} color="rgba(255,255,255,0.92)" strokeWidth={1.8} />
-                    <div
-                      className="font-body"
-                      style={{
-                        color: 'rgba(255,255,255,0.55)',
-                        fontSize: 13,
-                        lineHeight: 1.25,
-                        letterSpacing: '-0.01em',
-                        whiteSpace: 'pre-line',
-                      }}
-                    >
-                      {title}
-                    </div>
+                <div className="relative h-full w-full flex flex-col items-center justify-center gap-5 px-6 text-center">
+                  <Icon size={26} color="rgba(255,255,255,0.92)" strokeWidth={1.8} />
+                  <div
+                    className="font-body"
+                    style={{
+                      color: 'rgba(255,255,255,0.55)',
+                      fontSize: 13,
+                      lineHeight: 1.25,
+                      letterSpacing: '-0.01em',
+                      whiteSpace: 'pre-line',
+                    }}
+                  >
+                    {title}
                   </div>
                 </div>
               </div>
-            );
-          })}
-        </div>
+            </div>
+          );
+        })}
+      </div>
     </section>
   );
 };

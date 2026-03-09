@@ -87,80 +87,76 @@ const ProjectCarousels = () => {
       className="relative bg-black pt-48 md:pt-56 lg:pt-64 pb-24 overflow-hidden"
       style={{ minHeight: '100vh' }}
     >
-      <div className="sticky top-0 w-full flex flex-col pt-12 pb-16">
+      <div className="sticky top-0 w-full flex flex-col pt-24 lg:pt-12 pb-16">
         {/* Top row: text + first two carousels */}
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-center mb-6" style={{ paddingTop: '5px', paddingBottom: '5px' }}>
           {/* Left: heading, description, CTAs */}
           <div
-            className="w-full lg:w-[36%] lg:max-w-[480px] shrink-0"
-            style={{
-              paddingLeft: '48px',
-              paddingRight: '24px',
-            }}
+            className="w-full lg:w-[36%] lg:max-w-[480px] shrink-0 px-6 md:px-12 lg:px-0 lg:pl-[48px] lg:pr-[24px]"
           >
-          <h2
-            className="text-white font-primary font-bold leading-tight tracking-tight mb-6"
-            style={{ fontSize: 'clamp(22px, 2.8vw, 36px)' }}
-          >
-            <span className="block">Design that connects.</span>
-            <span className="block">Results that last.</span>
-          </h2>
-          <p
-            className="text-white/70 font-body text-base lg:text-lg leading-relaxed mb-14"
-            style={{ maxWidth: '42ch', paddingTop: '10px', paddingBottom: '10px' }}
-          >
-            We build digital experiences that hold attention and move the needle. Strong visuals and clear strategy help your brand stand out and turn visitors into customers—without the friction.
-          </p>
-          <div className="flex flex-wrap gap-4">
-            <button
-              type="button"
-              className="font-semibold rounded-full transition-all duration-300 active:scale-95"
-              style={{
-                padding: '14px 32px',
-                fontSize: '15px',
-                background: 'rgba(255,255,255,0.12)',
-                color: '#fff',
-                border: '1px solid rgba(255,255,255,0.2)',
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.background = 'rgba(255,255,255,0.18)';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.background = 'rgba(255,255,255,0.12)';
-              }}
+            <h2
+              className="text-white font-primary font-bold leading-tight tracking-tight mb-6"
+              style={{ fontSize: 'clamp(22px, 2.8vw, 36px)' }}
             >
-              About us
-            </button>
-            <button
-              type="button"
-              className="font-semibold rounded-full transition-all duration-300 active:scale-95"
-              style={{
-                padding: '14px 32px',
-                fontSize: '15px',
-                background: 'rgba(255,255,255,0.06)',
-                color: '#fff',
-                border: '1px solid rgba(255,255,255,0.15)',
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.background = 'rgba(255,255,255,0.12)';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.background = 'rgba(255,255,255,0.06)';
-              }}
+              <span className="block">Design that connects.</span>
+              <span className="block">Results that last.</span>
+            </h2>
+            <p
+              className="text-white/70 font-body text-base lg:text-lg leading-relaxed mb-14"
+              style={{ maxWidth: '42ch', paddingTop: '10px', paddingBottom: '10px' }}
             >
-              See our work
-            </button>
-          </div>
+              We build digital experiences that hold attention and move the needle. Strong visuals and clear strategy help your brand stand out and turn visitors into customers—without the friction.
+            </p>
+            <div className="flex flex-wrap gap-4">
+              <button
+                type="button"
+                className="font-semibold rounded-full transition-all duration-300 active:scale-95"
+                style={{
+                  padding: '14px 32px',
+                  fontSize: '15px',
+                  background: 'rgba(255,255,255,0.12)',
+                  color: '#fff',
+                  border: '1px solid rgba(255,255,255,0.2)',
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.background = 'rgba(255,255,255,0.18)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.background = 'rgba(255,255,255,0.12)';
+                }}
+              >
+                About us
+              </button>
+              <button
+                type="button"
+                className="font-semibold rounded-full transition-all duration-300 active:scale-95"
+                style={{
+                  padding: '14px 32px',
+                  fontSize: '15px',
+                  background: 'rgba(255,255,255,0.06)',
+                  color: '#fff',
+                  border: '1px solid rgba(255,255,255,0.15)',
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.background = 'rgba(255,255,255,0.12)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.background = 'rgba(255,255,255,0.06)';
+                }}
+              >
+                See our work
+              </button>
+            </div>
           </div>
 
           {/* Right: first two carousel rows only */}
           <div className="w-full lg:flex-1 flex flex-col gap-8 min-w-0 items-stretch">
-          <div className="overflow-hidden" style={{ height: rowHeight, maskImage: 'linear-gradient(to right, transparent, black 8%, black 100%)', WebkitMaskImage: 'linear-gradient(to right, transparent, black 8%, black 100%)' }}>
-            {renderRow(row1Images)}
-          </div>
-          <div className="overflow-hidden" style={{ height: rowHeight, maskImage: 'linear-gradient(to right, transparent, black 8%, black 100%)', WebkitMaskImage: 'linear-gradient(to right, transparent, black 8%, black 100%)' }}>
-            {renderRow(row2Images, `translateX(-${scrollProgress * SCROLL_OFFSET}px)`)}
-          </div>
+            <div className="overflow-hidden" style={{ height: rowHeight, maskImage: 'linear-gradient(to right, transparent, black 8%, black 100%)', WebkitMaskImage: 'linear-gradient(to right, transparent, black 8%, black 100%)' }}>
+              {renderRow(row1Images)}
+            </div>
+            <div className="overflow-hidden" style={{ height: rowHeight, maskImage: 'linear-gradient(to right, transparent, black 8%, black 100%)', WebkitMaskImage: 'linear-gradient(to right, transparent, black 8%, black 100%)' }}>
+              {renderRow(row2Images, `translateX(-${scrollProgress * SCROLL_OFFSET}px)`)}
+            </div>
           </div>
         </div>
 
@@ -168,8 +164,6 @@ const ProjectCarousels = () => {
         <div
           className="w-full overflow-hidden"
           style={{
-            width: '100vw',
-            marginLeft: 'calc(-50vw + 50%)',
             marginTop: '40px',
           }}
         >

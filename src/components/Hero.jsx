@@ -46,8 +46,8 @@ const Hero = () => {
 
         {/* Hero Heading */}
         <h1
-        className="mb-10 sm:mb-12 flex flex-col gap-2"
-        style={{ fontSize: 'clamp(34px, 9vw, 120px)', lineHeight: 0.95, letterSpacing: '-0.04em' }}
+          className="mb-10 sm:mb-12 flex flex-col gap-2"
+          style={{ fontSize: 'clamp(34px, 9vw, 120px)', lineHeight: 0.95, letterSpacing: '-0.04em' }}
         >
           <div className="flex items-baseline justify-center flex-wrap gap-x-[0.25em]">
             <span style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontWeight: 700, color: '#fff' }}>

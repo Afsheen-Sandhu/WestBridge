@@ -89,9 +89,9 @@ const OurWorksSlides = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative bg-black pt-6 pb-32 md:pt-8 md:pb-40"
+      className="relative bg-black pt-6 pb-[96px] md:pt-8 md:pb-[160px] lg:pb-[240px]"
     >
-      <div className="flex flex-col items-center w-full gap-y-24 sm:gap-y-32">
+      <div className="flex flex-col items-center w-full gap-y-12 sm:gap-y-32">
         {PROJECT_SLIDES.map((project, index) => (
           <div
             key={index}
@@ -103,7 +103,7 @@ const OurWorksSlides = () => {
         ))}
       </div>
 
-      <div className="flex justify-center mt-16 md:mt-20">
+      <div className="flex justify-center" style={{ paddingTop: '80px', marginTop: '20px' }}>
         <button
           type="button"
           className="text-white/90 hover:text-white text-2xl md:text-3xl tracking-wide transition-colors duration-200"
