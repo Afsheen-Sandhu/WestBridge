@@ -4,7 +4,7 @@ import GlowBadge from './GlowBadge';
 const Hero = () => {
   return (
     <section
-      className="relative min-h-screen flex items-center justify-center overflow-hidden px-10"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden"
       style={{ background: '#000' }}
     >
       {/* Video Background */}
@@ -38,7 +38,7 @@ const Hero = () => {
         }}
       />
 
-      <div className="relative flex flex-col items-center text-center z-10 max-w-[1400px]">
+      <div className="relative w-full max-w-[1400px] mx-auto flex flex-col items-center text-center z-10">
         {/* Glow Badge */}
         <div className="mb-14 animate-fade-in-down">
           <GlowBadge>Design In Details</GlowBadge>
@@ -46,11 +46,11 @@ const Hero = () => {
 
         {/* Hero Heading */}
         <h1
-          className="mb-12 flex flex-col gap-2"
-          style={{ fontSize: 'clamp(56px, 12vw, 150px)', lineHeight: 0.92, letterSpacing: '-0.04em' }}
+        className="mb-10 sm:mb-12 flex flex-col gap-2"
+        style={{ fontSize: 'clamp(34px, 9vw, 120px)', lineHeight: 0.95, letterSpacing: '-0.04em' }}
         >
           <div className="flex items-baseline justify-center flex-wrap gap-x-[0.25em]">
-            <span style={{ fontFamily: "'Inter', sans-serif", fontWeight: 700, color: '#fff' }}>
+            <span style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontWeight: 700, color: '#fff' }}>
               Luxury
             </span>
             <span style={{ fontFamily: "'Instrument Serif', serif", fontStyle: 'italic', fontWeight: 400, color: '#fff' }}>
@@ -61,7 +61,7 @@ const Hero = () => {
             <span style={{ fontFamily: "'Instrument Serif', serif", fontStyle: 'italic', fontWeight: 400, color: '#fff' }}>
               Lasting
             </span>
-            <span style={{ fontFamily: "'Inter', sans-serif", fontWeight: 700, color: '#fff' }}>
+            <span style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontWeight: 700, color: '#fff' }}>
               Impact
             </span>
           </div>
@@ -71,12 +71,12 @@ const Hero = () => {
         <p
           className="animate-fade-in-up max-w-[700px] leading-relaxed"
           style={{
-            fontSize: 'clamp(18px, 2.5vw, 28px)',
+            fontSize: 'clamp(14px, 2.2vw, 22px)',
             color: 'rgba(255,255,255,0.55)',
             animationDelay: '400ms',
             fontWeight: 400,
-            marginTop: '40px',
-            marginBottom: '60px',
+            marginTop: '28px',
+            marginBottom: '40px',
           }}
         >
           Premium websites crafted for bold brands.
@@ -84,14 +84,14 @@ const Hero = () => {
 
         {/* CTA Buttons */}
         <div
-          className="flex gap-5 animate-fade-in-up"
+          className="flex flex-wrap justify-center gap-4 sm:gap-5 animate-fade-in-up"
           style={{ animationDelay: '600ms' }}
         >
           <button
             className="font-semibold rounded-full transition-all duration-500 active:scale-95"
             style={{
-              padding: '18px 48px',
-              fontSize: '17px',
+              padding: '12px 24px',
+              fontSize: '14px',
               background: '#fff',
               color: '#000',
               border: 'none',
@@ -105,8 +105,8 @@ const Hero = () => {
           <button
             className="font-semibold rounded-full transition-all duration-500 active:scale-95"
             style={{
-              padding: '18px 48px',
-              fontSize: '17px',
+              padding: '12px 24px',
+              fontSize: '14px',
               background: 'rgba(255,255,255,0.08)',
               color: '#fff',
               border: '1px solid rgba(255,255,255,0.15)',

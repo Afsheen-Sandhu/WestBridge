@@ -3,7 +3,7 @@
 @import "tailwindcss";
 
 @theme {
-  --font-primary: 'Inter', sans-serif;
+  --font-primary: 'Plus Jakarta Sans', sans-serif;
   --font-accent: 'Instrument Serif', serif;
   --font-body: 'Plus Jakarta Sans', sans-serif;
   --color-accent-glow: rgba(0, 102, 255, 0.4);
@@ -94,4 +94,29 @@ button {
 
 .animate-marquee {
   animation: marquee 30s linear infinite;
+}
+
+/* Shared layout: centered content with consistent max-width and padding */
+.layout-outer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.layout-inner {
+  width: 100%;
+  max-width: 1400px;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+@media (min-width: 640px) {
+  .layout-inner {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+@media (min-width: 768px) {
+  .layout-inner {
+    padding-left: 48px;
+    padding-right: 48px;
+  }
 }

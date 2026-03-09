@@ -24,8 +24,8 @@ const GlowBadge = ({ children }) => {
                 position: 'relative',
                 display: 'inline-flex',
                 alignItems: 'center',
-                padding: '10px 32px',
-                borderRadius: '100px',
+                padding: '6px 18px',
+                borderRadius: '999px',
                 border: '1px solid rgba(255,255,255,0.12)',
                 background: 'rgba(255,255,255,0.04)',
                 backdropFilter: 'blur(20px)',
@@ -61,12 +61,13 @@ const GlowBadge = ({ children }) => {
             <span style={{
                 position: 'relative',
                 zIndex: 10,
-                fontSize: '13px',
+                fontSize: '11px',
                 fontWeight: 500,
                 color: '#fff',
-                letterSpacing: '2.5px',
+                letterSpacing: '2px',
                 textTransform: 'uppercase',
                 fontFamily: "'Plus Jakarta Sans', sans-serif",
+                whiteSpace: 'nowrap',
             }}>
                 {children}
             </span>

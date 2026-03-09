@@ -35,7 +35,7 @@ const Brands = () => {
                                     <span
                                         key={`${i}-${j}`}
                                         style={{
-                                            fontFamily: "'Inter', sans-serif",
+                                            fontFamily: "'Plus Jakarta Sans', sans-serif",
                                             fontWeight: 800,
                                             fontSize: '36px',
                                             letterSpacing: '-0.04em',
