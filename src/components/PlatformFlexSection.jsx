@@ -58,15 +58,16 @@ const PlatformFlexSection = () => {
 
           <div className="absolute inset-0 z-10 flex items-center">
             <div
-              className="w-full flex-1 flex flex-col items-start justify-center px-6 py-10 md:px-12 md:py-12"
+              className="w-full flex-1 flex flex-col items-start justify-center"
+              style={{ paddingLeft: '32px', paddingRight: '32px', paddingTop: '36px', paddingBottom: '36px' }}
             >
               <h3
                 className="text-white font-body text-left"
                 style={{
                   fontWeight: 700,
                   letterSpacing: '-0.03em',
-                  lineHeight: 1.05,
-                  fontSize: 'clamp(28px, 2.5vw, 34px)',
+                  lineHeight: 1.08,
+                  fontSize: 'clamp(18px, 1.8vw, 24px)',
                   marginBottom: 10,
                 }}
               >
@@ -77,7 +78,8 @@ const PlatformFlexSection = () => {
               <p
                 className="font-body text-left"
                 style={{
-                  maxWidth: 520,
+                  width: '280px',
+                  maxWidth: '100%',
                   color: 'rgba(255,255,255,0.55)',
                   fontSize: 13,
                   lineHeight: 1.6,
@@ -91,13 +93,13 @@ const PlatformFlexSection = () => {
                 type="button"
                 className="rounded-full font-semibold transition-all duration-300 active:scale-95"
                 style={{
-                  padding: '11px 18px',
-                  fontSize: '13px',
+                  padding: '12px 24px',
+                  fontSize: '14px',
                   background: 'rgba(255,255,255,0.10)',
                   color: '#fff',
                   border: '1px solid rgba(255,255,255,0.14)',
-                  backdropFilter: 'blur(14px)',
-                  WebkitBackdropFilter: 'blur(14px)',
+                  backdropFilter: 'blur(12px)',
+                  WebkitBackdropFilter: 'blur(12px)',
                 }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.background = 'rgba(255,255,255,0.16)';

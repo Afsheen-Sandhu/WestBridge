@@ -7,13 +7,13 @@ import FeaturesGrid from './components/FeaturesGrid';
 import ServicesGrid from './components/ServicesGrid';
 import PlatformFlexSection from './components/PlatformFlexSection';
 import ServiceTicker from './components/ServiceTicker';
-import Brands from './components/Brands';
+
 
 function App() {
   return (
     <Layout>
       <Hero />
-      <Brands />
+
       <ProjectCarousels />
       <OurWorksSlides />
       <FeaturesGrid />

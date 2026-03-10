@@ -84,8 +84,8 @@ const ProjectCarousels = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative bg-black pt-48 md:pt-56 lg:pt-64 pb-24 overflow-hidden"
-      style={{ minHeight: '100vh' }}
+      className="relative bg-black pt-[180px] md:pt-[240px] lg:pt-[300px] pb-24 overflow-hidden"
+      style={{ minHeight: '100vh', marginTop: '120px' }}
     >
       <div className="sticky top-0 w-full flex flex-col pt-24 lg:pt-12 pb-16">
         {/* Top row: text + first two carousels */}
@@ -107,16 +107,19 @@ const ProjectCarousels = () => {
             >
               We build digital experiences that hold attention and move the needle. Strong visuals and clear strategy help your brand stand out and turn visitors into customers—without the friction.
             </p>
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-col sm:flex-row flex-wrap gap-4 items-stretch sm:items-center">
               <button
                 type="button"
-                className="font-semibold rounded-full transition-all duration-300 active:scale-95"
+                className="font-semibold rounded-full transition-all duration-300 active:scale-95 flex-1 sm:flex-none justify-center"
                 style={{
-                  padding: '14px 32px',
-                  fontSize: '15px',
+                  padding: '12px 24px',
+                  fontSize: '14px',
                   background: 'rgba(255,255,255,0.12)',
                   color: '#fff',
                   border: '1px solid rgba(255,255,255,0.2)',
+                  minWidth: '160px',
+                  display: 'flex',
+                  alignItems: 'center',
                 }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.background = 'rgba(255,255,255,0.18)';
@@ -129,13 +132,16 @@ const ProjectCarousels = () => {
               </button>
               <button
                 type="button"
-                className="font-semibold rounded-full transition-all duration-300 active:scale-95"
+                className="font-semibold rounded-full transition-all duration-300 active:scale-95 flex-1 sm:flex-none justify-center"
                 style={{
-                  padding: '14px 32px',
-                  fontSize: '15px',
+                  padding: '12px 24px',
+                  fontSize: '14px',
                   background: 'rgba(255,255,255,0.06)',
                   color: '#fff',
                   border: '1px solid rgba(255,255,255,0.15)',
+                  minWidth: '160px',
+                  display: 'flex',
+                  alignItems: 'center',
                 }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.background = 'rgba(255,255,255,0.12)';

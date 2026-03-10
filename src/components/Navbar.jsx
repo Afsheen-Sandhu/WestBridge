@@ -156,11 +156,11 @@ const Navbar = () => {
                                     onMouseEnter={() => setConnectHovered(true)}
                                     onMouseLeave={() => setConnectHovered(false)}
                                     style={{
-                                        padding: '12px 28px',
+                                        padding: '12px 24px',
                                         borderRadius: '100px',
                                         fontFamily: "'Plus Jakarta Sans', sans-serif",
                                         fontWeight: 600,
-                                        fontSize: '15px',
+                                        fontSize: '14px',
                                         cursor: 'pointer',
                                         transition: 'all 0.4s ease',
                                         background: connectHovered ? '#fff' : 'transparent',
@@ -334,7 +334,7 @@ const Navbar = () => {
                                 onMouseLeave={() => setConnectHovered(false)}
                                 style={{
                                     flex: 1,
-                                    padding: '10px 18px',
+                                    padding: '12px 24px',
                                     borderRadius: 999,
                                     fontFamily: "'Plus Jakarta Sans', sans-serif",
                                     fontWeight: 600,

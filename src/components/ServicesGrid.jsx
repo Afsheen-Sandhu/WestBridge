@@ -55,18 +55,21 @@ const ServicesGrid = () => {
         </h2>
 
         <div
-          className="flex items-center gap-4 pt-2"
+          className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2 w-full sm:w-auto"
           style={{ paddingBottom: 8 }}
         >
           <button
             type="button"
-            className="rounded-full font-semibold transition-all duration-300 active:scale-95"
+            className="rounded-full font-semibold transition-all duration-300 active:scale-95 flex-1 sm:flex-none justify-center"
             style={{
-              padding: '12px 22px',
-              fontSize: '13px',
+              padding: '12px 24px',
+              fontSize: '14px',
               background: '#fff',
               color: '#000',
               border: '1px solid rgba(255,255,255,0.15)',
+              minWidth: '160px',
+              display: 'flex',
+              alignItems: 'center',
             }}
             onMouseEnter={(e) => {
               e.currentTarget.style.transform = 'translateY(-2px)';
@@ -81,15 +84,18 @@ const ServicesGrid = () => {
           </button>
           <button
             type="button"
-            className="rounded-full font-semibold transition-all duration-300 active:scale-95"
+            className="rounded-full font-semibold transition-all duration-300 active:scale-95 flex-1 sm:flex-none justify-center"
             style={{
-              padding: '12px 22px',
-              fontSize: '13px',
+              padding: '12px 24px',
+              fontSize: '14px',
               background: 'rgba(255,255,255,0.08)',
               color: '#fff',
               border: '1px solid rgba(255,255,255,0.15)',
               backdropFilter: 'blur(12px)',
               WebkitBackdropFilter: 'blur(12px)',
+              minWidth: '160px',
+              display: 'flex',
+              alignItems: 'center',
             }}
             onMouseEnter={(e) => {
               e.currentTarget.style.transform = 'translateY(-2px)';
