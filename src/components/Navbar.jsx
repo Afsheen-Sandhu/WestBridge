@@ -1,10 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import { useTheme } from '../context/ThemeContext';
+import { Link, useLocation } from 'react-router-dom';
 
 
-const navLinks = ['Home', 'About Us', 'Works', 'Services', 'Blogs', 'Templates'];
+const navLinks = [
+    { label: 'Home', path: '/' },
+    { label: 'About Us', path: '/about-us' },
+    { label: 'Works', path: '/works' },
+    { label: 'Services', path: '/services' },
+    { label: 'Blogs', path: '/blogs' },
+    { label: 'Templates', path: '/templates' }
+];
 
 const Navbar = () => {
+    const location = useLocation();
     const [activeLink, setActiveLink] = useState('Home');
     const [connectHovered, setConnectHovered] = useState(false);
     const [isMobile, setIsMobile] = useState(typeof window !== 'undefined' ? window.innerWidth <= 768 : false);
@@ -21,6 +30,14 @@ const Navbar = () => {
         window.addEventListener('resize', handleResize);
         return () => window.removeEventListener('resize', handleResize);
     }, []);
+
+    useEffect(() => {
+        // Update active link based on pathname
+        const currentLink = navLinks.find(link => link.path === location.pathname);
+        if (currentLink) {
+            setActiveLink(currentLink.label);
+        }
+    }, [location.pathname]);
 
     return (
         <nav
@@ -52,7 +69,11 @@ const Navbar = () => {
                     }}
                 >
                     {/* ── Logo ── */}
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '14px', cursor: 'pointer' }}>
+                    <Link
+                        to="/"
+                        onClick={() => setActiveLink('Home')}
+                        style={{ display: 'flex', alignItems: 'center', gap: '14px', cursor: 'pointer', textDecoration: 'none' }}
+                    >
                         <img
                             src={theme === 'dark' ? "/logo-white-removebg-preview.png" : "/logo-black-removebg-preview.png"}
                             alt="WestBridge"
@@ -90,7 +111,7 @@ const Navbar = () => {
                                 IT Solutions
                             </span>
                         </div>
-                    </div>
+                    </Link>
 
                     {/* Desktop nav */}
                     {!isMobile && (
@@ -111,31 +132,41 @@ const Navbar = () => {
                                 }}
                             >
                                 {navLinks.map(link => (
-                                    <a
-                                        key={link}
-                                        href={`#${link.toLowerCase().replace(' ', '-')}`}
-                                        onClick={() => setActiveLink(link)}
+                                    <Link
+                                        key={link.label}
+                                        to={link.path}
+                                        onClick={() => {
+                                            setActiveLink(link.label);
+                                            // Manual scroll for hash links if on Home page
+                                            if (link.path.startsWith('/#')) {
+                                                const id = link.path.substring(2);
+                                                const element = document.getElementById(id);
+                                                if (element) {
+                                                    element.scrollIntoView({ behavior: 'smooth' });
+                                                }
+                                            }
+                                        }}
                                         style={{
                                             padding: '9px 20px',
                                             borderRadius: '100px',
                                             fontSize: '14px',
                                             fontFamily: "'Plus Jakarta Sans', sans-serif",
                                             fontWeight: 500,
-                                            color: activeLink === link
+                                            color: activeLink === link.label
                                                 ? (theme === 'dark' ? '#fff' : '#000')
                                                 : (theme === 'dark' ? 'rgba(255,255,255,0.55)' : 'rgba(0,0,0,0.5)'),
-                                            background: activeLink === link
+                                            background: activeLink === link.label
                                                 ? (theme === 'dark' ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.05)')
                                                 : 'transparent',
                                             textDecoration: 'none',
                                             transition: 'all 0.3s ease',
                                             whiteSpace: 'nowrap',
                                         }}
-                                        onMouseEnter={e => { if (activeLink !== link) e.currentTarget.style.color = theme === 'dark' ? '#fff' : '#000'; }}
-                                        onMouseLeave={e => { if (activeLink !== link) e.currentTarget.style.color = theme === 'dark' ? 'rgba(255,255,255,0.55)' : 'rgba(0,0,0,0.5)'; }}
+                                        onMouseEnter={e => { if (activeLink !== link.label) e.currentTarget.style.color = theme === 'dark' ? '#fff' : '#000'; }}
+                                        onMouseLeave={e => { if (activeLink !== link.label) e.currentTarget.style.color = theme === 'dark' ? 'rgba(255,255,255,0.55)' : 'rgba(0,0,0,0.5)'; }}
                                     >
-                                        {link}
-                                    </a>
+                                        {link.label}
+                                    </Link>
                                 ))}
                             </div>
 
@@ -292,12 +323,19 @@ const Navbar = () => {
                             }}
                         >
                             {navLinks.map(link => (
-                                <a
-                                    key={link}
-                                    href={`#${link.toLowerCase().replace(' ', '-')}`}
+                                <Link
+                                    key={link.label}
+                                    to={link.path}
                                     onClick={() => {
-                                        setActiveLink(link);
+                                        setActiveLink(link.label);
                                         setMenuOpen(false);
+                                        if (link.path.startsWith('/#')) {
+                                            const id = link.path.substring(2);
+                                            const element = document.getElementById(id);
+                                            if (element) {
+                                                element.scrollIntoView({ behavior: 'smooth' });
+                                            }
+                                        }
                                     }}
                                     style={{
                                         padding: '8px 10px',
@@ -305,18 +343,18 @@ const Navbar = () => {
                                         fontSize: 13,
                                         fontFamily: "'Plus Jakarta Sans', sans-serif",
                                         fontWeight: 500,
-                                        color: activeLink === link
+                                        color: activeLink === link.label
                                             ? (theme === 'dark' ? '#000' : '#fff')
                                             : (theme === 'dark' ? 'rgba(255,255,255,0.86)' : 'rgba(0,0,0,0.7)'),
-                                        background: activeLink === link
+                                        background: activeLink === link.label
                                             ? (theme === 'dark' ? '#fff' : '#000')
                                             : 'transparent',
                                         textDecoration: 'none',
                                         transition: 'all 0.25s ease',
                                     }}
                                 >
-                                    {link}
-                                </a>
+                                    {link.label}
+                                </Link>
                             ))}
                         </div>
 

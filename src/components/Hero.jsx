@@ -8,6 +8,7 @@ const Hero = () => {
   const { theme } = useTheme();
   return (
     <section
+      id="home"
       className="relative min-h-screen flex flex-col items-center overflow-hidden transition-colors duration-400"
       style={{ background: theme === 'dark' ? '#000' : '#fff' }}
     >

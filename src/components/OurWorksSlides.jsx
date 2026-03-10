@@ -46,6 +46,7 @@ const OurWorksSlides = () => {
   const { theme } = useTheme();
   return (
     <section
+      id="works"
       className="relative pt-6 pb-[96px] md:pt-8 md:pb-[160px] lg:pb-[240px] transition-colors duration-400"
       style={{ background: theme === 'dark' ? '#000' : '#fff' }}
     >

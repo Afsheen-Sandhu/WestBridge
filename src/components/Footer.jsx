@@ -1,6 +1,7 @@
 import React from 'react';
 import { Instagram, Facebook, Twitter, Linkedin, ArrowUpRight } from 'lucide-react';
 import { useTheme } from '../context/ThemeContext';
+import { Link } from 'react-router-dom';
 
 
 const Footer = () => {
@@ -41,10 +42,13 @@ const Footer = () => {
           <div style={{ display: 'flex', flexDirection: 'column', gap: 0 }}>
 
             {/* Logo */}
-            <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '40px' }}>
+            <Link
+              to="/"
+              style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '40px', textDecoration: 'none' }}
+            >
               <img src={theme === 'dark' ? "/logo-white-removebg-preview.png" : "/logo-black-removebg-preview.png"} alt="WB" style={{ height: '24px' }} />
               <span style={{ color: theme === 'dark' ? '#fff' : '#000', fontWeight: 700, fontSize: '16px', letterSpacing: '-0.02em' }}>WestBridge</span>
-            </div>
+            </Link>
 
             {/* Headline */}
             <h2 style={{
@@ -196,14 +200,24 @@ const Footer = () => {
               </p>
               <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '12px' }}>
                 {(si === 0
-                  ? ['Works', 'About', 'Services', 'Approach']
-                  : ['Templates', 'Blog', 'Careers', 'Studio']
+                  ? [
+                    { label: 'Works', path: '/works' },
+                    { label: 'About', path: '/about-us' },
+                    { label: 'Services', path: '/services' },
+                    { label: 'Approach', path: '/approach' }
+                  ]
+                  : [
+                    { label: 'Templates', path: '/templates' },
+                    { label: 'Blog', path: '/blogs' },
+                    { label: 'Careers', path: '/careers' },
+                    { label: 'Studio', path: '/studio' }
+                  ]
                 ).map(item => (
-                  <li key={item}>
-                    <a href="#" style={{ color: theme === 'dark' ? 'rgba(255,255,255,0.45)' : 'rgba(0,0,0,0.5)', textDecoration: 'none', fontSize: '13px', transition: 'color 0.25s' }}
+                  <li key={item.label}>
+                    <Link to={item.path} style={{ color: theme === 'dark' ? 'rgba(255,255,255,0.45)' : 'rgba(0,0,0,0.5)', textDecoration: 'none', fontSize: '13px', transition: 'color 0.25s' }}
                       onMouseEnter={e => e.currentTarget.style.color = theme === 'dark' ? '#fff' : '#000'}
                       onMouseLeave={e => e.currentTarget.style.color = theme === 'dark' ? 'rgba(255,255,255,0.45)' : 'rgba(0,0,0,0.5)'}
-                    >{item}</a>
+                    >{item.label}</Link>
                   </li>
                 ))}
               </ul>
