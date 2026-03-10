@@ -1,0 +1,246 @@
+import React, { useEffect } from 'react';
+import { useParams, Link } from 'react-router-dom';
+import { useTheme } from '../context/ThemeContext';
+import { ArrowLeft, Clock, User, Calendar, Share2, Twitter, Linkedin, Facebook } from 'lucide-react';
+import { blogPosts } from '../data/blogData';
+
+const BlogDetail = () => {
+    const { slug } = useParams();
+    const { theme } = useTheme();
+    const isDark = theme === 'dark';
+
+    // Find the post by slug
+    const post = blogPosts.find(p => p.slug === slug);
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [slug]);
+
+    if (!post) {
+        return (
+            <div style={{
+                minHeight: '100vh',
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                justifyContent: 'center',
+                background: isDark ? '#080808' : '#f8f8f6',
+                color: isDark ? '#fff' : '#000',
+                padding: '20px',
+                textAlign: 'center'
+            }}>
+                <h1 style={{ fontSize: '32px', fontWeight: 800, marginBottom: '24px' }}>Post Not Found</h1>
+                <Link to="/blogs" style={{
+                    color: isDark ? 'rgba(255,255,255,0.6)' : 'rgba(0,0,0,0.6)',
+                    textDecoration: 'none',
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '8px',
+                    fontWeight: 700,
+                    fontSize: '14px'
+                }}>
+                    <ArrowLeft size={18} />
+                    Back to all blogs
+                </Link>
+            </div>
+        );
+    }
+
+    return (
+        <div style={{
+            width: '100%',
+            minHeight: '100vh',
+            background: isDark ? '#080808' : '#f8f8f6',
+            color: isDark ? '#fff' : '#0a0a0a',
+            fontFamily: "'Plus Jakarta Sans', sans-serif",
+            transition: 'background 0.4s ease',
+            paddingBottom: '120px',
+        }}>
+            {/* ── Progress Bar ── */}
+            <div style={{
+                position: 'fixed',
+                top: 0,
+                left: 0,
+                width: '100%',
+                height: '3px',
+                background: 'rgba(255,255,255,0.05)',
+                zIndex: 1000,
+            }}>
+                <div style={{
+                    width: '30%', // Would need actual scroll logic for real progress
+                    height: '100%',
+                    background: isDark ? '#fff' : '#000',
+                }} />
+            </div>
+
+            <article style={{
+                maxWidth: '900px',
+                margin: '0 auto',
+                padding: 'clamp(120px, 15vw, 180px) 24px 0',
+            }}>
+
+                {/* ── Back Link ── */}
+                <Link to="/blogs" style={{
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: '12px',
+                    color: isDark ? 'rgba(255,255,255,0.4)' : 'rgba(0,0,0,0.4)',
+                    textDecoration: 'none',
+                    fontSize: '12px',
+                    fontWeight: 800,
+                    textTransform: 'uppercase',
+                    letterSpacing: '0.12em',
+                    marginBottom: '48px',
+                    transition: 'color 0.3s ease',
+                }} onMouseEnter={e => e.currentTarget.style.color = isDark ? '#fff' : '#000'} onMouseLeave={e => e.currentTarget.style.color = ''}>
+                    <ArrowLeft size={16} />
+                    Back to Journal
+                </Link>
+
+                {/* ── Category & Title ── */}
+                <div style={{ marginBottom: '40px' }}>
+                    <span style={{
+                        display: 'inline-block',
+                        padding: '6px 16px',
+                        background: isDark ? 'rgba(255,255,255,0.05)' : 'rgba(0,0,0,0.05)',
+                        borderRadius: '500px',
+                        fontSize: '11px',
+                        fontWeight: 800,
+                        textTransform: 'uppercase',
+                        letterSpacing: '0.15em',
+                        color: isDark ? 'rgba(255,255,255,0.7)' : 'rgba(0,0,0,0.7)',
+                        marginBottom: '24px'
+                    }}>
+                        {post.category}
+                    </span>
+                    <h1 style={{
+                        fontSize: 'clamp(32px, 5.5vw, 64px)',
+                        fontWeight: 800,
+                        lineHeight: 1.1,
+                        letterSpacing: '-0.04em',
+                        margin: '0 0 32px 0',
+                    }}>
+                        {post.title}
+                    </h1>
+
+                    {/* ── Meta Info ── */}
+                    <div style={{
+                        display: 'flex',
+                        flexWrap: 'wrap',
+                        alignItems: 'center',
+                        gap: '24px',
+                        padding: '24px 0',
+                        borderTop: `1px solid ${isDark ? 'rgba(255,255,255,0.06)' : 'rgba(0,0,0,0.08)'}`,
+                        borderBottom: `1px solid ${isDark ? 'rgba(255,255,255,0.06)' : 'rgba(0,0,0,0.08)'}`,
+                    }}>
+                        <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                            <div style={{ width: '32px', height: '32px', borderRadius: '50%', background: isDark ? '#222' : '#ddd', overflow: 'hidden' }}>
+                                <img src="/work.png" alt={post.author} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                            </div>
+                            <span style={{ fontSize: '14px', fontWeight: 700 }}>{post.author}</span>
+                        </div>
+                        <div style={{ display: 'flex', alignItems: 'center', gap: '8px', color: isDark ? 'rgba(255,255,255,0.4)' : 'rgba(0,0,0,0.4)', fontSize: '14px' }}>
+                            <Calendar size={16} />
+                            <span>{post.date}</span>
+                        </div>
+                        <div style={{ display: 'flex', alignItems: 'center', gap: '8px', color: isDark ? 'rgba(255,255,255,0.4)' : 'rgba(0,0,0,0.4)', fontSize: '14px' }}>
+                            <Clock size={16} />
+                            <span>6 min read</span>
+                        </div>
+                    </div>
+                </div>
+
+                {/* ── Hero Image ── */}
+                <div style={{
+                    width: '100%',
+                    aspectRatio: '16/9',
+                    borderRadius: '40px',
+                    overflow: 'hidden',
+                    marginBottom: '64px',
+                    background: isDark ? '#111' : '#eee',
+                    border: `1px solid ${isDark ? 'rgba(255,255,255,0.06)' : 'rgba(0,0,0,0.08)'}`,
+                }}>
+                    <img src={post.image} alt={post.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                </div>
+
+                {/* ── Content Body ── */}
+                <div
+                    className="blog-content"
+                    dangerouslySetInnerHTML={{ __html: post.content }}
+                    style={{
+                        fontSize: '18px',
+                        lineHeight: 1.8,
+                        color: isDark ? 'rgba(255,255,255,0.85)' : 'rgba(0,0,0,0.8)',
+                    }}
+                />
+
+                {/* ── Social Share ── */}
+                <div style={{
+                    marginTop: '80px',
+                    padding: '48px 0',
+                    borderTop: `1px solid ${isDark ? 'rgba(255,255,255,0.06)' : 'rgba(0,0,0,0.08)'}`,
+                    display: 'flex',
+                    flexDirection: 'column',
+                    alignItems: 'center',
+                    gap: '24px'
+                }}>
+                    <span style={{ fontSize: '13px', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.12em', opacity: 0.5 }}>Share this insights</span>
+                    <div style={{ display: 'flex', gap: '16px' }}>
+                        {[Twitter, Linkedin, Facebook].map((SIcon, i) => (
+                            <button key={i} style={{
+                                width: '48px',
+                                height: '48px',
+                                borderRadius: '50%',
+                                border: `1px solid ${isDark ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.1)'}`,
+                                background: 'transparent',
+                                color: isDark ? '#fff' : '#000',
+                                display: 'flex',
+                                alignItems: 'center',
+                                justifyContent: 'center',
+                                cursor: 'pointer',
+                                transition: 'all 0.3s ease',
+                            }} onMouseEnter={e => { e.currentTarget.style.background = isDark ? '#fff' : '#000'; e.currentTarget.style.color = isDark ? '#000' : '#fff'; }} onMouseLeave={e => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.color = isDark ? '#fff' : '#000'; }}>
+                                <SIcon size={20} />
+                            </button>
+                        ))}
+                    </div>
+                </div>
+
+            </article>
+
+            <style>{`
+                .blog-content h3 {
+                    font-size: 28px;
+                    font-weight: 800;
+                    margin: 48px 0 24px;
+                    letter-spacing: -0.02em;
+                    color: \${isDark ? '#fff' : '#000'};
+                }
+                .blog-content p {
+                    margin-bottom: 24px;
+                }
+                .blog-content ul, .blog-content ol {
+                    margin-bottom: 32px;
+                    padding-left: 20px;
+                }
+                .blog-content li {
+                    margin-bottom: 12px;
+                }
+                .blog-content blockquote {
+                    margin: 48px 0;
+                    padding: 32px 40px;
+                    background: \${isDark ? 'rgba(255,255,255,0.03)' : 'rgba(0,0,0,0.03)'};
+                    border-radius: 24px;
+                    font-family: 'Instrument Serif', serif;
+                    font-style: italic;
+                    font-size: 24px;
+                    color: \${isDark ? 'rgba(255,255,255,0.9)' : 'rgba(0,0,0,0.9)'};
+                    line-height: 1.4;
+                    text-align: center;
+                }
+            `}</style>
+        </div>
+    );
+};
+
+export default BlogDetail;

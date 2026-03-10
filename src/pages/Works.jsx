@@ -4,40 +4,46 @@ import GlowBadge from '../components/GlowBadge';
 import { ChevronDown, ArrowUpRight } from 'lucide-react';
 
 const projects = [
-    { id: 1, name: "Photofolio", category: "Creative", image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=800", link: "#" },
-    { id: 2, name: "4Dolfins", category: "Agency", image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800", link: "#" },
-    { id: 3, name: "Avara", category: "Fitness", image: "https://images.unsplash.com/photo-1545208393-2160281bd89f?auto=format&fit=crop&q=80&w=800", link: "#" },
-    { id: 4, name: "Nova Lux", category: "Ecommerce", image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=800", link: "#" },
-    { id: 5, name: "Sentience", category: "SaaS", image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=800", link: "#" },
-    { id: 6, name: "Veloci", category: "Automotive", image: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&q=80&w=800", link: "#" },
-    { id: 7, name: "Elysian", category: "Lifestyle", image: "https://images.unsplash.com/photo-1511317551221-995a5ea516f8?auto=format&fit=crop&q=80&w=800", link: "#" },
-    { id: 8, name: "Kinetix", category: "Fitness", image: "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&q=80&w=800", link: "#" },
-    { id: 9, name: "Zenith", category: "Agency", image: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=800", link: "#" },
-    { id: 10, name: "Lumina", category: "Creative", image: "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&q=80&w=800", link: "#" },
-    { id: 11, name: "Peak", category: "Fitness", image: "https://images.unsplash.com/photo-1541534741688-6078c65b5a33?auto=format&fit=crop&q=80&w=800", link: "#" },
-    { id: 12, name: "Vantage", category: "Ecommerce", image: "https://images.unsplash.com/photo-1472851294608-062f824d29cc?auto=format&fit=crop&q=80&w=800", link: "#" },
-    { id: 13, name: "Flow", category: "SaaS", image: "https://images.unsplash.com/photo-1551288049-bbbda536339a?auto=format&fit=crop&q=80&w=800", link: "#" },
-    { id: 14, name: "Orbit", category: "Agency", image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=800", link: "#" },
-    { id: 15, name: "Prism", category: "Creative", image: "https://images.unsplash.com/photo-1550684848-fac1c5b4e853?auto=format&fit=crop&q=80&w=800", link: "#" },
-    { id: 16, name: "Stride", category: "Fitness", image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&q=80&w=800", link: "#" },
-    { id: 17, name: "Echo", category: "SaaS", image: "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=80&w=800", link: "#" },
-    { id: 18, name: "Nexus", category: "Ecommerce", image: "https://images.unsplash.com/photo-1557821552-17105176677c?auto=format&fit=crop&q=80&w=800", link: "#" },
-    { id: 19, name: "Aria", category: "Lifestyle", image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=800", link: "#" },
-    { id: 20, name: "Flux", category: "Creative", image: "https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&q=80&w=800", link: "#" },
-    { id: 21, name: "Crest", category: "Agency", image: "https://images.unsplash.com/photo-1497215842964-222b430dc094?auto=format&fit=crop&q=80&w=800", link: "#" },
-    { id: 22, name: "Unity", category: "SaaS", image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=800", link: "#" }
+    { id: 11, name: "Tranquil", category: "SaaS", image: "/img11.png", link: "https://tranquil-495tmg.peachworlds.com/" },
+    { id: 1, name: "Murakami City", category: "Food & Restaurant", image: "/img1.png", link: "https://murakamicity.com/en/" },
+    { id: 5, name: "Ochi Design", category: "Agency", image: "/img5.png", link: "https://ochi.design/" },
+    { id: 17, name: "Doze Studio", category: "Creative", image: "/img17.png", link: "https://doze.studio/en" },
+    { id: 24, name: "Well Designed", category: "Lifestyle", image: "/img24.png", link: "https://www.welldesigned.gr/" },
+    { id: 8, name: "Kinective", category: "Fitness", image: "/img8.png", link: "https://kinective.com/" },
+    { id: 2, name: "JF Vegan Cafe", category: "Food & Restaurant", image: "/img2.png", link: "https://jfvegancafe.com/" },
+    { id: 13, name: "Solstice Design", category: "Portfolio", image: "/img13.png", link: "https://solsticedesign.ca/en/" },
+    { id: 9, name: "Stampede Auto", category: "Ecommerce", image: "/img9.png", link: "https://stampedeauto.com/" },
+    { id: 14, name: "FMIG", category: "Healthcare", image: "/img14.png", link: "https://fmig-ksa.com/" },
+    { id: 23, name: "Uptura", category: "Agency", image: "/img23.png", link: "https://uptura.net" },
+    { id: 12, name: "Eclectic Lifestyle Co.", category: "Lifestyle", image: "/img12.png", link: "https://www.eclecticlifestylecompany.co.uk/" },
+    { id: 3, name: "Nidaba Spirit", category: "Food & Restaurant", image: "/img3.png", link: "https://www.nidabaspirit.it/" },
+    { id: 18, name: "Brewitty", category: "Creative", image: "/img18.png", link: "https://www.brewitty.com/" },
+    { id: 20, name: "Solidroad", category: "SaaS", image: "/img20.png", link: "https://www.solidroad.com/" },
+    { id: 4, name: "Restaurant Gem", category: "Food & Restaurant", image: "/img4.png", link: "https://restaurantgem.com/" },
+    { id: 16, name: "Bartosz Kolenda", category: "Portfolio", image: "/img16.png", link: "https://bartoszkolenda.com/" },
+    { id: 6, name: "Lento Agency", category: "Agency", image: "/img6.png", link: "https://www.lentoagency.com/" },
+    { id: 10, name: "Masons", category: "Ecommerce", image: "/img10.png", link: "https://us.masons.it/" },
+    { id: 15, name: "Austo Entertainment", category: "Lifestyle", image: "/img15.png", link: "https://www.austoentertainment.com/" },
+    { id: 7, name: "Bajgart Office", category: "Creative", image: "/img7.png", link: "https://bajgartoffice.com/" },
+    { id: 19, name: "Jamm", category: "Food & Restaurant", image: "/img19.png", link: "https://www.jamm.co/" },
+    { id: 21, name: "General Intelligence Co.", category: "Portfolio", image: "/img21.png", link: "https://www.generalintelligencecompany.com/" },
+    { id: 22, name: "Epiminds", category: "Agency", image: "/img22.png", link: "https://epiminds.com/" },
 ];
 
-const categories = ["All", "Creative", "Agency", "Fitness", "Ecommerce", "SaaS", "Lifestyle", "Automotive"];
+const categories = ["All", "Food & Restaurant", "Agency", "Creative", "Fitness", "Ecommerce", "SaaS", "Lifestyle", "Portfolio", "Healthcare"];
 
 const Works = () => {
     const { theme } = useTheme();
     const [selectedCategory, setSelectedCategory] = useState("All");
     const [isFilterOpen, setIsFilterOpen] = useState(false);
+    const [windowWidth, setWindowWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 1400);
     const isDark = theme === 'dark';
 
     useEffect(() => {
         window.scrollTo(0, 0);
+        const handleResize = () => setWindowWidth(window.innerWidth);
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
     }, []);
 
     useEffect(() => {
@@ -52,94 +58,115 @@ const Works = () => {
         ? projects
         : projects.filter(p => p.category === selectedCategory);
 
+    const isMobile = windowWidth <= 768;
+    const isTablet = windowWidth <= 1024 && windowWidth > 768;
+
     return (
         <div style={{
             width: '100%',
             minHeight: '100vh',
             background: isDark ? '#080808' : '#f8f8f6',
             fontFamily: "'Plus Jakarta Sans', sans-serif",
+            transition: 'background 0.4s ease',
         }}>
             <section style={{
                 width: '100%',
                 maxWidth: '1400px',
                 margin: '0 auto',
-                padding: '0 clamp(20px, 5vw, 64px)',
+                padding: isMobile ? '0 20px' : '0 clamp(40px, 5vw, 64px)',
             }}>
 
                 {/* ── Hero Header ── */}
                 <div style={{
-                    paddingTop: 'clamp(120px, 14vw, 180px)',
-                    paddingBottom: 'clamp(64px, 8vw, 100px)',
-                    borderBottom: `1px solid ${isDark ? 'rgba(255,255,255,0.06)' : 'rgba(0,0,0,0.07)'}`,
+                    paddingTop: isMobile ? '120px' : 'clamp(140px, 16vw, 200px)',
+                    paddingBottom: isMobile ? '48px' : 'clamp(64px, 10vw, 120px)',
+                    borderBottom: `1px solid ${isDark ? 'rgba(255,255,255,0.06)' : 'rgba(0,0,0,0.08)'}`,
                     display: 'flex',
                     flexDirection: 'column',
                     alignItems: 'flex-start',
                 }}>
                     <div style={{ marginBottom: '28px' }}>
-                        <GlowBadge>Portfolio</GlowBadge>
+                        <GlowBadge>Selected Portfolio</GlowBadge>
                     </div>
 
-                    {/* Header row: title left, description right */}
                     <div style={{
                         width: '100%',
                         display: 'grid',
-                        gridTemplateColumns: '1fr 1fr',
-                        gap: '48px',
+                        gridTemplateColumns: isMobile ? '1fr' : '1.2fr 0.8fr',
+                        gap: isMobile ? '32px' : '48px',
                         alignItems: 'flex-end',
                     }}>
                         <h1 style={{
-                            fontSize: 'clamp(52px, 7vw, 100px)',
+                            fontSize: isMobile ? '48px' : 'clamp(52px, 8.5vw, 120px)',
                             fontWeight: 800,
-                            lineHeight: 1.0,
-                            letterSpacing: '-0.04em',
+                            lineHeight: 0.9,
+                            letterSpacing: '-0.05em',
                             color: isDark ? '#fff' : '#0a0a0a',
                             margin: 0,
                         }}>
-                            Selected{' '}
-                            <em style={{
-                                fontFamily: "'Instrument Serif', serif",
-                                fontStyle: 'italic',
-                                fontWeight: 400,
-                                opacity: 0.85,
-                            }}>Works</em>.
+                            Extraordinary <br />
+                            <div style={{ display: 'flex', alignItems: 'center', gap: isMobile ? '12px' : '24px', flexWrap: 'nowrap' }}>
+                                <em style={{
+                                    fontFamily: "'Instrument Serif', serif",
+                                    fontStyle: 'italic',
+                                    fontWeight: 400,
+                                    opacity: 0.85,
+                                }}>Solutions</em>
+                                <div style={{
+                                    width: isMobile ? '50px' : 'calc(30px + 6vw)',
+                                    aspectRatio: '1',
+                                    borderRadius: '50% 50% 50% 50%',
+                                    overflow: 'hidden',
+                                    border: `1px solid ${isDark ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.1)'}`,
+                                    flexShrink: 0,
+                                    background: isDark ? '#111' : '#eee',
+                                    boxShadow: isDark ? '0 10px 30px rgba(0,0,0,0.5)' : '0 10px 30px rgba(0,0,0,0.05)',
+                                }}>
+                                    <img
+                                        src="/work.png"
+                                        alt="Creative portrait"
+                                        style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                                    />
+                                </div>
+                                .
+                            </div>
                         </h1>
 
-                        <div style={{ paddingBottom: '8px' }}>
+                        <div style={{ paddingBottom: isMobile ? '0' : '10px' }}>
                             <p style={{
-                                fontSize: '15px',
-                                lineHeight: 1.75,
-                                color: isDark ? 'rgba(255,255,255,0.45)' : 'rgba(0,0,0,0.5)',
-                                margin: '0 0 28px 0',
-                                maxWidth: '400px',
+                                fontSize: isMobile ? '15px' : '16px',
+                                lineHeight: 1.7,
+                                color: isDark ? 'rgba(255,255,255,0.5)' : 'rgba(0,0,0,0.6)',
+                                margin: '0 0 32px 0',
+                                maxWidth: '420px',
                             }}>
-                                A curated collection of digital experiences built with precision, performance, and a focus on lasting brand impact.
+                                We partner with visionary brands to create highly performant, accessible, and emotionally resonant digital products.
                             </p>
 
-                            {/* Count */}
                             <div style={{
                                 display: 'flex',
                                 alignItems: 'center',
-                                gap: '10px',
+                                gap: '12px',
                             }}>
                                 <span style={{
                                     fontSize: '11px',
-                                    letterSpacing: '0.18em',
+                                    letterSpacing: '0.2em',
                                     textTransform: 'uppercase',
-                                    color: isDark ? 'rgba(255,255,255,0.25)' : 'rgba(0,0,0,0.3)',
-                                    fontWeight: 600,
+                                    color: isDark ? 'rgba(255,255,255,0.3)' : 'rgba(0,0,0,0.4)',
+                                    fontWeight: 700,
                                 }}>
                                     {filteredProjects.length} Projects
                                 </span>
-                                <span style={{
+                                <div style={{
                                     width: '32px', height: '1px',
                                     background: isDark ? 'rgba(255,255,255,0.15)' : 'rgba(0,0,0,0.15)',
                                 }} />
                                 <span style={{
                                     fontSize: '11px',
-                                    letterSpacing: '0.18em',
+                                    letterSpacing: '0.2em',
                                     textTransform: 'uppercase',
-                                    color: isDark ? 'rgba(255,255,255,0.25)' : 'rgba(0,0,0,0.3)',
-                                    fontWeight: 600,
+                                    color: isDark ? 'rgba(255,255,255,0.5)' : 'rgba(0,0,0,0.6)',
+                                    fontWeight: 700,
                                 }}>
                                     {selectedCategory}
                                 </span>
@@ -149,16 +176,20 @@ const Works = () => {
                 </div>
 
                 {/* ── Filter Bar ── */}
-                <div style={{
-                    display: 'flex',
-                    justifyContent: 'space-between',
-                    alignItems: 'center',
-                    padding: '28px 0',
-                    borderBottom: `1px solid ${isDark ? 'rgba(255,255,255,0.06)' : 'rgba(0,0,0,0.07)'}`,
-                    marginBottom: '56px',
-                }}>
-                    {/* Category pills — inline on desktop */}
-                    <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
+                <div
+                    className="filter-wrapper"
+                    style={{
+                        padding: '32px 0',
+                        borderBottom: `1px solid ${isDark ? 'rgba(255,255,255,0.06)' : 'rgba(0,0,0,0.08)'}`,
+                        marginBottom: isMobile ? '40px' : '72px',
+                    }}
+                >
+                    <div style={{
+                        display: 'grid',
+                        gridTemplateColumns: isMobile ? 'repeat(2, 1fr)' : 'repeat(5, 1fr)',
+                        gap: '12px',
+                        width: '100%'
+                    }}>
                         {categories.map(cat => {
                             const active = selectedCategory === cat;
                             return (
@@ -166,36 +197,30 @@ const Works = () => {
                                     key={cat}
                                     onClick={() => setSelectedCategory(cat)}
                                     style={{
-                                        padding: '7px 18px',
+                                        padding: '12px 20px',
                                         fontSize: '11px',
-                                        fontWeight: 600,
-                                        letterSpacing: '0.1em',
+                                        fontWeight: 700,
+                                        letterSpacing: '0.12em',
                                         textTransform: 'uppercase',
                                         border: `1px solid ${active
-                                            ? (isDark ? 'rgba(255,255,255,0.5)' : 'rgba(0,0,0,0.5)')
-                                            : (isDark ? 'rgba(255,255,255,0.08)' : 'rgba(0,0,0,0.08)')}`,
-                                        borderRadius: '2px',
+                                            ? (isDark ? 'rgba(255,255,255,0.6)' : 'rgba(0,0,0,0.6)')
+                                            : (isDark ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.1)')}`,
+                                        borderRadius: '8px',
                                         background: active
-                                            ? (isDark ? 'rgba(255,255,255,0.08)' : 'rgba(0,0,0,0.06)')
+                                            ? (isDark ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.05)')
                                             : 'transparent',
                                         color: active
                                             ? (isDark ? '#fff' : '#000')
-                                            : (isDark ? 'rgba(255,255,255,0.35)' : 'rgba(0,0,0,0.4)'),
+                                            : (isDark ? 'rgba(255,255,255,0.4)' : 'rgba(0,0,0,0.5)'),
                                         cursor: 'pointer',
-                                        transition: 'all 0.2s',
+                                        transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+                                        whiteSpace: 'nowrap',
                                         fontFamily: "'Plus Jakarta Sans', sans-serif",
-                                    }}
-                                    onMouseEnter={e => {
-                                        if (!active) {
-                                            e.currentTarget.style.color = isDark ? 'rgba(255,255,255,0.8)' : 'rgba(0,0,0,0.8)';
-                                            e.currentTarget.style.borderColor = isDark ? 'rgba(255,255,255,0.25)' : 'rgba(0,0,0,0.25)';
-                                        }
-                                    }}
-                                    onMouseLeave={e => {
-                                        if (!active) {
-                                            e.currentTarget.style.color = isDark ? 'rgba(255,255,255,0.35)' : 'rgba(0,0,0,0.4)';
-                                            e.currentTarget.style.borderColor = isDark ? 'rgba(255,255,255,0.08)' : 'rgba(0,0,0,0.08)';
-                                        }
+                                        textAlign: 'center',
+                                        display: 'flex',
+                                        alignItems: 'center',
+                                        justifyContent: 'center',
+                                        height: '44px'
                                     }}
                                 >
                                     {cat}
@@ -203,29 +228,17 @@ const Works = () => {
                             );
                         })}
                     </div>
-
-                    <span style={{
-                        fontSize: '11px',
-                        letterSpacing: '0.16em',
-                        textTransform: 'uppercase',
-                        color: isDark ? 'rgba(255,255,255,0.2)' : 'rgba(0,0,0,0.25)',
-                        fontWeight: 600,
-                        flexShrink: 0,
-                        marginLeft: '24px',
-                    }}>
-                        {filteredProjects.length} shown
-                    </span>
                 </div>
 
                 {/* ── Projects Grid ── */}
                 <div style={{
                     display: 'grid',
-                    gridTemplateColumns: 'repeat(3, 1fr)',
-                    gap: '2px',
-                    marginBottom: '120px',
+                    gridTemplateColumns: isMobile ? '1fr' : (isTablet ? 'repeat(2, 1fr)' : 'repeat(3, 1fr)'),
+                    gap: isMobile ? '32px' : '48px', // Increased gap for a more spacious feel
+                    marginBottom: '140px',
                 }}>
                     {filteredProjects.map((project) => (
-                        <ProjectCard key={project.id} project={project} theme={theme} />
+                        <ProjectCard key={project.id} project={project} theme={theme} isMobile={isMobile} />
                     ))}
                 </div>
 
@@ -234,7 +247,7 @@ const Works = () => {
     );
 };
 
-const ProjectCard = ({ project, theme }) => {
+const ProjectCard = ({ project, theme, isMobile }) => {
     const [isHovered, setIsHovered] = useState(false);
     const isDark = theme === 'dark';
 
@@ -246,7 +259,12 @@ const ProjectCard = ({ project, theme }) => {
                 position: 'relative',
                 overflow: 'hidden',
                 cursor: 'pointer',
-                background: isDark ? '#111' : '#e8e8e4',
+                background: isDark ? '#0d0d0d' : '#fff',
+                border: `1px solid ${isDark ? 'rgba(255,255,255,0.06)' : 'rgba(0,0,0,0.08)'}`,
+                borderRadius: isMobile ? '24px' : '32px', // Added radius for desktop cards
+                transition: 'all 0.5s cubic-bezier(0.19, 1, 0.22, 1)',
+                boxShadow: isHovered ? (isDark ? '0 20px 40px rgba(0,0,0,0.4)' : '0 20px 40px rgba(0,0,0,0.05)') : 'none',
+                transform: isHovered ? 'translateY(-8px)' : 'translateY(0)',
             }}
         >
             {/* Image */}
@@ -259,111 +277,116 @@ const ProjectCard = ({ project, theme }) => {
                         height: '100%',
                         objectFit: 'cover',
                         display: 'block',
-                        transform: isHovered ? 'scale(1.07)' : 'scale(1)',
-                        filter: isHovered ? 'brightness(0.35)' : 'brightness(0.85)',
-                        transition: 'transform 0.8s cubic-bezier(0.25,0.46,0.45,0.94), filter 0.6s ease',
+                        transform: isHovered ? 'scale(1.08)' : 'scale(1)',
+                        filter: isHovered ? 'brightness(0.4) saturate(1.2)' : 'brightness(0.95)',
+                        transition: 'transform 1.2s cubic-bezier(0.165, 0.84, 0.44, 1), filter 0.8s ease',
                     }}
                 />
 
-                {/* Hover: View Project */}
+                {/* Hover: View Project Link Indicator (Centered) */}
                 <div style={{
                     position: 'absolute', inset: 0,
                     display: 'flex', alignItems: 'center', justifyContent: 'center',
                     pointerEvents: 'none',
                 }}>
-                    <span style={{
-                        fontFamily: "'Instrument Serif', serif",
-                        fontStyle: 'italic',
-                        fontSize: 'clamp(28px, 3vw, 42px)',
-                        color: '#fff',
+                    <div style={{
+                        width: '80px', height: '80px',
+                        borderRadius: '50%',
+                        background: 'rgba(255,255,255,1)',
+                        display: 'flex', alignItems: 'center', justifyContent: 'center',
+                        color: '#000',
                         opacity: isHovered ? 1 : 0,
-                        transform: isHovered ? 'translateY(0)' : 'translateY(20px)',
-                        transition: 'opacity 0.4s ease, transform 0.4s ease',
-                        letterSpacing: '-0.01em',
+                        transform: isHovered ? 'scale(1)' : 'scale(0.8)',
+                        transition: 'all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1)',
                     }}>
-                        View Project
-                    </span>
+                        <ArrowUpRight size={32} />
+                    </div>
                 </div>
 
-                {/* Category tag — top left */}
+                {/* Category Badge - Small & Elegant */}
                 <div style={{
-                    position: 'absolute', top: '18px', left: '18px',
-                    padding: '5px 12px',
-                    background: 'rgba(0,0,0,0.5)',
-                    backdropFilter: 'blur(8px)',
-                    border: '1px solid rgba(255,255,255,0.12)',
+                    position: 'absolute', top: '24px', left: '24px',
+                    padding: '6px 14px',
+                    background: 'rgba(255,255,255,0.95)',
+                    borderRadius: '2px',
                     opacity: isHovered ? 0 : 1,
-                    transition: 'opacity 0.3s ease',
+                    transition: 'opacity 0.4s ease',
                 }}>
                     <span style={{
                         fontSize: '9px',
-                        fontWeight: 700,
-                        letterSpacing: '0.18em',
+                        fontWeight: 800,
+                        letterSpacing: '0.15em',
                         textTransform: 'uppercase',
-                        color: 'rgba(255,255,255,0.7)',
-                        fontFamily: "'Plus Jakarta Sans', sans-serif",
+                        color: '#000',
                     }}>
                         {project.category}
                     </span>
                 </div>
             </div>
 
-            {/* Details bar */}
+            {/* Content Details */}
             <div style={{
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'space-between',
-                padding: '20px 24px',
-                borderTop: `1px solid ${isDark ? 'rgba(255,255,255,0.05)' : 'rgba(0,0,0,0.06)'}`,
+                padding: isMobile ? '24px' : '28px 32px',
+                borderTop: `1px solid ${isDark ? 'rgba(255,255,255,0.06)' : 'rgba(0,0,0,0.08)'}`,
             }}>
-                <div>
+                <div style={{ minWidth: 0 }}>
                     <h3 style={{
-                        fontSize: 'clamp(16px, 1.8vw, 22px)',
+                        fontSize: isMobile ? '20px' : '24px',
                         fontWeight: 700,
                         letterSpacing: '-0.025em',
                         color: isDark ? '#fff' : '#0a0a0a',
-                        margin: '0 0 3px',
-                        fontFamily: "'Plus Jakarta Sans', sans-serif",
+                        margin: '0 0 6px',
+                        whiteSpace: 'nowrap',
+                        overflow: 'hidden',
+                        textOverflow: 'ellipsis'
                     }}>
                         {project.name}
                     </h3>
-                    <span style={{
-                        fontSize: '10px',
+                    <p style={{
+                        fontSize: '11px',
                         fontWeight: 600,
-                        letterSpacing: '0.16em',
+                        letterSpacing: '0.15em',
                         textTransform: 'uppercase',
-                        color: isDark ? 'rgba(255,255,255,0.3)' : 'rgba(0,0,0,0.35)',
+                        color: isDark ? 'rgba(255,255,255,0.3)' : 'rgba(0,0,0,0.4)',
+                        margin: 0
                     }}>
                         {project.category}
-                    </span>
+                    </p>
                 </div>
 
                 <a
                     href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={(e) => e.stopPropagation()}
                     style={{
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
-                        width: '38px',
-                        height: '38px',
-                        border: `1px solid ${isDark ? 'rgba(255,255,255,0.12)' : 'rgba(0,0,0,0.12)'}`,
-                        color: isDark ? 'rgba(255,255,255,0.6)' : 'rgba(0,0,0,0.6)',
+                        width: '44px',
+                        height: '44px',
+                        borderRadius: '50%',
+                        border: `1px solid ${isDark ? 'rgba(255,255,255,0.15)' : 'rgba(0,0,0,0.15)'}`,
+                        color: isDark ? '#fff' : '#000',
                         textDecoration: 'none',
-                        transition: 'all 0.25s ease',
+                        transition: 'all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1)',
                         flexShrink: 0,
                     }}
                     onMouseEnter={e => {
                         e.currentTarget.style.background = isDark ? '#fff' : '#000';
                         e.currentTarget.style.color = isDark ? '#000' : '#fff';
-                        e.currentTarget.style.borderColor = isDark ? '#fff' : '#000';
+                        e.currentTarget.style.transform = 'translateY(-4px)';
                     }}
                     onMouseLeave={e => {
                         e.currentTarget.style.background = 'transparent';
-                        e.currentTarget.style.color = isDark ? 'rgba(255,255,255,0.6)' : 'rgba(0,0,0,0.6)';
-                        e.currentTarget.style.borderColor = isDark ? 'rgba(255,255,255,0.12)' : 'rgba(0,0,0,0.12)';
+                        e.currentTarget.style.color = isDark ? '#fff' : '#000';
+                        e.currentTarget.style.transform = 'translateY(0)';
                     }}
                 >
-                    <ArrowUpRight size={15} strokeWidth={2} />
+                    <ArrowUpRight size={20} />
                 </a>
             </div>
         </div>

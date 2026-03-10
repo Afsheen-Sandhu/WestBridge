@@ -6,6 +6,7 @@ import About from './pages/About';
 import Works from './pages/Works';
 import Services from './pages/Services';
 import Blogs from './pages/Blogs';
+import BlogDetail from './pages/BlogDetail';
 import Templates from './pages/Templates';
 import Approach from './pages/Approach';
 import { Careers, Studio } from './pages/OtherPages';
@@ -20,6 +21,7 @@ function App() {
           <Route path="/works" element={<Works />} />
           <Route path="/services" element={<Services />} />
           <Route path="/blogs" element={<Blogs />} />
+          <Route path="/blogs/:slug" element={<BlogDetail />} />
           <Route path="/templates" element={<Templates />} />
           <Route path="/approach" element={<Approach />} />
           <Route path="/careers" element={<Careers />} />

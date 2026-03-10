@@ -4,16 +4,21 @@ import { useTheme } from '../context/ThemeContext';
 
 // Replace these with your actual project image paths under /public
 const PROJECT_IMAGES = [
-  '/canvas-image.png',
-  '/VisuvateBG2.avif',
-  '/logo-black.png',
-  '/logo-white.jpg',
-  'https://picsum.photos/seed/proj1/420/280',
-  'https://picsum.photos/seed/proj2/420/280',
-  'https://picsum.photos/seed/proj3/420/280',
-  'https://picsum.photos/seed/proj4/420/280',
-  'https://picsum.photos/seed/proj5/420/280',
-  'https://picsum.photos/seed/proj6/420/280',
+  '/img1.png',
+  '/img5.png',
+  '/img17.png',
+  '/img24.png',
+  '/img8.png',
+  '/img2.png',
+  '/img13.png',
+  '/img9.png',
+  '/img14.png',
+  '/img23.png',
+  '/img12.png',
+  '/img3.png',
+  '/img18.png',
+  '/img20.png',
+  '/img4.png',
 ];
 
 const CARD_WIDTH = 380;
