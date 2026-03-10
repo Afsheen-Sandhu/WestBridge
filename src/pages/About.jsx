@@ -35,74 +35,127 @@ const About = () => {
             title: "Performance",
             description: "True beauty lies in excellence. A project is only complete when it operates as flawlessly as it looks—fast, secure, and reliable.",
             align: "left"
+        },
+        {
+            title: "Partnership",
+            description: "We see every engagement as a long-term collaboration—communicating openly, sharing context, and making decisions together so the work continues to deliver value well beyond launch.",
+            align: "right"
         }
     ];
 
     return (
-        <div className="w-full transition-colors duration-400" style={{ background: theme === 'dark' ? '#000' : '#fff' }}>
+        <div
+            className="w-full transition-colors duration-400"
+            style={{ background: theme === 'dark' ? '#000' : '#fff' }}
+        >
             <section
-                className="w-full flex flex-col items-center"
+                className="w-full"
                 style={{
-                    padding: 'clamp(140px, 15vw, 180px) 0 clamp(80px, 10vw, 120px)',
+                    paddingTop: 180,
+                    paddingBottom: 96,
                 }}
             >
-                {/* Text Content Container */}
-                <div className="w-full max-w-[1000px] px-8 flex flex-col items-center text-center">
-
-                    <div className="flex justify-center w-full mb-8">
-                        <GlowBadge>Our Story</GlowBadge>
-                    </div>
-
-                    <h1
-                        className="mb-12 leading-[1.1] text-center"
-                        style={{
-                            fontSize: 'clamp(40px, 6vw, 72px)',
-                            fontWeight: 800,
-                            color: theme === 'dark' ? '#fff' : '#000',
-                            letterSpacing: '-0.04em'
-                        }}
-                    >
-                        About Our <br />
-                        <span className="font-accent italic font-normal opacity-90">Journey</span>
-                    </h1>
-
-                    <div className="flex flex-col gap-14 items-center w-full mb-32">
-                        {/* Lead Text */}
-                        <p
-                            className="text-lg md:text-2xl leading-relaxed font-medium text-center"
+                <div className="layout-outer">
+                    <div className="layout-inner">
+                        {/* Top story block – center aligned, clear of navbar */}
+                        <div
                             style={{
-                                color: theme === 'dark' ? 'rgba(255,255,255,0.95)' : 'rgba(0,0,0,0.9)',
-                                letterSpacing: '-0.02em',
-                                maxWidth: '850px'
+                                maxWidth: 960,
+                                marginLeft: 'auto',
+                                marginRight: 'auto',
+                                textAlign: 'center',
                             }}
                         >
-                            We are a Canada-based digital solutions company dedicated to building modern, high-performing websites and digital experiences for businesses around the world. Our team specializes in both creative design and functional development, ensuring every project is visually engaging, technically robust, and optimized for growth.
-                        </p>
+                            <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 32 }}>
+                                <GlowBadge>Our Story</GlowBadge>
+                            </div>
 
-                        {/* Founder/Secondary Text */}
-                        <div className="flex flex-col gap-10 items-center max-w-[850px]">
-                            <p
-                                className="text-base md:text-lg leading-relaxed opacity-60 text-center"
-                                style={{ color: theme === 'dark' ? '#fff' : '#000' }}
+                            <h1
+                                style={{
+                                    fontSize: 'clamp(40px, 5.4vw, 70px)',
+                                    fontWeight: 800,
+                                    color: theme === 'dark' ? '#fff' : '#000',
+                                    letterSpacing: '-0.04em',
+                                    lineHeight: 1.08,
+                                    marginTop: 24,
+                                    marginBottom: 40,
+                                }}
                             >
-                                From custom web development to powerful no-code and CMS platforms, we provide tailored solutions using technologies like WordPress, Webflow, and Shopify. Whether it's a business website, an e-commerce store, or a scalable web platform, we focus on delivering solutions that are fast, secure, and user-friendly.
+                                About Our <br />
+                                <span className="font-accent italic font-normal opacity-90">
+                                    Journey
+                                </span>
+                            </h1>
+
+                            <p
+                                style={{
+                                    fontSize: 'clamp(1.125rem, 2vw, 1.5rem)',
+                                    lineHeight: 1.6,
+                                    fontWeight: 500,
+                                    color: theme === 'dark'
+                                        ? 'rgba(255,255,255,0.95)'
+                                        : 'rgba(0,0,0,0.9)',
+                                    letterSpacing: '-0.02em',
+                                    maxWidth: 820,
+                                    marginLeft: 'auto',
+                                    marginRight: 'auto',
+                                    textAlign: 'center',
+                                }}
+                            >
+                                We are a Canada-based digital solutions company dedicated to
+                                building modern, high-performing websites and digital experiences
+                                for businesses around the world. Our team specializes in both
+                                creative design and functional development, ensuring every project
+                                is visually engaging, technically robust, and optimized for growth.
                             </p>
 
-                            <div className="flex flex-col items-center">
+                            <div
+                                style={{
+                                    marginTop: 48,
+                                    maxWidth: 840,
+                                    marginLeft: 'auto',
+                                    marginRight: 'auto',
+                                    textAlign: 'center',
+                                }}
+                            >
                                 <p
-                                    className="text-base md:text-lg leading-relaxed font-medium text-center"
                                     style={{
-                                        color: theme === 'dark' ? 'rgba(255,255,255,0.8)' : 'rgba(0,0,0,0.7)',
+                                        fontSize: 'clamp(1rem, 1.5vw, 1.125rem)',
+                                        lineHeight: 1.7,
+                                        color: theme === 'dark' ? 'rgba(255,255,255,0.7)' : 'rgba(0,0,0,0.7)',
+                                        marginBottom: 40,
+                                    }}
+                                >
+                                    From custom web development to powerful no-code and CMS
+                                    platforms, we provide tailored solutions using technologies like
+                                    WordPress, Webflow, and Shopify. Whether it's a business
+                                    website, an e-commerce store, or a scalable web platform, we
+                                    focus on delivering solutions that are fast, secure, and
+                                    user-friendly.
+                                </p>
+
+                                <p
+                                    style={{
+                                        fontSize: 'clamp(1rem, 1.5vw, 1.125rem)',
+                                        lineHeight: 1.7,
+                                        fontWeight: 500,
+                                        color: theme === 'dark'
+                                            ? 'rgba(255,255,255,0.8)'
+                                            : 'rgba(0,0,0,0.7)',
+                                        textAlign: 'center',
                                     }}
                                 >
                                     <span className="inline align-middle">
-                                        Founded by
-                                        {' '}
+                                        Founded by{' '}
                                         <span
                                             className="inline-flex items-center justify-center p-[2px] rounded-full border border-dashed mx-3 align-middle"
                                             style={{
-                                                borderColor: theme === 'dark' ? 'rgba(255,255,255,0.25)' : 'rgba(0,0,0,0.2)',
-                                                background: theme === 'dark' ? 'rgba(255,255,255,0.06)' : 'rgba(0,0,0,0.04)'
+                                                borderColor: theme === 'dark'
+                                                    ? 'rgba(255,255,255,0.25)'
+                                                    : 'rgba(0,0,0,0.2)',
+                                                background: theme === 'dark'
+                                                    ? 'rgba(255,255,255,0.06)'
+                                                    : 'rgba(0,0,0,0.04)',
                                             }}
                                         >
                                             <img
@@ -111,7 +164,6 @@ const About = () => {
                                                 className="w-8 h-8 rounded-full object-cover"
                                             />
                                         </span>
-                                        {' '}
                                         <a
                                             href="https://www.linkedin.com/in/asgharjunaid/"
                                             target="_blank"
@@ -123,123 +175,118 @@ const About = () => {
                                                 fontFamily: "'Instrument Serif', serif",
                                                 fontStyle: 'italic',
                                                 fontSize: '1.25em',
-                                                textDecoration: 'none'
+                                                textDecoration: 'none',
                                             }}
                                         >
                                             Junaid
-                                        </a>,
-                                        {' '}WestBridge was created from a passion for visual innovation and a belief in designing with detail. Every project reflects a commitment to clarity, purpose, and precision, values that define both the work and the process behind it.
+                                        </a>
+                                        , WestBridge was created from a passion for visual
+                                        innovation and a belief in designing with detail. Every
+                                        project reflects a commitment to clarity, purpose, and
+                                        precision, values that define both the work and the process
+                                        behind it.
                                     </span>
                                 </p>
                             </div>
                         </div>
-                    </div>
 
-                    {/* Our Values Section */}
-                    <div className="w-full max-w-[900px] flex flex-col items-center mt-60 pt-20 border-t border-white/[0.05]">
-                        <h2
-                            className="mb-24 text-4xl font-bold tracking-tight text-center"
-                            style={{ color: theme === 'dark' ? '#fff' : '#000' }}
-                        >
-                            Our Values
-                        </h2>
+                        {/* Wide image block */}
+                        <div className="mt-20 md:mt-24">
+                            <div className="relative w-full overflow-hidden border border-white/10">
+                                <img
+                                    src="/about2.png"
+                                    alt="WestBridge studio"
+                                    className="w-full h-full object-cover"
+                                    style={{
+                                        maxHeight: '520px',
+                                        opacity: theme === 'dark'
+                                            ? (imgHover ? 0.9 : 0.6)
+                                            : (imgHover ? 0.95 : 0.8),
+                                        filter: theme === 'dark'
+                                            ? (imgHover
+                                                ? 'grayscale(0%) contrast(1.15) brightness(1.1)'
+                                                : 'grayscale(100%) contrast(1.05)')
+                                            : (imgHover
+                                                ? 'grayscale(0%) contrast(1.05) brightness(1.05)'
+                                                : 'grayscale(90%) contrast(0.95)'),
+                                        transition:
+                                            'all 0.7s cubic-bezier(0.23, 1, 0.32, 1)',
+                                    }}
+                                    onMouseEnter={() => setImgHover(true)}
+                                    onMouseLeave={() => setImgHover(false)}
+                                />
+                                <div
+                                    className="absolute inset-0 pointer-events-none"
+                                    style={{
+                                        background: theme === 'dark'
+                                            ? 'radial-gradient(circle at top, rgba(255,255,255,0.06), transparent 55%)'
+                                            : 'radial-gradient(circle at top, rgba(0,0,0,0.06), transparent 55%)',
+                                        opacity: imgHover ? 0.2 : 0.6,
+                                        transition: 'opacity 0.7s ease',
+                                    }}
+                                />
+                            </div>
+                        </div>
 
-                        <div className="relative w-full">
-                            {/* Central Vertical Line */}
-                            <div
-                                className="absolute top-0 bottom-0 w-[1px]"
-                                style={{
-                                    background: theme === 'dark' ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.1)',
-                                    left: 'var(--line-pos, 50%)'
-                                }}
-                            />
+                        {/* Our Values – new design */}
+                        <div className="mt-24 md:mt-32">
+                            <div className="flex flex-col items-center text-center">
+                                <GlowBadge>What guides our work</GlowBadge>
+                                <h2
+                                    className="mt-6 text-3xl md:text-4xl font-bold tracking-tight"
+                                    style={{ color: theme === 'dark' ? '#fff' : '#000' }}
+                                >
+                                    Our Values
+                                </h2>
+                                <p
+                                    className="mt-4 text-sm md:text-base max-w-[560px]"
+                                    style={{
+                                        color: theme === 'dark'
+                                            ? 'rgba(255,255,255,0.6)'
+                                            : 'rgba(0,0,0,0.6)',
+                                        paddingTop: 5,
+                                        paddingBottom: 5,
+                                    }}
+                                >
+                                    The principles we return to on every project—from first
+                                    strategy call to final handoff.
+                                </p>
+                            </div>
 
-                            <style>
-                                {`
-                                    @media (max-width: 768px) {
-                                        :root { --line-pos: 20px; }
-                                    }
-                                    @media (min-width: 769px) {
-                                        :root { --line-pos: 50%; }
-                                    }
-                                `}
-                            </style>
-
-                            <div className="relative w-full flex flex-col items-center">
-                                {values.map((v, i) => (
-                                    <div
-                                        key={i}
-                                        className={`relative w-full flex mb-28 last:mb-0 
-                                            flex-col md:flex-row
-                                            ${v.align === 'left' ? 'md:justify-start' : 'md:justify-end'}
-                                        `}
-                                    >
-                                        {/* Tick Point Line */}
-                                        <div
-                                            className={`absolute h-[1px] w-6 
-                                                top-[14px] md:top-[18px]
-                                                ${v.align === 'left' ? 'md:-translate-x-full' : 'translate-x-0'}
-                                                left-[var(--line-pos)]
-                                            `}
+                            <div className="mt-16 md:mt-20 grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12">
+                                {values.map((v, index) => (
+                                    <div key={index}>
+                                        <h3
                                             style={{
-                                                background: theme === 'dark' ? 'rgba(255,255,255,0.4)' : 'rgba(0,0,0,0.35)',
+                                                fontSize: '1.15rem',
+                                                fontWeight: 600,
+                                                letterSpacing: '-0.02em',
+                                                marginBottom: 8,
+                                                color:
+                                                    theme === 'dark'
+                                                        ? '#fff'
+                                                        : '#0a0a0a',
                                             }}
-                                        />
-
-                                        <div className={`
-                                            w-full md:w-[42%] 
-                                            pl-12 md:pl-0
-                                            ${v.align === 'left' ? 'md:pr-12 md:text-right' : 'md:pl-12 md:text-left'}
-                                            text-left
-                                        `}>
-                                            <h3
-                                                className="text-2xl md:text-3xl font-bold mb-4 leading-none"
-                                                style={{ color: theme === 'dark' ? '#fff' : '#000' }}
-                                            >
-                                                {v.title}
-                                            </h3>
-                                            <p
-                                                className="text-sm md:text-base leading-relaxed opacity-60"
-                                                style={{ color: theme === 'dark' ? '#fff' : '#000' }}
-                                            >
-                                                {v.description}
-                                            </p>
-                                        </div>
+                                        >
+                                            {v.title}
+                                        </h3>
+                                        <p
+                                            style={{
+                                                fontSize: '0.95rem',
+                                                lineHeight: 1.7,
+                                                color:
+                                                    theme === 'dark'
+                                                        ? 'rgba(255,255,255,0.7)'
+                                                        : 'rgba(0,0,0,0.7)',
+                                            }}
+                                        >
+                                            {v.description}
+                                        </p>
                                     </div>
                                 ))}
                             </div>
                         </div>
                     </div>
-                </div>
-
-                {/* Landscape Image - Full Width, Sharp Corners with Glow Effect */}
-                <div
-                    className="relative w-full aspect-[21/8] md:aspect-[21/6] overflow-hidden cursor-pointer mt-60"
-                    onMouseEnter={() => setImgHover(true)}
-                    onMouseLeave={() => setImgHover(false)}
-                >
-                    <img
-                        src="/about2.png"
-                        alt="WestBridge Full Width"
-                        className="w-full h-full object-cover"
-                        style={{
-                            opacity: theme === 'dark' ? (imgHover ? 0.85 : 0.5) : (imgHover ? 0.95 : 0.8),
-                            filter: theme === 'dark'
-                                ? (imgHover ? 'grayscale(0%) contrast(1.2) brightness(1.2) drop-shadow(0 0 30px rgba(255,255,255,0.25))' : 'grayscale(100%) contrast(1.1)')
-                                : (imgHover ? 'grayscale(0%) contrast(1.1) brightness(1.1)' : 'grayscale(100%) contrast(0.9)'),
-                            transition: 'all 0.8s cubic-bezier(0.23, 1, 0.32, 1)',
-                        }}
-                    />
-                    <div
-                        className="absolute inset-0 pointer-events-none"
-                        style={{
-                            background: theme === 'dark'
-                                ? 'linear-gradient(to top, rgba(0,0,0,0.5), transparent)'
-                                : 'linear-gradient(to top, rgba(0,0,0,0.05), transparent)',
-                            opacity: imgHover ? 0.2 : 1,
-                            transition: 'opacity 0.8s ease'
-                        }}
-                    />
                 </div>
             </section>
         </div>

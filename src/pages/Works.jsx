@@ -59,6 +59,7 @@ const Works = () => {
         : projects.filter(p => p.category === selectedCategory);
 
     const isMobile = windowWidth <= 768;
+    const isSmallMobile = windowWidth <= 480;
     const isTablet = windowWidth <= 1024 && windowWidth > 768;
 
     return (
@@ -97,9 +98,9 @@ const Works = () => {
                         alignItems: 'flex-end',
                     }}>
                         <h1 style={{
-                            fontSize: isMobile ? '48px' : 'clamp(52px, 8.5vw, 120px)',
+                            fontSize: isSmallMobile ? '34px' : (isMobile ? '42px' : 'clamp(52px, 8.5vw, 120px)'),
                             fontWeight: 800,
-                            lineHeight: 0.9,
+                            lineHeight: isSmallMobile ? 1 : 0.9,
                             letterSpacing: '-0.05em',
                             color: isDark ? '#fff' : '#0a0a0a',
                             margin: 0,
@@ -132,9 +133,9 @@ const Works = () => {
                             </div>
                         </h1>
 
-                        <div style={{ paddingBottom: isMobile ? '0' : '10px' }}>
+                            <div style={{ paddingBottom: isMobile ? '0' : '10px' }}>
                             <p style={{
-                                fontSize: isMobile ? '15px' : '16px',
+                                fontSize: isSmallMobile ? '14px' : (isMobile ? '15px' : '16px'),
                                 lineHeight: 1.7,
                                 color: isDark ? 'rgba(255,255,255,0.5)' : 'rgba(0,0,0,0.6)',
                                 margin: '0 0 32px 0',
@@ -179,15 +180,16 @@ const Works = () => {
                 <div
                     className="filter-wrapper"
                     style={{
-                        padding: '32px 0',
+                        padding: '24px 0',
                         borderBottom: `1px solid ${isDark ? 'rgba(255,255,255,0.06)' : 'rgba(0,0,0,0.08)'}`,
                         marginBottom: isMobile ? '40px' : '72px',
                     }}
                 >
                     <div style={{
-                        display: 'grid',
-                        gridTemplateColumns: isMobile ? 'repeat(2, 1fr)' : 'repeat(5, 1fr)',
-                        gap: '12px',
+                        display: isSmallMobile ? 'flex' : 'grid',
+                        gridTemplateColumns: !isSmallMobile && (isMobile ? 'repeat(2, 1fr)' : 'repeat(5, 1fr)'),
+                        flexWrap: isSmallMobile ? 'wrap' : 'nowrap',
+                        gap: isSmallMobile ? '8px' : '12px',
                         width: '100%'
                     }}>
                         {categories.map(cat => {
@@ -197,15 +199,15 @@ const Works = () => {
                                     key={cat}
                                     onClick={() => setSelectedCategory(cat)}
                                     style={{
-                                        padding: '12px 20px',
-                                        fontSize: '11px',
+                                        padding: isSmallMobile ? '10px 14px' : '12px 20px',
+                                        fontSize: isSmallMobile ? '10px' : '11px',
                                         fontWeight: 700,
-                                        letterSpacing: '0.12em',
+                                        letterSpacing: isSmallMobile ? '0.1em' : '0.12em',
                                         textTransform: 'uppercase',
                                         border: `1px solid ${active
                                             ? (isDark ? 'rgba(255,255,255,0.6)' : 'rgba(0,0,0,0.6)')
                                             : (isDark ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.1)')}`,
-                                        borderRadius: '8px',
+                                        borderRadius: '999px',
                                         background: active
                                             ? (isDark ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.05)')
                                             : 'transparent',
@@ -214,13 +216,14 @@ const Works = () => {
                                             : (isDark ? 'rgba(255,255,255,0.4)' : 'rgba(0,0,0,0.5)'),
                                         cursor: 'pointer',
                                         transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
-                                        whiteSpace: 'nowrap',
+                                        whiteSpace: isSmallMobile ? 'normal' : 'nowrap',
                                         fontFamily: "'Plus Jakarta Sans', sans-serif",
                                         textAlign: 'center',
                                         display: 'flex',
                                         alignItems: 'center',
                                         justifyContent: 'center',
-                                        height: '44px'
+                                        height: '40px',
+                                        minWidth: isSmallMobile ? 'auto' : 'unset',
                                     }}
                                 >
                                     {cat}

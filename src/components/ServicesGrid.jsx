@@ -158,7 +158,11 @@ const ServicesGrid = () => {
                 />
 
                 <div className="relative h-full w-full flex flex-col items-center justify-center gap-5 px-6 text-center">
-                  <Icon size={26} color={theme === 'dark' ? 'rgba(255,255,255,0.92)' : 'rgba(0,0,0,0.8)'} strokeWidth={1.8} />
+                  <Icon
+                    size={26}
+                    color={theme === 'dark' ? 'rgba(255,255,255,0.92)' : 'rgba(0,0,0,0.8)'}
+                    strokeWidth={1.8}
+                  />
                   <div
                     className="font-body"
                     style={{
