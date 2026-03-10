@@ -1,7 +1,11 @@
 import React, { useMemo, useState } from 'react';
+import { useTheme } from '../context/ThemeContext';
+
 
 const PlatformFlexSection = () => {
+  const { theme } = useTheme();
   const [hoveredIdx, setHoveredIdx] = useState(null);
+
 
   const logos = useMemo(
     () => [
@@ -20,18 +24,22 @@ const PlatformFlexSection = () => {
   return (
     <section
       id="platforms"
-      className="w-full bg-black relative"
-      style={{ padding: 'clamp(60px, 8vw, 120px) 0 clamp(80px, 12vw, 160px)', overflowX: 'clip' }}
+      className="w-full relative transition-colors duration-400"
+      style={{
+        background: theme === 'dark' ? '#000' : '#fff',
+        padding: 'clamp(60px, 8vw, 120px) 0 clamp(80px, 12vw, 160px)',
+        overflowX: 'clip'
+      }}
     >
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-stretch">
         {/* Left: video card */}
         <div
-          className="relative overflow-hidden"
+          className="relative overflow-hidden transition-all duration-400"
           style={{
             borderRadius: 18,
-            border: '1px solid rgba(255,255,255,0.10)',
-            background: 'rgba(255,255,255,0.02)',
-            boxShadow: '0 32px 64px -36px rgba(0,0,0,0.7)',
+            border: `1px solid ${theme === 'dark' ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.1)'}`,
+            background: theme === 'dark' ? 'rgba(255,255,255,0.02)' : 'rgba(0,0,0,0.02)',
+            boxShadow: theme === 'dark' ? '0 32px 64px -36px rgba(0,0,0,0.7)' : '0 32px 64px -36px rgba(0,0,0,0.15)',
             minHeight: 260,
           }}
         >
@@ -47,12 +55,11 @@ const PlatformFlexSection = () => {
             <source src="/file.mp4" type="video/mp4" />
           </video>
 
-          {/* subtle overlay to match dark UI */}
+          {/* subtle overlay to match UI */}
           <div
             className="absolute inset-0"
             style={{
-              background:
-                'radial-gradient(90% 80% at 20% 20%, rgba(0,0,0,0.06) 0%, rgba(0,0,0,0.38) 55%, rgba(0,0,0,0.62) 100%)',
+              background: 'radial-gradient(90% 80% at 20% 20%, rgba(0,0,0,0.06) 0%, rgba(0,0,0,0.38) 55%, rgba(0,0,0,0.62) 100%)',
             }}
           />
 
@@ -62,8 +69,9 @@ const PlatformFlexSection = () => {
               style={{ paddingLeft: '32px', paddingRight: '32px', paddingTop: '36px', paddingBottom: '36px' }}
             >
               <h3
-                className="text-white font-body text-left"
+                className="font-body text-left"
                 style={{
+                  color: '#fff', // Always white as it sits on video/dark gradient overlay
                   fontWeight: 700,
                   letterSpacing: '-0.03em',
                   lineHeight: 1.08,
@@ -95,7 +103,7 @@ const PlatformFlexSection = () => {
                 style={{
                   padding: '12px 24px',
                   fontSize: '14px',
-                  background: 'rgba(255,255,255,0.10)',
+                  background: 'rgba(255,255,255,0.1)',
                   color: '#fff',
                   border: '1px solid rgba(255,255,255,0.14)',
                   backdropFilter: 'blur(12px)',
@@ -106,7 +114,7 @@ const PlatformFlexSection = () => {
                   e.currentTarget.style.transform = 'translateY(-2px)';
                 }}
                 onMouseLeave={(e) => {
-                  e.currentTarget.style.background = 'rgba(255,255,255,0.10)';
+                  e.currentTarget.style.background = 'rgba(255,255,255,0.1)';
                   e.currentTarget.style.transform = 'translateY(0)';
                 }}
               >
@@ -118,12 +126,12 @@ const PlatformFlexSection = () => {
 
         {/* Right: logos grid card */}
         <div
-          className="relative overflow-hidden"
+          className="relative overflow-hidden transition-all duration-400"
           style={{
             borderRadius: 18,
-            border: '1px solid rgba(255,255,255,0.10)',
-            background: 'rgba(255,255,255,0.02)',
-            boxShadow: '0 32px 64px -36px rgba(0,0,0,0.7)',
+            border: `1px solid ${theme === 'dark' ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.1)'}`,
+            background: theme === 'dark' ? 'rgba(255,255,255,0.02)' : 'rgba(0,0,0,0.02)',
+            boxShadow: theme === 'dark' ? '0 32px 64px -36px rgba(0,0,0,0.7)' : '0 32px 64px -36px rgba(0,0,0,0.15)',
           }}
         >
           <div className="grid grid-cols-2 md:grid-cols-4">
@@ -132,23 +140,32 @@ const PlatformFlexSection = () => {
               return (
                 <div
                   key={item.label}
-                  className="flex items-center justify-center border-white/10 border-b border-r [&:nth-child(2n)]:border-r-0 md:[&:nth-child(2n)]:border-r md:[&:nth-child(4n)]:border-r-0 [&:nth-last-child(-n+2)]:border-b-0 md:[&:nth-last-child(-n+4)]:border-b-0"
+                  className="flex items-center justify-center transition-all duration-400"
                   onMouseEnter={() => setHoveredIdx(idx)}
                   onMouseLeave={() => setHoveredIdx(null)}
                   style={{
                     height: 132,
-                    background: isHovered ? 'rgba(255,255,255,0.03)' : 'transparent',
+                    background: isHovered
+                      ? (theme === 'dark' ? 'rgba(255,255,255,0.03)' : 'rgba(0,0,0,0.03)')
+                      : 'transparent',
+                    borderRight: `1px solid ${theme === 'dark' ? 'rgba(255,255,255,0.08)' : 'rgba(0,0,0,0.08)'}`,
+                    borderBottom: `1px solid ${theme === 'dark' ? 'rgba(255,255,255,0.08)' : 'rgba(0,0,0,0.08)'}`,
                     transition: 'background 200ms ease',
+                    display: 'flex', // Ensure flex container
+                    alignItems: 'center', // Center vertically
+                    justifyContent: 'center', // Center horizontally
                   }}
                 >
                   <div
                     className="font-body"
                     style={{
-                      color: isHovered ? 'rgba(255,255,255,0.9)' : 'rgba(255,255,255,0.65)',
+                      color: isHovered
+                        ? (theme === 'dark' ? '#fff' : '#000')
+                        : (theme === 'dark' ? 'rgba(255,255,255,0.65)' : 'rgba(0,0,0,0.6)'),
                       fontWeight: 700,
                       letterSpacing: '-0.02em',
                       fontSize: 16,
-                      opacity: 0.95,
+                      textAlign: 'center', // Center text
                       transition: 'color 200ms ease',
                     }}
                   >

@@ -1,4 +1,6 @@
 import React from 'react';
+import { useTheme } from '../context/ThemeContext';
+
 
 // Project images: each is a single image (e.g. laptop on desk with project on screen). Replace with your own.
 const PROJECT_SLIDES = [
@@ -9,14 +11,18 @@ const PROJECT_SLIDES = [
 ];
 
 const ProjectSlide = ({ project }) => {
+  const { theme } = useTheme();
   return (
     <div className="w-full flex justify-center px-4 sm:px-6">
       <div className="w-full max-w-6xl">
         <div
-          className="relative overflow-hidden bg-neutral-900/50"
+          className="relative overflow-hidden transition-all duration-400"
           style={{
             borderRadius: '20px',
-            boxShadow: '0 32px 64px -12px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.06)',
+            background: theme === 'dark' ? 'rgba(23, 23, 23, 0.5)' : 'rgba(245, 245, 245, 0.8)',
+            boxShadow: theme === 'dark'
+              ? '0 32px 64px -12px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.06)'
+              : '0 32px 64px -12px rgba(0,0,0,0.1), 0 0 0 1px rgba(0,0,0,0.06)',
           }}
         >
           <div
@@ -37,8 +43,12 @@ const ProjectSlide = ({ project }) => {
 };
 
 const OurWorksSlides = () => {
+  const { theme } = useTheme();
   return (
-    <section className="relative bg-black pt-6 pb-[96px] md:pt-8 md:pb-[160px] lg:pb-[240px]">
+    <section
+      className="relative pt-6 pb-[96px] md:pt-8 md:pb-[160px] lg:pb-[240px] transition-colors duration-400"
+      style={{ background: theme === 'dark' ? '#000' : '#fff' }}
+    >
       <div className="flex flex-col items-center w-full gap-y-12 sm:gap-y-32">
         {PROJECT_SLIDES.map((project, index) => (
           <ProjectSlide key={index} project={project} />
@@ -52,13 +62,13 @@ const OurWorksSlides = () => {
           style={{
             padding: '12px 24px',
             fontSize: '14px',
-            background: 'rgba(255,255,255,0.06)',
-            color: '#fff',
-            border: '1px solid rgba(255,255,255,0.15)',
+            background: theme === 'dark' ? 'rgba(255,255,255,0.06)' : 'rgba(0,0,0,0.04)',
+            color: theme === 'dark' ? '#fff' : '#000',
+            border: `1px solid ${theme === 'dark' ? 'rgba(255,255,255,0.15)' : 'rgba(0,0,0,0.15)'}`,
             backdropFilter: 'blur(12px)',
           }}
-          onMouseEnter={e => { e.currentTarget.style.background = 'rgba(255,255,255,0.12)'; }}
-          onMouseLeave={e => { e.currentTarget.style.background = 'rgba(255,255,255,0.06)'; }}
+          onMouseEnter={e => { e.currentTarget.style.background = theme === 'dark' ? 'rgba(255,255,255,0.12)' : 'rgba(0,0,0,0.08)'; }}
+          onMouseLeave={e => { e.currentTarget.style.background = theme === 'dark' ? 'rgba(255,255,255,0.06)' : 'rgba(0,0,0,0.04)'; }}
         >
           View all projects
         </button>

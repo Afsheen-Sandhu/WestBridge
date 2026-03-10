@@ -1,4 +1,6 @@
 import React, { useRef, useState, useEffect } from 'react';
+import { useTheme } from '../context/ThemeContext';
+
 
 // Replace these with your actual project image paths under /public
 const PROJECT_IMAGES = [
@@ -19,8 +21,10 @@ const GAP = 24;
 const SCROLL_OFFSET = 220; // how far row 2/3 move at full scroll
 
 const ProjectCarousels = () => {
+  const { theme } = useTheme();
   const sectionRef = useRef(null);
   const [scrollProgress, setScrollProgress] = useState(0);
+
 
   useEffect(() => {
     const section = sectionRef.current;
@@ -57,10 +61,12 @@ const ProjectCarousels = () => {
       {[...images, ...images].map((src, i) => (
         <div
           key={i}
-          className="shrink-0 overflow-hidden rounded-xl bg-white/5 border border-white/10"
+          className="shrink-0 overflow-hidden rounded-xl transition-all duration-400"
           style={{
             width: CARD_WIDTH,
             height: rowHeight,
+            background: theme === 'dark' ? 'rgba(255,255,255,0.05)' : 'rgba(0,0,0,0.05)',
+            border: `1px solid ${theme === 'dark' ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.1)'}`,
           }}
         >
           <img
@@ -84,8 +90,8 @@ const ProjectCarousels = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative bg-black pt-[180px] md:pt-[240px] lg:pt-[300px] pb-24 overflow-hidden"
-      style={{ minHeight: '100vh', marginTop: '120px' }}
+      className="relative pt-[180px] md:pt-[240px] lg:pt-[300px] pb-24 overflow-hidden transition-colors duration-400"
+      style={{ minHeight: '100vh', marginTop: '120px', background: theme === 'dark' ? '#000' : '#fff' }}
     >
       <div className="sticky top-0 w-full flex flex-col pt-24 lg:pt-12 pb-16">
         {/* Top row: text + first two carousels */}
@@ -95,15 +101,15 @@ const ProjectCarousels = () => {
             className="w-full lg:w-[36%] lg:max-w-[480px] shrink-0 px-6 md:px-12 lg:px-0 lg:pl-[48px] lg:pr-[24px]"
           >
             <h2
-              className="text-white font-primary font-bold leading-tight tracking-tight mb-6"
-              style={{ fontSize: 'clamp(22px, 2.8vw, 36px)' }}
+              className="font-primary font-bold leading-tight tracking-tight mb-6"
+              style={{ fontSize: 'clamp(22px, 2.8vw, 36px)', color: theme === 'dark' ? '#fff' : '#000' }}
             >
               <span className="block">Design that connects.</span>
               <span className="block">Results that last.</span>
             </h2>
             <p
-              className="text-white/70 font-body text-base lg:text-lg leading-relaxed mb-14"
-              style={{ maxWidth: '42ch', paddingTop: '10px', paddingBottom: '10px' }}
+              className="font-body text-base lg:text-lg leading-relaxed mb-14"
+              style={{ maxWidth: '42ch', paddingTop: '10px', paddingBottom: '10px', color: theme === 'dark' ? 'rgba(255,255,255,0.7)' : 'rgba(0,0,0,0.7)' }}
             >
               We build digital experiences that hold attention and move the needle. Strong visuals and clear strategy help your brand stand out and turn visitors into customers—without the friction.
             </p>
@@ -114,9 +120,9 @@ const ProjectCarousels = () => {
                 style={{
                   padding: '12px 24px',
                   fontSize: '14px',
-                  background: 'rgba(255,255,255,0.12)',
-                  color: '#fff',
-                  border: '1px solid rgba(255,255,255,0.2)',
+                  background: theme === 'dark' ? 'rgba(255,255,255,0.12)' : 'rgba(0,0,0,0.12)',
+                  color: theme === 'dark' ? '#fff' : '#000',
+                  border: `1px solid ${theme === 'dark' ? 'rgba(255,255,255,0.2)' : 'rgba(0,0,0,0.2)'}`,
                   minWidth: '160px',
                   display: 'flex',
                   alignItems: 'center',
@@ -136,9 +142,9 @@ const ProjectCarousels = () => {
                 style={{
                   padding: '12px 24px',
                   fontSize: '14px',
-                  background: 'rgba(255,255,255,0.06)',
-                  color: '#fff',
-                  border: '1px solid rgba(255,255,255,0.15)',
+                  background: theme === 'dark' ? 'rgba(255,255,255,0.06)' : 'rgba(0,0,0,0.06)',
+                  color: theme === 'dark' ? '#fff' : '#000',
+                  border: `1px solid ${theme === 'dark' ? 'rgba(255,255,255,0.15)' : 'rgba(0,0,0,0.15)'}`,
                   minWidth: '160px',
                   display: 'flex',
                   alignItems: 'center',
@@ -188,10 +194,11 @@ const ProjectCarousels = () => {
         }}
       >
         <h2
-          className="font-primary font-bold text-white select-none"
+          className="font-primary font-bold select-none"
           style={{
             fontSize: 'clamp(48px, 12vw, 160px)',
             letterSpacing: '-0.02em',
+            color: theme === 'dark' ? '#fff' : '#000',
             opacity: Math.min(1, Math.max(0, (scrollProgress - 0.35) / 0.45)),
             transform: `translateY(${scrollProgress < 0.5 ? 40 : 0}px)`,
             transition: 'opacity 0.2s ease-out, transform 0.35s ease-out',

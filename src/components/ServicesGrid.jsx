@@ -1,4 +1,6 @@
 import React, { useMemo, useState } from 'react';
+import { useTheme } from '../context/ThemeContext';
+
 import {
   Globe,
   PenTool,
@@ -13,7 +15,9 @@ import {
 } from 'lucide-react';
 
 const ServicesGrid = () => {
+  const { theme } = useTheme();
   const [hovered, setHovered] = useState(null);
+
 
   const services = useMemo(
     () => [
@@ -34,16 +38,21 @@ const ServicesGrid = () => {
   return (
     <section
       id="services"
-      className="w-full bg-black relative"
-      style={{ padding: 'clamp(60px, 8vw, 120px) 0 clamp(80px, 12vw, 160px)', overflowX: 'clip' }}
+      className="w-full relative transition-colors duration-400"
+      style={{
+        background: theme === 'dark' ? '#000' : '#fff',
+        padding: 'clamp(60px, 8vw, 120px) 0 clamp(80px, 12vw, 160px)',
+        overflowX: 'clip'
+      }}
     >
       <div
         className="w-full flex flex-col lg:flex-row lg:items-center items-start justify-between gap-6 lg:gap-10"
         style={{ paddingBottom: '32px' }}
       >
         <h2
-          className="text-white font-body leading-tight"
+          className="font-body leading-tight"
           style={{
+            color: theme === 'dark' ? '#fff' : '#000',
             fontSize: 'clamp(30px, 3.6vw, 52px)',
             letterSpacing: '-0.03em',
             fontWeight: 600,
@@ -64,9 +73,9 @@ const ServicesGrid = () => {
             style={{
               padding: '12px 24px',
               fontSize: '14px',
-              background: '#fff',
-              color: '#000',
-              border: '1px solid rgba(255,255,255,0.15)',
+              background: theme === 'dark' ? '#fff' : '#000',
+              color: theme === 'dark' ? '#000' : '#fff',
+              border: `1px solid ${theme === 'dark' ? 'rgba(255,255,255,0.15)' : 'rgba(0,0,0,0.15)'}`,
               minWidth: '160px',
               display: 'flex',
               alignItems: 'center',
@@ -88,9 +97,9 @@ const ServicesGrid = () => {
             style={{
               padding: '12px 24px',
               fontSize: '14px',
-              background: 'rgba(255,255,255,0.08)',
-              color: '#fff',
-              border: '1px solid rgba(255,255,255,0.15)',
+              background: theme === 'dark' ? 'rgba(255,255,255,0.08)' : 'rgba(0,0,0,0.06)',
+              color: theme === 'dark' ? '#fff' : '#000',
+              border: `1px solid ${theme === 'dark' ? 'rgba(255,255,255,0.15)' : 'rgba(0,0,0,0.15)'}`,
               backdropFilter: 'blur(12px)',
               WebkitBackdropFilter: 'blur(12px)',
               minWidth: '160px',
@@ -128,9 +137,11 @@ const ServicesGrid = () => {
                   width: '100%',
                   maxWidth: 260,
                   borderRadius: 18,
-                  border: '1px solid rgba(255,255,255,0.10)',
-                  background: 'rgba(255,255,255,0.02)',
-                  boxShadow: isHovered ? '0 40px 80px -40px rgba(255,255,255,0.18)' : 'none',
+                  border: `1px solid ${theme === 'dark' ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.1)'}`,
+                  background: theme === 'dark' ? 'rgba(255,255,255,0.02)' : 'rgba(0,0,0,0.03)',
+                  boxShadow: isHovered
+                    ? (theme === 'dark' ? '0 40px 80px -40px rgba(255,255,255,0.18)' : '0 40px 80px -40px rgba(0,0,0,0.1)')
+                    : 'none',
                   transform: isHovered ? 'translateY(-4px)' : 'translateY(0)',
                   transition: 'transform 260ms ease, box-shadow 260ms ease, border-color 260ms ease, background 260ms ease',
                 }}
@@ -140,17 +151,18 @@ const ServicesGrid = () => {
                   style={{
                     opacity: isHovered ? 1 : 0,
                     transition: 'opacity 260ms ease',
-                    background:
-                      'radial-gradient(60% 65% at 50% 35%, rgba(255,255,255,0.12) 0%, rgba(255,255,255,0.06) 28%, rgba(255,255,255,0) 70%)',
+                    background: theme === 'dark'
+                      ? 'radial-gradient(60% 65% at 50% 35%, rgba(255,255,255,0.12) 0%, rgba(255,255,255,0.06) 28%, rgba(255,255,255,0) 70%)'
+                      : 'radial-gradient(60% 65% at 50% 35%, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0.02) 28%, rgba(0,0,0,0) 70%)',
                   }}
                 />
 
                 <div className="relative h-full w-full flex flex-col items-center justify-center gap-5 px-6 text-center">
-                  <Icon size={26} color="rgba(255,255,255,0.92)" strokeWidth={1.8} />
+                  <Icon size={26} color={theme === 'dark' ? 'rgba(255,255,255,0.92)' : 'rgba(0,0,0,0.8)'} strokeWidth={1.8} />
                   <div
                     className="font-body"
                     style={{
-                      color: 'rgba(255,255,255,0.55)',
+                      color: theme === 'dark' ? 'rgba(255,255,255,0.55)' : 'rgba(0,0,0,0.6)',
                       fontSize: 13,
                       lineHeight: 1.25,
                       letterSpacing: '-0.01em',

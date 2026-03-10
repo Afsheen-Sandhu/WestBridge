@@ -1,13 +1,15 @@
-import React from 'react';
 import GlowBadge from './GlowBadge';
+import { useTheme } from '../context/ThemeContext';
+
 
 const BRANDS = ["OASIS", "VERTEX", "NEXUS", "QUANTA", "EQUINOX", "AETHER", "LUMINA", "VANGUARD"];
 
 const Hero = () => {
+  const { theme } = useTheme();
   return (
     <section
-      className="relative min-h-screen flex flex-col items-center overflow-hidden"
-      style={{ background: '#000' }}
+      className="relative min-h-screen flex flex-col items-center overflow-hidden transition-colors duration-400"
+      style={{ background: theme === 'dark' ? '#000' : '#fff' }}
     >
       {/* Video Background */}
       <video
@@ -30,13 +32,16 @@ const Hero = () => {
         <source src="/canvas-animation.webm" type="video/webm" />
       </video>
 
-      {/* Dark overlay to keep text readable */}
+      {/* Theme-aware overlay */}
       <div
         style={{
           position: 'absolute',
           inset: 0,
-          background: 'linear-gradient(to bottom, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.65) 100%)',
+          background: theme === 'dark'
+            ? 'linear-gradient(to bottom, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.65) 100%)'
+            : 'linear-gradient(to bottom, rgba(255,255,255,0.7) 0%, rgba(255,255,255,0.4) 50%, rgba(255,255,255,0.8) 100%)',
           zIndex: 1,
+          transition: 'background 0.4s ease',
         }}
       />
 
@@ -53,18 +58,18 @@ const Hero = () => {
           style={{ fontSize: 'clamp(34px, 9vw, 120px)', lineHeight: 0.95, letterSpacing: '-0.04em' }}
         >
           <div className="flex items-baseline justify-center flex-wrap gap-x-[0.25em]">
-            <span style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontWeight: 700, color: '#fff' }}>
+            <span style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontWeight: 700, color: theme === 'dark' ? '#fff' : '#000' }}>
               Luxury
             </span>
-            <span style={{ fontFamily: "'Instrument Serif', serif", fontStyle: 'italic', fontWeight: 400, color: '#fff' }}>
+            <span style={{ fontFamily: "'Instrument Serif', serif", fontStyle: 'italic', fontWeight: 400, color: theme === 'dark' ? '#fff' : '#000' }}>
               Aesthetics
             </span>
           </div>
           <div className="flex items-baseline justify-center flex-wrap gap-x-[0.25em]">
-            <span style={{ fontFamily: "'Instrument Serif', serif", fontStyle: 'italic', fontWeight: 400, color: '#fff' }}>
+            <span style={{ fontFamily: "'Instrument Serif', serif", fontStyle: 'italic', fontWeight: 400, color: theme === 'dark' ? '#fff' : '#000' }}>
               Lasting
             </span>
-            <span style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontWeight: 700, color: '#fff' }}>
+            <span style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontWeight: 700, color: theme === 'dark' ? '#fff' : '#000' }}>
               Impact
             </span>
           </div>
@@ -75,7 +80,7 @@ const Hero = () => {
           className="animate-fade-in-up max-w-[700px] leading-relaxed"
           style={{
             fontSize: 'clamp(14px, 2.2vw, 22px)',
-            color: 'rgba(255,255,255,0.55)',
+            color: theme === 'dark' ? 'rgba(255,255,255,0.55)' : 'rgba(0,0,0,0.6)',
             animationDelay: '400ms',
             fontWeight: 400,
             marginTop: '28px',
@@ -95,8 +100,8 @@ const Hero = () => {
             style={{
               padding: '12px 24px',
               fontSize: '14px',
-              background: '#fff',
-              color: '#000',
+              background: theme === 'dark' ? '#fff' : '#000',
+              color: theme === 'dark' ? '#000' : '#fff',
               border: 'none',
               minWidth: '160px',
               display: 'flex',
@@ -113,9 +118,9 @@ const Hero = () => {
             style={{
               padding: '12px 24px',
               fontSize: '14px',
-              background: 'rgba(255,255,255,0.08)',
-              color: '#fff',
-              border: '1px solid rgba(255,255,255,0.15)',
+              background: theme === 'dark' ? 'rgba(255,255,255,0.08)' : 'rgba(0,0,0,0.04)',
+              color: theme === 'dark' ? '#fff' : '#000',
+              border: theme === 'dark' ? '1px solid rgba(255,255,255,0.15)' : '1px solid rgba(0,0,0,0.15)',
               backdropFilter: 'blur(12px)',
               minWidth: '160px',
               display: 'flex',
@@ -139,7 +144,7 @@ const Hero = () => {
             fontWeight: 600,
             textTransform: 'uppercase',
             letterSpacing: '0.2em',
-            color: 'rgba(255,255,255,0.3)',
+            color: theme === 'dark' ? 'rgba(255,255,255,0.3)' : 'rgba(0,0,0,0.35)',
           }}
         >
           They trusted us
@@ -163,7 +168,7 @@ const Hero = () => {
                       fontWeight: 800,
                       fontSize: 'clamp(18px, 4vw, 26px)',
                       letterSpacing: '-0.04em',
-                      color: '#ffffff',
+                      color: theme === 'dark' ? '#ffffff' : '#000000',
                     }}
                   >
                     {brand}

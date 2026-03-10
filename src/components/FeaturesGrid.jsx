@@ -1,36 +1,57 @@
 import React from 'react';
+import { useTheme } from '../context/ThemeContext';
 
-const FeatureCard = ({ title, description, children, className = '' }) => (
-    <div className={`group relative bg-[#0A0A0A] border border-white/5 rounded-[24px] md:rounded-[32px] overflow-hidden flex flex-col ${className}`}>
-        {/* Text Content */}
-        <div
-            className="relative z-10 pr-6 md:pr-10"
+const FeatureCard = ({ title, description, children, className = '' }) => {
+    const { theme } = useTheme();
+    return (
+        <div className={`group relative border rounded-[24px] md:rounded-[32px] overflow-hidden flex flex-col transition-all duration-400 ${className}`}
             style={{
-                paddingTop: 'clamp(32px, 6vw, 56px)',
-                paddingLeft: '6%',
+                background: theme === 'dark' ? '#0A0A0A' : '#f9f9f9',
+                borderColor: theme === 'dark' ? 'rgba(255,255,255,0.05)' : 'rgba(0,0,0,0.05)',
             }}
         >
-            <h3 className="text-white text-2xl md:text-3xl font-bold mb-3 tracking-tight leading-tight">
-                {title}
-            </h3>
-            <p className="text-white/50 text-sm md:text-base leading-relaxed max-w-[480px]">
-                {description}
-            </p>
-        </div>
+            {/* Text Content */}
+            <div
+                className="relative z-10 pr-6 md:pr-10"
+                style={{
+                    paddingTop: 'clamp(32px, 6vw, 56px)',
+                    paddingLeft: '6%',
+                }}
+            >
+                <h3 className="font-primary font-semibold mb-3 leading-tight transition-colors duration-400"
+                    style={{
+                        color: theme === 'dark' ? '#fff' : '#000',
+                        fontSize: 'clamp(24px, 2.5vw, 30px)',
+                        fontWeight: 600,
+                        letterSpacing: '-0.03em'
+                    }}>
+                    {title}
+                </h3>
+                <p className="text-sm md:text-base leading-relaxed max-w-[480px] transition-colors duration-400"
+                    style={{ color: theme === 'dark' ? 'rgba(255,255,255,0.5)' : 'rgba(0,0,0,0.55)' }}>
+                    {description}
+                </p>
+            </div>
 
-        {/* Visual Content Area */}
-        <div className="relative flex-1 min-h-[300px] md:min-h-[360px] w-full mt-4 overflow-hidden">
-            {children}
-        </div>
+            {/* Visual Content Area */}
+            <div className="relative flex-1 min-h-[300px] md:min-h-[360px] w-full mt-4 overflow-hidden">
+                {children}
+            </div>
 
-        {/* Subtle Inner Glow */}
-        <div className="absolute inset-0 bg-gradient-to-b from-white/[0.02] to-transparent pointer-events-none" />
-    </div>
-);
+            {/* Subtle Inner Glow - only in dark mode */}
+            {theme === 'dark' && <div className="absolute inset-0 bg-gradient-to-b from-white/[0.02] to-transparent pointer-events-none" />}
+        </div>
+    );
+};
 
 const FeaturesGrid = () => {
+    const { theme } = useTheme();
     return (
-        <section className="bg-black w-full" style={{ padding: 'clamp(60px, 8vw, 120px) 0 clamp(80px, 12vw, 160px)' }}>
+        <section className="w-full transition-colors duration-400"
+            style={{
+                background: theme === 'dark' ? '#000' : '#fff',
+                padding: 'clamp(60px, 8vw, 120px) 0 clamp(80px, 12vw, 160px)'
+            }}>
             <div className="w-full flex flex-col gap-6 lg:gap-8">
 
                 {/* Row 1 */}
@@ -40,8 +61,13 @@ const FeaturesGrid = () => {
                         description="We begin by defining clear goals, understanding your audience, and aligning with your brand voice to set a strong foundation."
                         className="lg:col-span-7"
                     >
-                        <div className="absolute inset-x-[6%] bottom-0 top-4 md:top-8 bg-neutral-900 rounded-t-xl md:rounded-t-2xl border-x border-t border-white/10 overflow-hidden">
-                            <img src="/discovery.png" alt="Discovery" className="w-full h-full object-cover opacity-80" />
+                        <div className="absolute inset-x-[6%] bottom-0 top-4 md:top-8 rounded-t-xl md:rounded-t-2xl border-x border-t transition-all duration-400 overflow-hidden"
+                            style={{
+                                background: theme === 'dark' ? '#111' : '#eee',
+                                borderColor: theme === 'dark' ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.1)'
+                            }}>
+                            <img src="/discovery.png" alt="Discovery" className="w-full h-full object-cover"
+                                style={{ opacity: theme === 'dark' ? 0.8 : 1 }} />
                         </div>
                     </FeatureCard>
 
@@ -51,11 +77,21 @@ const FeaturesGrid = () => {
                         className="lg:col-span-5"
                     >
                         <div className="absolute inset-x-[6%] bottom-0 top-4 md:top-8 flex items-end justify-center gap-3 md:gap-4">
-                            <div className="flex-1 max-w-[180px] h-full bg-neutral-900 rounded-t-[30px] md:rounded-t-[40px] border-x border-t border-white/10 relative overflow-hidden">
-                                <img src="/mobile.png" alt="Mobile" className="w-full h-full object-cover opacity-80" />
+                            <div className="flex-1 max-w-[180px] h-full rounded-t-[30px] md:rounded-t-[40px] border-x border-t relative overflow-hidden transition-all duration-400"
+                                style={{
+                                    background: theme === 'dark' ? '#111' : '#eee',
+                                    borderColor: theme === 'dark' ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.1)'
+                                }}>
+                                <img src="/mobile.png" alt="Mobile" className="w-full h-full object-cover"
+                                    style={{ opacity: theme === 'dark' ? 0.8 : 1 }} />
                             </div>
-                            <div className="flex-1 max-w-[180px] h-[85%] bg-neutral-900 rounded-t-[30px] md:rounded-t-[40px] border-x border-t border-white/10 relative overflow-hidden hidden sm:block">
-                                <img src="/mobile.png" alt="Mobile" className="w-full h-full object-cover opacity-60" />
+                            <div className="flex-1 max-w-[180px] h-[85%] rounded-t-[30px] md:rounded-t-[40px] border-x border-t relative overflow-hidden hidden sm:block transition-all duration-400"
+                                style={{
+                                    background: theme === 'dark' ? '#111' : '#eee',
+                                    borderColor: theme === 'dark' ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.1)'
+                                }}>
+                                <img src="/mobile.png" alt="Mobile" className="w-full h-full object-cover"
+                                    style={{ opacity: theme === 'dark' ? 0.6 : 0.8 }} />
                             </div>
                         </div>
                     </FeatureCard>
@@ -68,8 +104,13 @@ const FeaturesGrid = () => {
                         description="Websites built with strategy, designed to engage audiences, and crafted to turn visitors into customers."
                         className="lg:col-span-5"
                     >
-                        <div className="absolute inset-x-[6%] bottom-0 top-4 md:top-8 bg-neutral-900 rounded-t-xl border-x border-t border-white/10 overflow-hidden">
-                            <img src="/conversion.png" alt="Conversion" className="w-full h-full object-cover opacity-80" />
+                        <div className="absolute inset-x-[6%] bottom-0 top-4 md:top-8 rounded-t-xl border-x border-t relative overflow-hidden transition-all duration-400"
+                            style={{
+                                background: theme === 'dark' ? '#111' : '#eee',
+                                borderColor: theme === 'dark' ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.1)'
+                            }}>
+                            <img src="/conversion.png" alt="Conversion" className="w-full h-full object-cover"
+                                style={{ opacity: theme === 'dark' ? 0.8 : 1 }} />
                         </div>
                     </FeatureCard>
 
@@ -78,8 +119,13 @@ const FeaturesGrid = () => {
                         description="Designed and developed with pixel-perfect precision, delivering high performance and easy updates."
                         className="lg:col-span-7"
                     >
-                        <div className="absolute inset-x-[6%] bottom-0 top-4 md:top-8 bg-[#1B1B1B] rounded-t-xl md:rounded-t-2xl border-x border-t border-white/10 overflow-hidden">
-                            <img src="/pixel-perfect.png" alt="Pixel Perfect" className="w-full h-full object-cover opacity-80" />
+                        <div className="absolute inset-x-[6%] bottom-0 top-4 md:top-8 rounded-t-xl md:rounded-t-2xl border-x border-t relative overflow-hidden transition-all duration-400"
+                            style={{
+                                background: theme === 'dark' ? '#1B1B1B' : '#ddd',
+                                borderColor: theme === 'dark' ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.1)'
+                            }}>
+                            <img src="/pixel-perfect.png" alt="Pixel Perfect" className="w-full h-full object-cover"
+                                style={{ opacity: theme === 'dark' ? 0.8 : 1 }} />
                         </div>
                     </FeatureCard>
                 </div>
@@ -91,8 +137,13 @@ const FeaturesGrid = () => {
                         description="Launched seamlessly with a powerful CMS, allowing you to update and manage your website content effortlessly after going live."
                         className="lg:col-span-7"
                     >
-                        <div className="absolute inset-x-[6%] bottom-0 top-4 md:top-8 bg-neutral-900 rounded-t-xl border-x border-t border-white/10 overflow-hidden">
-                            <img src="/cms.png" alt="CMS Dashboard" className="w-full h-full object-cover opacity-80" />
+                        <div className="absolute inset-x-[6%] bottom-0 top-4 md:top-8 rounded-t-xl border-x border-t relative overflow-hidden transition-all duration-400"
+                            style={{
+                                background: theme === 'dark' ? '#111' : '#eee',
+                                borderColor: theme === 'dark' ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.1)'
+                            }}>
+                            <img src="/cms.png" alt="CMS Dashboard" className="w-full h-full object-cover"
+                                style={{ opacity: theme === 'dark' ? 0.8 : 1 }} />
                         </div>
                     </FeatureCard>
 

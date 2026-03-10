@@ -1,8 +1,12 @@
 import React from 'react';
+import { useTheme } from '../context/ThemeContext';
+
 
 const Brands = () => {
+    const { theme } = useTheme();
     return (
-        <section className="w-full bg-black flex flex-col items-center justify-center relative z-10 pt-16 pb-[120px] mb-[240px] md:pt-[100px] md:pb-[200px] md:mb-[100px]">
+        <section className="w-full transition-colors duration-400 flex flex-col items-center justify-center relative z-10 pt-16 pb-[120px] mb-[240px] md:pt-[100px] md:pb-[200px] md:mb-[100px]"
+            style={{ background: theme === 'dark' ? '#000' : '#fff' }}>
             <div
                 className="w-full max-w-[1400px] flex flex-col items-center animate-fade-in-up"
             >
@@ -12,7 +16,7 @@ const Brands = () => {
                     fontWeight: 600,
                     textTransform: 'uppercase',
                     letterSpacing: '0.2em',
-                    color: 'rgba(255,255,255,0.3)',
+                    color: theme === 'dark' ? 'rgba(255,255,255,0.3)' : 'rgba(0,0,0,0.4)',
                     marginBottom: '12px'
                 }}>
                     They trusted us
@@ -39,7 +43,7 @@ const Brands = () => {
                                             fontWeight: 800,
                                             fontSize: 'clamp(24px, 6vw, 36px)',
                                             letterSpacing: '-0.04em',
-                                            color: '#ffffff',
+                                            color: theme === 'dark' ? '#ffffff' : '#000000',
                                         }}
                                     >
                                         {brand}

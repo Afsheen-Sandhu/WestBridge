@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import { useTheme } from '../context/ThemeContext';
+
 
 const navLinks = ['Home', 'About Us', 'Works', 'Services', 'Blogs', 'Templates'];
 
@@ -7,6 +9,8 @@ const Navbar = () => {
     const [connectHovered, setConnectHovered] = useState(false);
     const [isMobile, setIsMobile] = useState(typeof window !== 'undefined' ? window.innerWidth <= 768 : false);
     const [menuOpen, setMenuOpen] = useState(false);
+    const { theme, toggleTheme } = useTheme();
+
 
     useEffect(() => {
         const handleResize = () => {
@@ -29,9 +33,12 @@ const Navbar = () => {
                 paddingBottom: isMobile ? 16 : 24,
                 zIndex: 1000,
                 animation: 'fadeInDown 1s cubic-bezier(0.16, 1, 0.3, 1) forwards',
-                background: 'linear-gradient(to bottom, rgba(0,0,0,0.92), rgba(0,0,0,0.6), transparent)',
+                background: theme === 'dark'
+                    ? 'linear-gradient(to bottom, rgba(0,0,0,0.92), rgba(0,0,0,0.6), transparent)'
+                    : 'linear-gradient(to bottom, rgba(255,255,255,0.95), rgba(255,255,255,0.7), transparent)',
                 backdropFilter: 'blur(18px)',
                 WebkitBackdropFilter: 'blur(18px)',
+                transition: 'background 0.4s ease',
             }}
         >
             <div className="layout-outer">
@@ -47,9 +54,14 @@ const Navbar = () => {
                     {/* ── Logo ── */}
                     <div style={{ display: 'flex', alignItems: 'center', gap: '14px', cursor: 'pointer' }}>
                         <img
-                            src="/logo-white-removebg-preview.png"
+                            src={theme === 'dark' ? "/logo-white-removebg-preview.png" : "/logo-black-removebg-preview.png"}
                             alt="WestBridge"
-                            style={{ height: '60px', width: 'auto', objectFit: 'contain' }}
+                            style={{
+                                height: isMobile ? '48px' : (theme === 'dark' ? '85px' : '64px'),
+                                width: 'auto',
+                                objectFit: 'contain',
+                                transition: 'height 0.4s ease'
+                            }}
                         />
                         <div style={{ display: 'flex', flexDirection: 'column', lineHeight: 1.15 }}>
                             <span
@@ -58,7 +70,8 @@ const Navbar = () => {
                                     fontWeight: 800,
                                     fontSize: '20px',
                                     letterSpacing: '-0.03em',
-                                    color: '#fff',
+                                    color: theme === 'dark' ? '#fff' : '#000',
+                                    transition: 'color 0.4s ease',
                                 }}
                             >
                                 WestBridge
@@ -69,8 +82,9 @@ const Navbar = () => {
                                     fontWeight: 400,
                                     fontSize: '10px',
                                     letterSpacing: '0.15em',
-                                    color: 'rgba(255,255,255,0.4)',
+                                    color: theme === 'dark' ? 'rgba(255,255,255,0.4)' : 'rgba(0,0,0,0.5)',
                                     textTransform: 'uppercase',
+                                    transition: 'color 0.4s ease',
                                 }}
                             >
                                 IT Solutions
@@ -107,14 +121,18 @@ const Navbar = () => {
                                             fontSize: '14px',
                                             fontFamily: "'Plus Jakarta Sans', sans-serif",
                                             fontWeight: 500,
-                                            color: activeLink === link ? '#fff' : 'rgba(255,255,255,0.55)',
-                                            background: activeLink === link ? 'rgba(255,255,255,0.1)' : 'transparent',
+                                            color: activeLink === link
+                                                ? (theme === 'dark' ? '#fff' : '#000')
+                                                : (theme === 'dark' ? 'rgba(255,255,255,0.55)' : 'rgba(0,0,0,0.5)'),
+                                            background: activeLink === link
+                                                ? (theme === 'dark' ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.05)')
+                                                : 'transparent',
                                             textDecoration: 'none',
                                             transition: 'all 0.3s ease',
                                             whiteSpace: 'nowrap',
                                         }}
-                                        onMouseEnter={e => { if (activeLink !== link) e.currentTarget.style.color = '#fff'; }}
-                                        onMouseLeave={e => { if (activeLink !== link) e.currentTarget.style.color = 'rgba(255,255,255,0.55)'; }}
+                                        onMouseEnter={e => { if (activeLink !== link) e.currentTarget.style.color = theme === 'dark' ? '#fff' : '#000'; }}
+                                        onMouseLeave={e => { if (activeLink !== link) e.currentTarget.style.color = theme === 'dark' ? 'rgba(255,255,255,0.55)' : 'rgba(0,0,0,0.5)'; }}
                                     >
                                         {link}
                                     </a>
@@ -125,15 +143,17 @@ const Navbar = () => {
                             <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
                                 {/* Theme toggle */}
                                 <div
+                                    onClick={toggleTheme}
                                     style={{
                                         width: '52px',
                                         height: '28px',
                                         borderRadius: '100px',
-                                        background: 'rgba(255,255,255,0.08)',
-                                        border: '1px solid rgba(255,255,255,0.15)',
+                                        background: theme === 'dark' ? 'rgba(255,255,255,0.08)' : 'rgba(0,0,0,0.05)',
+                                        border: theme === 'dark' ? '1px solid rgba(255,255,255,0.15)' : '1px solid rgba(0,0,0,0.1)',
                                         position: 'relative',
                                         cursor: 'pointer',
                                         flexShrink: 0,
+                                        transition: 'all 0.3s ease',
                                     }}
                                 >
                                     <div
@@ -141,12 +161,14 @@ const Navbar = () => {
                                             width: '20px',
                                             height: '20px',
                                             borderRadius: '50%',
-                                            background: '#fff',
+                                            background: theme === 'dark' ? '#fff' : '#000',
                                             position: 'absolute',
                                             top: '50%',
-                                            right: '4px',
+                                            left: theme === 'dark' ? 'auto' : '4px',
+                                            right: theme === 'dark' ? '4px' : 'auto',
                                             transform: 'translateY(-50%)',
-                                            boxShadow: '0 0 8px rgba(255,255,255,0.5)',
+                                            boxShadow: theme === 'dark' ? '0 0 8px rgba(255,255,255,0.5)' : '0 0 8px rgba(0,0,0,0.2)',
+                                            transition: 'all 0.3s cubic-bezier(0.23, 1, 0.32, 1)',
                                         }}
                                     />
                                 </div>
@@ -163,9 +185,9 @@ const Navbar = () => {
                                         fontSize: '14px',
                                         cursor: 'pointer',
                                         transition: 'all 0.4s ease',
-                                        background: connectHovered ? '#fff' : 'transparent',
-                                        color: connectHovered ? '#000' : '#fff',
-                                        border: '1.5px solid rgba(255,255,255,0.4)',
+                                        background: connectHovered ? (theme === 'dark' ? '#fff' : '#000') : 'transparent',
+                                        color: connectHovered ? (theme === 'dark' ? '#000' : '#fff') : (theme === 'dark' ? '#fff' : '#000'),
+                                        border: theme === 'dark' ? '1.5px solid rgba(255,255,255,0.4)' : '1.5px solid rgba(0,0,0,0.3)',
                                         transform: connectHovered ? 'scale(1.04)' : 'scale(1)',
                                         whiteSpace: 'nowrap',
                                     }}
@@ -243,10 +265,11 @@ const Navbar = () => {
                         paddingBottom: 24,
                         paddingLeft: 16,
                         paddingRight: 24,
-                        background: 'rgba(5,5,5,0.96)',
-                        borderBottom: '1px solid rgba(255,255,255,0.12)',
+                        background: theme === 'dark' ? 'rgba(5,5,5,0.96)' : 'rgba(255,255,255,0.98)',
+                        borderBottom: theme === 'dark' ? '1px solid rgba(255,255,255,0.12)' : '1px solid rgba(0,0,0,0.1)',
                         backdropFilter: 'blur(18px)',
                         WebkitBackdropFilter: 'blur(18px)',
+                        transition: 'background 0.4s ease',
                     }}
                 >
                     <div
@@ -282,8 +305,12 @@ const Navbar = () => {
                                         fontSize: 13,
                                         fontFamily: "'Plus Jakarta Sans', sans-serif",
                                         fontWeight: 500,
-                                        color: activeLink === link ? '#000' : 'rgba(255,255,255,0.86)',
-                                        background: activeLink === link ? '#fff' : 'transparent',
+                                        color: activeLink === link
+                                            ? (theme === 'dark' ? '#000' : '#fff')
+                                            : (theme === 'dark' ? 'rgba(255,255,255,0.86)' : 'rgba(0,0,0,0.7)'),
+                                        background: activeLink === link
+                                            ? (theme === 'dark' ? '#fff' : '#000')
+                                            : 'transparent',
                                         textDecoration: 'none',
                                         transition: 'all 0.25s ease',
                                     }}
@@ -303,15 +330,17 @@ const Navbar = () => {
                         >
                             {/* Theme toggle (same visual) */}
                             <div
+                                onClick={toggleTheme}
                                 style={{
                                     width: '48px',
                                     height: '26px',
                                     borderRadius: '100px',
-                                    background: 'rgba(255,255,255,0.08)',
-                                    border: '1px solid rgba(255,255,255,0.15)',
+                                    background: theme === 'dark' ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.06)',
+                                    border: theme === 'dark' ? '1px solid rgba(255,255,255,0.2)' : '1px solid rgba(0,0,0,0.12)',
                                     position: 'relative',
                                     cursor: 'pointer',
                                     flexShrink: 0,
+                                    transition: 'all 0.3s ease',
                                 }}
                             >
                                 <div
@@ -319,12 +348,14 @@ const Navbar = () => {
                                         width: '18px',
                                         height: '18px',
                                         borderRadius: '50%',
-                                        background: '#fff',
+                                        background: theme === 'dark' ? '#fff' : '#000',
                                         position: 'absolute',
                                         top: '50%',
-                                        right: '4px',
+                                        left: theme === 'dark' ? 'auto' : '4px',
+                                        right: theme === 'dark' ? '4px' : 'auto',
                                         transform: 'translateY(-50%)',
-                                        boxShadow: '0 0 8px rgba(255,255,255,0.5)',
+                                        transition: 'all 0.3s cubic-bezier(0.23, 1, 0.32, 1)',
+                                        boxShadow: theme === 'dark' ? '0 0 8px rgba(255,255,255,0.5)' : 'none',
                                     }}
                                 />
                             </div>

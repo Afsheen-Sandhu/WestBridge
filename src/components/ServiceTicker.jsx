@@ -1,4 +1,6 @@
 import React from 'react';
+import { useTheme } from '../context/ThemeContext';
+
 
 const items = [
   'Code Customization',
@@ -10,17 +12,22 @@ const items = [
 ];
 
 const ServiceTicker = () => {
+  const { theme } = useTheme();
   return (
     <section
-      className="w-full bg-black relative"
-      style={{ padding: 'clamp(24px, 4vw, 48px) 0 clamp(32px, 5vw, 64px)', overflowX: 'clip' }}
+      className="w-full relative transition-colors duration-400"
+      style={{
+        background: theme === 'dark' ? '#000' : '#fff',
+        padding: 'clamp(24px, 4vw, 48px) 0 clamp(32px, 5vw, 64px)',
+        overflowX: 'clip'
+      }}
     >
       <div
         className="w-full relative overflow-hidden"
         style={{
           borderRadius: 999,
-          border: '1px solid rgba(255,255,255,0.10)',
-          background: 'rgba(10,10,10,0.95)',
+          border: `1px solid ${theme === 'dark' ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.1)'}`,
+          background: theme === 'dark' ? 'rgba(10,10,10,0.95)' : 'rgba(245,245,245,0.95)',
         }}
       >
         <div
@@ -30,7 +37,7 @@ const ServiceTicker = () => {
             fontSize: 12,
             letterSpacing: '0.16em',
             textTransform: 'uppercase',
-            color: 'rgba(255,255,255,0.6)',
+            color: theme === 'dark' ? 'rgba(255,255,255,0.6)' : 'rgba(0,0,0,0.6)',
             whiteSpace: 'nowrap',
             paddingLeft: 32,
           }}
