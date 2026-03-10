@@ -5,7 +5,7 @@ import { useTheme } from '../context/ThemeContext';
 // Replace these with your actual project image paths under /public
 const PROJECT_IMAGES = [
   '/img1.png',
-  '/img5.png',
+  '/work3.png',
   '/img17.png',
   '/img24.png',
   '/img8.png',
