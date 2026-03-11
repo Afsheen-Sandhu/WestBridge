@@ -70,7 +70,7 @@ const Blogs = () => {
                             <p style={{
                                 fontSize: '16px',
                                 lineHeight: 1.7,
-                                color: isDark ? 'rgba(255,255,255,0.5)' : 'rgba(0,0,0,0.6)',
+                                color: isDark ? 'rgba(255,255,255,0.7)' : 'rgba(0,0,0,0.7)',
                                 margin: '0 0 32px 0',
                                 maxWidth: '420px',
                             }}>
@@ -126,7 +126,7 @@ const Blogs = () => {
                         </h2>
                         <p style={{
                             fontSize: '16px',
-                            color: isDark ? 'rgba(255,255,255,0.5)' : 'rgba(0,0,0,0.6)',
+                            color: isDark ? 'rgba(255,255,255,0.7)' : 'rgba(0,0,0,0.7)',
                             margin: '0 0 32px',
                             maxWidth: '560px',
                         }}>
@@ -213,20 +213,11 @@ const BlogCard = ({ post, isDark, isMobile }) => {
             </div>
 
             <div>
-                <div style={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    gap: '16px',
-                    marginBottom: '16px',
-                    fontSize: '12px',
-                    color: isDark ? 'rgba(255,255,255,0.3)' : 'rgba(0,0,0,0.4)',
-                    fontWeight: 600,
-                    letterSpacing: '0.05em',
-                }}>
-                    <span>{post.date}</span>
-                    <div style={{ width: '4px', height: '4px', borderRadius: '50%', background: 'currentColor' }} />
-                    <span>{post.author}</span>
-                </div>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '16px', fontSize: '12px', color: isDark ? 'rgba(255,255,255,0.5)' : 'rgba(0,0,0,0.55)', fontWeight: 600, letterSpacing: '0.05em' }}>
+                        <span>{post.date}</span>
+                        <div style={{ width: '4px', height: '4px', borderRadius: '50%', background: 'currentColor' }} />
+                        <span>{post.author}</span>
+                    </div>
                 <h3 style={{
                     fontSize: '22px',
                     fontWeight: 700,
@@ -241,7 +232,7 @@ const BlogCard = ({ post, isDark, isMobile }) => {
                 <p style={{
                     fontSize: '15px',
                     lineHeight: 1.6,
-                    color: isDark ? 'rgba(255,255,255,0.45)' : 'rgba(0,0,0,0.5)',
+                    color: isDark ? 'rgba(255,255,255,0.65)' : 'rgba(0,0,0,0.6)',
                     margin: 0,
                 }}>
                     {post.excerpt}

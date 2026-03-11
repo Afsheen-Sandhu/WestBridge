@@ -80,20 +80,22 @@ const BlogDetail = () => {
             }}>
 
                 {/* ── Back Link ── */}
-                <Link to="/blogs" style={{
+                <Link to="/blogs" 
+                    aria-label="Back to all blog posts"
+                    style={{
                     display: 'inline-flex',
                     alignItems: 'center',
                     gap: '12px',
-                    color: isDark ? 'rgba(255,255,255,0.4)' : 'rgba(0,0,0,0.4)',
+                    color: isDark ? 'rgba(255,255,255,0.7)' : 'rgba(0,0,0,0.65)',
                     textDecoration: 'none',
                     fontSize: '12px',
                     fontWeight: 800,
                     textTransform: 'uppercase',
                     letterSpacing: '0.12em',
                     marginBottom: '48px',
-                    transition: 'color 0.3s ease',
+                    transition: 'all 0.3s ease',
                 }} onMouseEnter={e => e.currentTarget.style.color = isDark ? '#fff' : '#000'} onMouseLeave={e => e.currentTarget.style.color = ''}>
-                    <ArrowLeft size={16} />
+                    <ArrowLeft size={16} aria-hidden="true" />
                     Back to Journal
                 </Link>
 
@@ -139,12 +141,12 @@ const BlogDetail = () => {
                             </div>
                             <span style={{ fontSize: '14px', fontWeight: 700 }}>{post.author}</span>
                         </div>
-                        <div style={{ display: 'flex', alignItems: 'center', gap: '8px', color: isDark ? 'rgba(255,255,255,0.4)' : 'rgba(0,0,0,0.4)', fontSize: '14px' }}>
-                            <Calendar size={16} />
+                        <div style={{ display: 'flex', alignItems: 'center', gap: '8px', color: isDark ? 'rgba(255,255,255,0.65)' : 'rgba(0,0,0,0.6)', fontSize: '14px' }}>
+                            <Calendar size={16} aria-hidden="true" />
                             <span>{post.date}</span>
                         </div>
-                        <div style={{ display: 'flex', alignItems: 'center', gap: '8px', color: isDark ? 'rgba(255,255,255,0.4)' : 'rgba(0,0,0,0.4)', fontSize: '14px' }}>
-                            <Clock size={16} />
+                        <div style={{ display: 'flex', alignItems: 'center', gap: '8px', color: isDark ? 'rgba(255,255,255,0.65)' : 'rgba(0,0,0,0.6)', fontSize: '14px' }}>
+                            <Clock size={16} aria-hidden="true" />
                             <span>6 min read</span>
                         </div>
                     </div>
@@ -186,8 +188,14 @@ const BlogDetail = () => {
                 }}>
                     <span style={{ fontSize: '13px', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.12em', opacity: 0.5 }}>Share this insights</span>
                     <div style={{ display: 'flex', gap: '16px' }}>
-                        {[Twitter, Linkedin, Facebook].map((SIcon, i) => (
-                            <button key={i} style={{
+                        {[
+                            { Icon: Twitter, label: 'Twitter' },
+                            { Icon: Linkedin, label: 'LinkedIn' },
+                            { Icon: Facebook, label: 'Facebook' }
+                        ].map(({ Icon, label }, i) => (
+                            <button key={i} 
+                                aria-label={`Share on ${label}`}
+                                style={{
                                 width: '48px',
                                 height: '48px',
                                 borderRadius: '50%',
@@ -200,7 +208,7 @@ const BlogDetail = () => {
                                 cursor: 'pointer',
                                 transition: 'all 0.3s ease',
                             }} onMouseEnter={e => { e.currentTarget.style.background = isDark ? '#fff' : '#000'; e.currentTarget.style.color = isDark ? '#000' : '#fff'; }} onMouseLeave={e => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.color = isDark ? '#fff' : '#000'; }}>
-                                <SIcon size={20} />
+                                <Icon size={20} aria-hidden="true" />
                             </button>
                         ))}
                     </div>

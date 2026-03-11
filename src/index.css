@@ -71,6 +71,12 @@ button {
   animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid #0066ff;
+  outline-offset: 4px;
+}
+
 @keyframes fadeInDown {
   from {
     opacity: 0;

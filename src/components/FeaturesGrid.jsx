@@ -58,7 +58,7 @@ const FeatureCard = ({ title, description, children, className = '', cardIndex =
                     {title}
                 </h3>
                 <p className="text-sm md:text-base leading-relaxed max-w-[480px] transition-colors duration-400"
-                    style={{ color: theme === 'dark' ? 'rgba(255,255,255,0.5)' : 'rgba(0,0,0,0.55)' }}>
+                    style={{ color: theme === 'dark' ? 'rgba(255,255,255,0.7)' : 'rgba(0,0,0,0.7)' }}>
                     {description}
                 </p>
             </div>
@@ -113,7 +113,7 @@ const FeaturesGrid = () => {
                                 background: theme === 'dark' ? '#111' : '#eee',
                                 borderColor: theme === 'dark' ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.1)'
                             }}>
-                            <img src="/feature2.png" alt="Mobile-First Design" className="w-full h-full object-cover object-center"
+                            <img src="/feature2.webp" alt="Mobile-First Design" className="w-full h-full object-cover object-center"
                                 style={{ opacity: theme === 'dark' ? 0.8 : 1 }} />
                         </div>
                     </FeatureCard>

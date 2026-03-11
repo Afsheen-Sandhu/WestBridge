@@ -99,18 +99,19 @@ const OurWorksSlides = () => {
       <div className="flex justify-center" style={{ paddingTop: '80px', marginTop: '20px' }}>
         <Link
           to="/works"
+          aria-label="View all portfolio projects"
           className="font-semibold rounded-full transition-all duration-300 active:scale-95 inline-block"
           style={{
             padding: '12px 24px',
             fontSize: '14px',
-            background: theme === 'dark' ? 'rgba(255,255,255,0.06)' : 'rgba(0,0,0,0.04)',
+            background: theme === 'dark' ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.06)',
             color: theme === 'dark' ? '#fff' : '#000',
             border: `1px solid ${theme === 'dark' ? 'rgba(255,255,255,0.15)' : 'rgba(0,0,0,0.15)'}`,
             backdropFilter: 'blur(12px)',
             textDecoration: 'none',
           }}
-          onMouseEnter={e => { e.currentTarget.style.background = theme === 'dark' ? 'rgba(255,255,255,0.12)' : 'rgba(0,0,0,0.08)'; }}
-          onMouseLeave={e => { e.currentTarget.style.background = theme === 'dark' ? 'rgba(255,255,255,0.06)' : 'rgba(0,0,0,0.04)'; }}
+          onMouseEnter={e => { e.currentTarget.style.background = theme === 'dark' ? 'rgba(255,255,255,0.15)' : 'rgba(0,0,0,0.1)'; }}
+          onMouseLeave={e => { e.currentTarget.style.background = theme === 'dark' ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.06)'; }}
         >
           View all projects
         </Link>

@@ -19,6 +19,7 @@ const Hero = () => {
         muted
         playsInline
         preload="auto"
+        aria-hidden="true"
         style={{
           position: 'absolute',
           top: 0,
@@ -81,7 +82,7 @@ const Hero = () => {
           className="animate-fade-in-up max-w-[700px] leading-relaxed"
           style={{
             fontSize: 'clamp(14px, 2.2vw, 22px)',
-            color: theme === 'dark' ? 'rgba(255,255,255,0.55)' : 'rgba(0,0,0,0.6)',
+            color: theme === 'dark' ? 'rgba(255,255,255,0.7)' : 'rgba(0,0,0,0.7)',
             animationDelay: '400ms',
             fontWeight: 400,
             marginTop: '28px',

@@ -49,6 +49,7 @@ const PlatformFlexSection = () => {
             muted
             playsInline
             preload="auto"
+            aria-hidden="true"
             className="absolute inset-0 w-full h-full object-cover"
             style={{ opacity: 1, filter: 'brightness(1.18) contrast(1.06) saturate(1.02)' }}
           >
@@ -88,7 +89,7 @@ const PlatformFlexSection = () => {
                 style={{
                   width: '280px',
                   maxWidth: '100%',
-                  color: 'rgba(255,255,255,0.55)',
+                  color: 'rgba(255,255,255,0.75)',
                   fontSize: 13,
                   lineHeight: 1.6,
                   marginBottom: 18,

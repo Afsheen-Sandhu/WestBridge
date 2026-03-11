@@ -97,7 +97,7 @@ const ServicesGrid = () => {
             style={{
               padding: '12px 24px',
               fontSize: '14px',
-              background: theme === 'dark' ? 'rgba(255,255,255,0.08)' : 'rgba(0,0,0,0.06)',
+              background: theme === 'dark' ? 'rgba(255,255,255,0.12)' : 'rgba(0,0,0,0.06)',
               color: theme === 'dark' ? '#fff' : '#000',
               border: `1px solid ${theme === 'dark' ? 'rgba(255,255,255,0.15)' : 'rgba(0,0,0,0.15)'}`,
               backdropFilter: 'blur(12px)',
@@ -106,13 +106,14 @@ const ServicesGrid = () => {
               display: 'flex',
               alignItems: 'center',
             }}
+            aria-label="See our portfolio works"
             onMouseEnter={(e) => {
               e.currentTarget.style.transform = 'translateY(-2px)';
               e.currentTarget.style.background = 'rgba(255,255,255,0.14)';
             }}
             onMouseLeave={(e) => {
               e.currentTarget.style.transform = 'translateY(0)';
-              e.currentTarget.style.background = 'rgba(255,255,255,0.08)';
+              e.currentTarget.style.background = 'rgba(255,255,255,0.12)';
             }}
           >
             See our work
@@ -166,7 +167,7 @@ const ServicesGrid = () => {
                   <div
                     className="font-body"
                     style={{
-                      color: theme === 'dark' ? 'rgba(255,255,255,0.55)' : 'rgba(0,0,0,0.6)',
+                      color: theme === 'dark' ? 'rgba(255,255,255,0.8)' : 'rgba(0,0,0,0.75)',
                       fontSize: 13,
                       lineHeight: 1.25,
                       letterSpacing: '-0.01em',

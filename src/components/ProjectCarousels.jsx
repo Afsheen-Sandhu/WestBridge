@@ -5,7 +5,7 @@ import { useTheme } from '../context/ThemeContext';
 // Replace these with your actual project image paths under /public
 const PROJECT_IMAGES = [
   '/img1.webp',
-  '/work3.png',
+  '/work3.webp',
   '/img17.webp',
   '/img24.webp',
   '/img8.webp',
@@ -76,7 +76,8 @@ const ProjectCarousels = () => {
         >
           <img
             src={src}
-            alt={`Project ${i + 1}`}
+            alt=""
+            aria-hidden="true"
             className="w-full h-full object-cover"
             loading="lazy"
             onError={(e) => {
@@ -122,6 +123,7 @@ const ProjectCarousels = () => {
               <button
                 type="button"
                 className="font-semibold rounded-full transition-all duration-300 active:scale-95 flex-1 sm:flex-none justify-center"
+                aria-label="Learn more about WestBridge"
                 style={{
                   padding: '12px 24px',
                   fontSize: '14px',
@@ -144,6 +146,7 @@ const ProjectCarousels = () => {
               <button
                 type="button"
                 className="font-semibold rounded-full transition-all duration-300 active:scale-95 flex-1 sm:flex-none justify-center"
+                aria-label="View our work portfolio"
                 style={{
                   padding: '12px 24px',
                   fontSize: '14px',

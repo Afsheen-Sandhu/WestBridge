@@ -110,21 +110,27 @@ const Footer = () => {
 
               {/* Socials */}
               <div>
-                <p style={{ fontSize: 10, letterSpacing: '0.18em', textTransform: 'uppercase', color: theme === 'dark' ? 'rgba(255,255,255,0.25)' : 'rgba(0,0,0,0.25)', margin: '0 0 12px', fontWeight: 600 }}>
+                <p style={{ fontSize: 10, letterSpacing: '0.18em', textTransform: 'uppercase', color: theme === 'dark' ? 'rgba(255,255,255,0.45)' : 'rgba(0,0,0,0.5)', margin: '0 0 12px', fontWeight: 600 }}>
                   Follow
                 </p>
                 <div style={{ display: 'flex', gap: '20px', marginTop: '4px' }}>
-                  {[Instagram, Facebook, Twitter, Linkedin].map((Icon, i) => (
+                  {[
+                    { Icon: Instagram, label: 'Instagram' },
+                    { Icon: Facebook, label: 'Facebook' },
+                    { Icon: Twitter, label: 'Twitter' },
+                    { Icon: Linkedin, label: 'LinkedIn' }
+                  ].map(({ Icon, label }, i) => (
                     <button
                       key={i}
+                      aria-label={label}
                       style={{
                         background: 'none', border: 'none', padding: 0, cursor: 'pointer',
-                        color: theme === 'dark' ? 'rgba(255,255,255,0.3)' : 'rgba(0,0,0,0.3)',
+                        color: theme === 'dark' ? 'rgba(255,255,255,0.4)' : 'rgba(0,0,0,0.4)',
                         display: 'flex', alignItems: 'center',
                         transition: 'color 0.3s',
                       }}
                       onMouseEnter={e => e.currentTarget.style.color = theme === 'dark' ? '#fff' : '#000'}
-                      onMouseLeave={e => e.currentTarget.style.color = theme === 'dark' ? 'rgba(255,255,255,0.3)' : 'rgba(0,0,0,0.3)'}
+                      onMouseLeave={e => e.currentTarget.style.color = theme === 'dark' ? 'rgba(255,255,255,0.4)' : 'rgba(0,0,0,0.4)'}
                     >
                       <Icon size={17} strokeWidth={1.5} />
                     </button>
@@ -195,7 +201,7 @@ const Footer = () => {
 
           {['Explore', 'Resources'].map((section, si) => (
             <div key={section}>
-              <p style={{ fontSize: 10, letterSpacing: '0.18em', textTransform: 'uppercase', color: theme === 'dark' ? 'rgba(255,255,255,0.25)' : 'rgba(0,0,0,0.3)', margin: '0 0 18px', fontWeight: 600 }}>
+              <p style={{ fontSize: 10, letterSpacing: '0.18em', textTransform: 'uppercase', color: theme === 'dark' ? 'rgba(255,255,255,0.45)' : 'rgba(0,0,0,0.45)', margin: '0 0 18px', fontWeight: 600 }}>
                 {section}
               </p>
               <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '12px' }}>
@@ -214,9 +220,9 @@ const Footer = () => {
                   ]
                 ).map(item => (
                   <li key={item.label}>
-                    <Link to={item.path} style={{ color: theme === 'dark' ? 'rgba(255,255,255,0.45)' : 'rgba(0,0,0,0.5)', textDecoration: 'none', fontSize: '13px', transition: 'color 0.25s' }}
+                    <Link to={item.path} style={{ color: theme === 'dark' ? 'rgba(255,255,255,0.7)' : 'rgba(0,0,0,0.65)', textDecoration: 'none', fontSize: '13px', transition: 'color 0.25s' }}
                       onMouseEnter={e => e.currentTarget.style.color = theme === 'dark' ? '#fff' : '#000'}
-                      onMouseLeave={e => e.currentTarget.style.color = theme === 'dark' ? 'rgba(255,255,255,0.45)' : 'rgba(0,0,0,0.5)'}
+                      onMouseLeave={e => e.currentTarget.style.color = theme === 'dark' ? 'rgba(255,255,255,0.7)' : 'rgba(0,0,0,0.65)'}
                     >{item.label}</Link>
                   </li>
                 ))}

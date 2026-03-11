@@ -1,6 +1,9 @@
 import React, { useRef, useState } from 'react';
+import { useTheme } from '../context/ThemeContext';
 
 const GlowBadge = ({ children }) => {
+    const { theme } = useTheme();
+    const isDark = theme === 'dark';
     const badgeRef = useRef(null);
     const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
     const [isHovered, setIsHovered] = useState(false);
@@ -26,11 +29,11 @@ const GlowBadge = ({ children }) => {
                 alignItems: 'center',
                 padding: 'clamp(4px, 1.2vw, 6px) clamp(12px, 2.5vw, 18px)',
                 borderRadius: '999px',
-                border: '1px solid rgba(255,255,255,0.12)',
-                background: 'rgba(255,255,255,0.04)',
+                border: isDark ? '1px solid rgba(255,255,255,0.12)' : '1px solid rgba(0,0,0,0.1)',
+                background: isDark ? 'rgba(255,255,255,0.04)' : 'rgba(0,0,0,0.04)',
                 backdropFilter: 'blur(20px)',
                 WebkitBackdropFilter: 'blur(20px)',
-                cursor: 'pointer',
+                cursor: 'default',
                 overflow: 'hidden',
                 transition: 'transform 0.2s ease',
                 '--mouse-x': `${mousePos.x}px`,
@@ -62,8 +65,8 @@ const GlowBadge = ({ children }) => {
                 position: 'relative',
                 zIndex: 10,
                 fontSize: 'clamp(9px, 1.8vw, 11px)',
-                fontWeight: 500,
-                color: '#fff',
+                fontWeight: 600,
+                color: isDark ? '#fff' : '#000',
                 letterSpacing: 'clamp(1px, 0.3vw, 2px)',
                 textTransform: 'uppercase',
                 fontFamily: "'Plus Jakarta Sans', sans-serif",

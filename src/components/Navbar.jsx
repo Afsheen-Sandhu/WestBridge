@@ -41,6 +41,8 @@ const Navbar = () => {
 
     return (
         <nav
+            role="navigation"
+            aria-label="Main Navigation"
             style={{
                 position: 'fixed',
                 top: 0,
@@ -51,8 +53,8 @@ const Navbar = () => {
                 zIndex: 1000,
                 animation: 'fadeInDown 1s cubic-bezier(0.16, 1, 0.3, 1) forwards',
                 background: theme === 'dark'
-                    ? 'linear-gradient(to bottom, rgba(0,0,0,0.92), rgba(0,0,0,0.6), transparent)'
-                    : 'linear-gradient(to bottom, rgba(255,255,255,0.95), rgba(255,255,255,0.7), transparent)',
+                    ? 'linear-gradient(to bottom, rgba(0,0,0,0.95), rgba(0,0,0,0.7), transparent)'
+                    : 'linear-gradient(to bottom, rgba(255,255,255,0.98), rgba(255,255,255,0.8), transparent)',
                 backdropFilter: 'blur(18px)',
                 WebkitBackdropFilter: 'blur(18px)',
                 transition: 'background 0.4s ease',
@@ -154,9 +156,9 @@ const Navbar = () => {
                                             fontWeight: 500,
                                             color: activeLink === link.label
                                                 ? (theme === 'dark' ? '#fff' : '#000')
-                                                : (theme === 'dark' ? 'rgba(255,255,255,0.55)' : 'rgba(0,0,0,0.5)'),
+                                                : (theme === 'dark' ? 'rgba(255,255,255,0.7)' : 'rgba(0,0,0,0.65)'),
                                             background: activeLink === link.label
-                                                ? (theme === 'dark' ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.05)')
+                                                ? (theme === 'dark' ? 'rgba(255,255,255,0.15)' : 'rgba(0,0,0,0.08)')
                                                 : 'transparent',
                                             textDecoration: 'none',
                                             transition: 'all 0.3s ease',
@@ -173,18 +175,20 @@ const Navbar = () => {
                             {/* ── Right Actions ── */}
                             <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
                                 {/* Theme toggle */}
-                                <div
+                                <button
                                     onClick={toggleTheme}
+                                    aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
                                     style={{
                                         width: '52px',
                                         height: '28px',
                                         borderRadius: '100px',
-                                        background: theme === 'dark' ? 'rgba(255,255,255,0.08)' : 'rgba(0,0,0,0.05)',
-                                        border: theme === 'dark' ? '1px solid rgba(255,255,255,0.15)' : '1px solid rgba(0,0,0,0.1)',
+                                        background: theme === 'dark' ? 'rgba(255,255,255,0.12)' : 'rgba(0,0,0,0.08)',
+                                        border: theme === 'dark' ? '1px solid rgba(255,255,255,0.25)' : '1px solid rgba(0,0,0,0.15)',
                                         position: 'relative',
                                         cursor: 'pointer',
                                         flexShrink: 0,
                                         transition: 'all 0.3s ease',
+                                        outline: 'none',
                                     }}
                                 >
                                     <div
@@ -202,7 +206,7 @@ const Navbar = () => {
                                             transition: 'all 0.3s cubic-bezier(0.23, 1, 0.32, 1)',
                                         }}
                                     />
-                                </div>
+                                </button>
 
                                 {/* Connect Button */}
                                 <button
@@ -233,6 +237,8 @@ const Navbar = () => {
                     {isMobile && (
                         <button
                             onClick={() => setMenuOpen(open => !open)}
+                            aria-expanded={menuOpen}
+                            aria-label="Toggle Mobile Menu"
                             style={{
                                 width: 36,
                                 height: 36,
