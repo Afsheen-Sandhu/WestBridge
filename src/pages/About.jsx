@@ -236,17 +236,17 @@ const About = () => {
 
                         {/* Our Values – new design */}
                         <div 
-                            className="mx-auto"
                             style={{ 
-                                marginTop: 'clamp(120px, 20vw, 240px)',
-                                maxWidth: '1200px',
-                                width: '100%',
-                                paddingLeft: 'clamp(20px, 5vw, 80px)',
-                                paddingRight: 'clamp(20px, 5vw, 80px)',
-                                paddingBottom: '120px'
+                                display: 'flex',
+                                flexDirection: 'column',
+                                alignItems: 'center',
+                                justifyContent: 'center',
+                                margin: 'clamp(120px, 20vw, 240px) auto 120px auto',
+                                maxWidth: '840px',
+                                width: '100%'
                             }}
                         >
-                            <div className="flex flex-col items-center text-center">
+                            <div className="flex flex-col items-center text-center w-full">
                                 <GlowBadge>What guides our work</GlowBadge>
                                 <h2
                                     className="mt-6 text-3xl md:text-4xl font-bold tracking-tight"
@@ -255,7 +255,7 @@ const About = () => {
                                     Our Values
                                 </h2>
                                 <p
-                                    className="mx-auto"
+                                    className="mx-auto w-full"
                                     style={{
                                         marginTop: '24px',
                                         fontSize: 'clamp(1rem, 1.2vw, 1.15rem)',
@@ -263,8 +263,6 @@ const About = () => {
                                         color: theme === 'dark' ? 'rgba(255,255,255,0.6)' : 'rgba(0,0,0,0.6)',
                                         lineHeight: 1.8,
                                         letterSpacing: '0.01em',
-                                        paddingLeft: '20px',
-                                        paddingRight: '20px'
                                     }}
                                 >
                                     The principles we return to on every project—from first
@@ -272,7 +270,7 @@ const About = () => {
                                 </p>
                             </div>
 
-                            <div className="mt-16 md:mt-20 grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12">
+                            <div className="mt-16 md:mt-20 grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 lg:gap-24 w-full">
                                 {values.map((v, index) => (
                                     <div key={index}>
                                         <h3

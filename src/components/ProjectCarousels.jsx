@@ -199,7 +199,7 @@ const ProjectCarousels = () => {
           }}
         >
           <div className="overflow-hidden" style={{ height: rowHeight, maskImage: 'linear-gradient(to right, black 0%, black 100%)', WebkitMaskImage: 'linear-gradient(to right, black 0%, black 100%)' }}>
-            {renderRow(row3Images, `translateX(${scrollProgress * SCROLL_OFFSET}px)`)}
+            {renderRow(row3Images, `translateX(calc(-400px + ${scrollProgress * SCROLL_OFFSET}px))`)}
           </div>
         </div>
       </div>
