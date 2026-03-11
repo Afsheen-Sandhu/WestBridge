@@ -81,6 +81,8 @@ const Navbar = () => {
                             alt="WestBridge"
                             width={isMobile ? 48 : (theme === 'dark' ? 85 : 64)}
                             height={isMobile ? 48 : (theme === 'dark' ? 85 : 64)}
+                            loading="eager"
+                            fetchPriority="high"
                             style={{
                                 height: isMobile ? '48px' : (theme === 'dark' ? '85px' : '64px'),
                                 width: 'auto',

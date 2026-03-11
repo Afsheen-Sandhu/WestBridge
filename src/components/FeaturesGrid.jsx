@@ -26,6 +26,9 @@ const FeatureCard = ({ title, description, children, className = '', cardIndex =
                 <img
                     src="/VisuvateBG2.avif"
                     alt=""
+                    width={800}
+                    height={600}
+                    decoding="async"
                     className="absolute w-full h-full object-cover"
                     style={{
                         objectPosition: variant.position,
@@ -97,7 +100,7 @@ const FeaturesGrid = () => {
                                 background: theme === 'dark' ? '#111' : '#eee',
                                 borderColor: theme === 'dark' ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.1)'
                             }}>
-                            <img src="/srv1.webp" alt="Discovery" className="w-full h-full object-cover object-center"
+                            <img src="/srv1.webp" alt="Discovery" width={800} height={450} decoding="async" className="w-full h-full object-cover object-center"
                                 style={{ opacity: theme === 'dark' ? 0.8 : 1 }} />
                         </div>
                     </FeatureCard>
@@ -113,7 +116,7 @@ const FeaturesGrid = () => {
                                 background: theme === 'dark' ? '#111' : '#eee',
                                 borderColor: theme === 'dark' ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.1)'
                             }}>
-                            <img src="/feature2.webp" alt="Mobile-First Design" className="w-full h-full object-cover object-center"
+                            <img src="/feature2.webp" alt="Mobile-First Design" width={550} height={450} decoding="async" className="w-full h-full object-cover object-center"
                                 style={{ opacity: theme === 'dark' ? 0.8 : 1 }} />
                         </div>
                     </FeatureCard>
@@ -132,7 +135,7 @@ const FeaturesGrid = () => {
                                 background: theme === 'dark' ? '#111' : '#eee',
                                 borderColor: theme === 'dark' ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.1)'
                             }}>
-                            <img src="/srv3.webp" alt="Conversion" className="w-full h-full object-cover object-center"
+                            <img src="/srv3.webp" alt="Conversion" width={550} height={450} decoding="async" className="w-full h-full object-cover object-center"
                                 style={{ opacity: theme === 'dark' ? 0.8 : 1 }} />
                         </div>
                     </FeatureCard>
@@ -148,7 +151,7 @@ const FeaturesGrid = () => {
                                 background: theme === 'dark' ? '#111' : '#eee',
                                 borderColor: theme === 'dark' ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.1)'
                             }}>
-                            <img src="/srv4.webp" alt="Pixel Perfect" className="w-full h-full object-cover object-center"
+                            <img src="/srv4.webp" alt="Pixel Perfect" width={800} height={450} decoding="async" className="w-full h-full object-cover object-center"
                                 style={{ opacity: theme === 'dark' ? 0.8 : 1 }} />
                         </div>
                     </FeatureCard>
@@ -167,7 +170,7 @@ const FeaturesGrid = () => {
                                 background: 'transparent',
                                 borderColor: theme === 'dark' ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.1)'
                             }}>
-                            <img src="/srv5.webp" alt="CMS Dashboard" className="w-full h-full object-cover object-center"
+                            <img src="/srv5.webp" alt="CMS Dashboard" width={800} height={450} decoding="async" className="w-full h-full object-cover object-center"
                                 style={{ opacity: theme === 'dark' ? 0.8 : 1 }} />
                         </div>
                     </FeatureCard>
@@ -186,6 +189,9 @@ const FeaturesGrid = () => {
                             <img
                                 src="/srv6.webp"
                                 alt="Ronin Trading Academy"
+                                width={550}
+                                height={450}
+                                decoding="async"
                                 className="w-full h-full object-cover object-center grayscale opacity-90 group-hover:opacity-100 transition-opacity duration-500"
                             />
                         </div>

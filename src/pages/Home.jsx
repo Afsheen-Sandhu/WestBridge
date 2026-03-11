@@ -1,11 +1,12 @@
-import React, { useEffect } from 'react';
+import { Suspense, lazy, useEffect } from 'react';
 import Hero from '../components/Hero';
 import ProjectCarousels from '../components/ProjectCarousels';
 import OurWorksSlides from '../components/OurWorksSlides';
-import FeaturesGrid from '../components/FeaturesGrid';
-import ServicesGrid from '../components/ServicesGrid';
-import PlatformFlexSection from '../components/PlatformFlexSection';
-import ServiceTicker from '../components/ServiceTicker';
+
+const FeaturesGrid = lazy(() => import('../components/FeaturesGrid'));
+const ServicesGrid = lazy(() => import('../components/ServicesGrid'));
+const PlatformFlexSection = lazy(() => import('../components/PlatformFlexSection'));
+const ServiceTicker = lazy(() => import('../components/ServiceTicker'));
 
 const Home = () => {
     useEffect(() => {
@@ -26,10 +27,12 @@ const Home = () => {
             <Hero />
             <ProjectCarousels />
             <OurWorksSlides />
-            <FeaturesGrid />
-            <ServicesGrid />
-            <PlatformFlexSection />
-            <ServiceTicker />
+            <Suspense fallback={<div className="h-40" />}>
+                <FeaturesGrid />
+                <ServicesGrid />
+                <PlatformFlexSection />
+                <ServiceTicker />
+            </Suspense>
         </>
     );
 };
