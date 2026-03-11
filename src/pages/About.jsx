@@ -235,7 +235,7 @@ const About = () => {
                         </div>
 
                         {/* Our Values – new design */}
-                        <div className="mt-24 md:mt-32">
+                        <div className="mt-32 md:mt-48 px-6 md:px-10">
                             <div className="flex flex-col items-center text-center">
                                 <GlowBadge>What guides our work</GlowBadge>
                                 <h2

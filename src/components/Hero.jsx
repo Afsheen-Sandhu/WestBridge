@@ -49,7 +49,7 @@ const Hero = () => {
       />
 
       {/* Main hero content */}
-      <div className="relative w-full max-w-[1400px] mx-auto flex flex-col items-center text-center z-10 flex-1 justify-center pt-[120px] pb-12 md:pt-[160px] md:pb-20">
+      <div className="relative w-full max-w-[1400px] mx-auto flex flex-col items-center text-center z-10 flex-1 justify-center pt-[180px] pb-12 md:pt-[220px] md:pb-20">
         {/* Glow Badge */}
         <div className="mb-20 md:mb-14 animate-fade-in-down">
           <GlowBadge>Design In Details</GlowBadge>
