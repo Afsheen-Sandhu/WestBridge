@@ -7,7 +7,7 @@ export const blogPosts = [
         category: "Strategy",
         author: "Afsheen Sandhu",
         date: "March 10, 2026",
-        image: "/discovery.png",
+        image: "/discovery.webp",
         content: `
             <p>In the fast-paced world of digital product creation, there is a common temptation to jump straight into design and code. However, at WestBridge, we’ve learned that the most successful projects aren't built on code alone—they are built on a foundation of <strong>Strategic Discovery</strong>.</p>
             
@@ -67,7 +67,7 @@ export const blogPosts = [
         category: "Marketing",
         author: "Afsheen Sandhu",
         date: "March 5, 2026",
-        image: "/conversion.png",
+        image: "/conversion.webp",
         content: `
             <p>A beautiful website that doesn't convert is just a piece of art. At WestBridge, we believe that <strong>high-end aesthetics should always serve a conversion goal</strong>.</p>
             
@@ -124,7 +124,7 @@ export const blogPosts = [
         category: "CMS",
         author: "Junaid Khan",
         date: "Feb 28, 2026",
-        image: "/cms.png",
+        image: "/cms.webp",
         content: `
             <p>A website should never be a "black box" that requires a developer for every small update. To scale effectively, your team needs a <strong>powerful Content Management System (CMS)</strong>.</p>
             

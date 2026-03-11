@@ -4,21 +4,21 @@ import { useTheme } from '../context/ThemeContext';
 
 // Replace these with your actual project image paths under /public
 const PROJECT_IMAGES = [
-  '/img1.png',
+  '/img1.webp',
   '/work3.png',
-  '/img17.png',
-  '/img24.png',
-  '/img8.png',
-  '/img2.png',
-  '/img13.png',
-  '/img9.png',
-  '/img14.png',
-  '/img23.png',
-  '/img12.png',
-  '/img3.png',
-  '/img18.png',
-  '/img20.png',
-  '/img4.png',
+  '/img17.webp',
+  '/img24.webp',
+  '/img8.webp',
+  '/img2.webp',
+  '/img13.webp',
+  '/img9.webp',
+  '/img14.webp',
+  '/img23.webp',
+  '/img12.webp',
+  '/img3.webp',
+  '/img18.webp',
+  '/img20.webp',
+  '/img4.webp',
 ];
 
 const CARD_WIDTH = 380;
