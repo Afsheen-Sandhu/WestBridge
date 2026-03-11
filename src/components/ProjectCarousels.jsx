@@ -77,6 +77,8 @@ const ProjectCarousels = () => {
           <img
             src={src}
             alt=""
+            width={CARD_WIDTH}
+            height={rowHeight}
             aria-hidden="true"
             className="w-full h-full object-cover"
             loading="lazy"

@@ -79,6 +79,8 @@ const Navbar = () => {
                         <img
                             src={theme === 'dark' ? "/logo-white-removebg-preview.png" : "/logo-black-removebg-preview.png"}
                             alt="WestBridge"
+                            width={isMobile ? 48 : (theme === 'dark' ? 85 : 64)}
+                            height={isMobile ? 48 : (theme === 'dark' ? 85 : 64)}
                             style={{
                                 height: isMobile ? '48px' : (theme === 'dark' ? '85px' : '64px'),
                                 width: 'auto',

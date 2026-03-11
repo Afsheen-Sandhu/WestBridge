@@ -161,7 +161,10 @@ const About = () => {
                                             <img
                                                 src="/junaid.jpeg"
                                                 alt="Junaid"
+                                                width={32}
+                                                height={32}
                                                 className="w-8 h-8 rounded-full object-cover"
+                                                loading="lazy"
                                             />
                                         </span>
                                         <a
@@ -196,6 +199,8 @@ const About = () => {
                                 <img
                                     src="/about2.png"
                                     alt="WestBridge studio"
+                                    width={1200}
+                                    height={520}
                                     className="w-full h-full object-cover"
                                     style={{
                                         maxHeight: '520px',

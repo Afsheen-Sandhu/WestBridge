@@ -19,6 +19,7 @@ const Hero = () => {
         muted
         playsInline
         preload="auto"
+        poster="/city.png"
         aria-hidden="true"
         style={{
           position: 'absolute',

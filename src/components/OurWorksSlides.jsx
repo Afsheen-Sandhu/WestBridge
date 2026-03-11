@@ -31,6 +31,8 @@ const ProjectSlide = ({ project }) => {
         <img
           src={project.image}
           alt={project.alt}
+          width={520}
+          height={325}
           className="absolute inset-0 w-full h-full object-cover"
           loading="lazy"
         />
