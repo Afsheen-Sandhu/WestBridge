@@ -46,7 +46,7 @@ const Footer = () => {
               to="/"
               style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '40px', textDecoration: 'none' }}
             >
-              <img src={theme === 'dark' ? "/logo-white-removebg-preview.png" : "/logo-black-removebg-preview.png"} alt="WB" style={{ height: '24px' }} />
+              <img src={theme === 'dark' ? "/logo-white-removebg-preview.webp" : "/logo-black-removebg-preview.webp"} alt="WB" style={{ height: '24px' }} />
               <span style={{ color: theme === 'dark' ? '#fff' : '#000', fontWeight: 700, fontSize: '16px', letterSpacing: '-0.02em' }}>WestBridge</span>
             </Link>
 
@@ -162,7 +162,7 @@ const Footer = () => {
                 zIndex: 2, pointerEvents: 'none',
               }} />
               <img
-                src="/city2.png"
+                src="/city2.webp"
                 alt="City Illustration"
                 onMouseEnter={() => setImgHover(true)}
                 onMouseLeave={() => setImgHover(false)}

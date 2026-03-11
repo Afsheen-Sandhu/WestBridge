@@ -5,10 +5,10 @@ import { useTheme } from '../context/ThemeContext';
 
 // Real project slides
 const PROJECT_SLIDES = [
-  { image: '/work1.png', alt: 'Akaneya — Japanese sumibiyaki', link: 'https://akaneyajapan.com/en/' },
-  { image: '/work2.png', alt: 'CHANI Shop — astrology workshops & ritual tools', link: 'https://chanishop.com/' },
-  { image: '/work4.png', alt: 'Burger & Sauce — tasty burgers, fresh everyday', link: 'https://www.burgerandsauce.com/' },
-  { image: '/work6.png', alt: 'Frequency Breathwork — healing begins with the breath', link: 'https://frequencybreathwork.com/' },
+  { image: '/work1.webp', alt: 'Akaneya — Japanese sumibiyaki', link: 'https://akaneyajapan.com/en/' },
+  { image: '/work2.webp', alt: 'CHANI Shop — astrology workshops & ritual tools', link: 'https://chanishop.com/' },
+  { image: '/work4.webp', alt: 'Burger & Sauce — tasty burgers, fresh everyday', link: 'https://www.burgerandsauce.com/' },
+  { image: '/work6.webp', alt: 'Frequency Breathwork — healing begins with the breath', link: 'https://frequencybreathwork.com/' },
 ];
 
 const ProjectSlide = ({ project }) => {

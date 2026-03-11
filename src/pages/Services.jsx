@@ -182,7 +182,7 @@ const Services = () => {
                         justifyContent: 'center',
                     }}>
                         <img
-                            src="/services-removebg-preview.png"
+                            src="/services-removebg-preview.webp"
                             alt="Services Showcase"
                             style={{
                                 width: '100%',
@@ -212,7 +212,7 @@ const Services = () => {
                         boxShadow: '0 10px 30px rgba(0,0,0,0.1)',
                     }}>
                         <img
-                            src="/work.png"
+                            src="/work.webp"
                             alt="Agency Portrait"
                             style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                         />

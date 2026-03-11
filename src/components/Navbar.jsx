@@ -77,7 +77,7 @@ const Navbar = () => {
                         style={{ display: 'flex', alignItems: 'center', gap: '14px', cursor: 'pointer', textDecoration: 'none' }}
                     >
                         <img
-                            src={theme === 'dark' ? "/logo-white-removebg-preview.png" : "/logo-black-removebg-preview.png"}
+                            src={theme === 'dark' ? "/logo-white-removebg-preview.webp" : "/logo-black-removebg-preview.webp"}
                             alt="WestBridge"
                             width={isMobile ? 48 : (theme === 'dark' ? 85 : 64)}
                             height={isMobile ? 48 : (theme === 'dark' ? 85 : 64)}

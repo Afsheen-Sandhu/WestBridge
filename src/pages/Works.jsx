@@ -124,7 +124,7 @@ const Works = () => {
                                     boxShadow: isDark ? '0 10px 30px rgba(0,0,0,0.5)' : '0 10px 30px rgba(0,0,0,0.05)',
                                 }}>
                                     <img
-                                        src="/work.png"
+                                        src="/work.webp"
                                         alt="Creative portrait"
                                         style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                                     />

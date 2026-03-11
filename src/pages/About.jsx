@@ -159,7 +159,7 @@ const About = () => {
                                             }}
                                         >
                                             <img
-                                                src="/junaid.jpeg"
+                                                src="/junaid.webp"
                                                 alt="Junaid"
                                                 width={32}
                                                 height={32}
@@ -197,7 +197,7 @@ const About = () => {
                         <div className="mt-20 md:mt-24">
                             <div className="relative w-full overflow-hidden border border-white/10">
                                 <img
-                                    src="/about2.png"
+                                    src="/about2.webp"
                                     alt="WestBridge studio"
                                     width={1200}
                                     height={520}

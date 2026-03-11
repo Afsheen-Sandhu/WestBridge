@@ -37,7 +37,7 @@ export const blogPosts = [
         category: "Design",
         author: "Junaid Khan",
         date: "March 8, 2026",
-        image: "/mobile.png",
+        image: "/mobile.webp",
         content: `
             <p>The shift to mobile is no longer a trend; it is the reality of the digital landscape. With over 60% of global web traffic coming from mobile devices, a "responsive" site is no longer enough. You need to think <strong>Mobile-First</strong>.</p>
             
@@ -95,7 +95,7 @@ export const blogPosts = [
         category: "Development",
         author: "Technical Team",
         date: "March 2, 2026",
-        image: "/pixel-perfect.png",
+        image: "/pixel-perfect.webp",
         content: `
             <p>Translating a complex Figma design into a living, breathing website is an exercise in precision. <strong>Pixel-perfect development</strong> isn't just about matching dimensions; it's about maintaining the integrity of the creative vision while ensuring technical excellence.</p>
             
