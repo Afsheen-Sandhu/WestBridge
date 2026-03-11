@@ -235,7 +235,16 @@ const About = () => {
                         </div>
 
                         {/* Our Values – new design */}
-                        <div className="mt-32 md:mt-48 px-6 md:px-10">
+                        <div 
+                            className="w-full mx-auto"
+                            style={{ 
+                                marginTop: 'clamp(80px, 15vw, 160px)',
+                                maxWidth: '1000px',
+                                paddingLeft: '20px',
+                                paddingRight: '20px',
+                                paddingBottom: '120px'
+                            }}
+                        >
                             <div className="flex flex-col items-center text-center">
                                 <GlowBadge>What guides our work</GlowBadge>
                                 <h2
@@ -245,14 +254,16 @@ const About = () => {
                                     Our Values
                                 </h2>
                                 <p
-                                    className="mt-4 text-sm md:text-base max-w-[560px] mx-auto px-4 md:px-0"
+                                    className="mx-auto"
                                     style={{
-                                        color: theme === 'dark'
-                                            ? 'rgba(255,255,255,0.6)'
-                                            : 'rgba(0,0,0,0.6)',
-                                        paddingTop: 8,
-                                        paddingBottom: 8,
-                                        lineHeight: 1.6
+                                        marginTop: '24px',
+                                        fontSize: 'clamp(1rem, 1.2vw, 1.15rem)',
+                                        maxWidth: '720px',
+                                        color: theme === 'dark' ? 'rgba(255,255,255,0.6)' : 'rgba(0,0,0,0.6)',
+                                        lineHeight: 1.8,
+                                        letterSpacing: '0.01em',
+                                        paddingLeft: '20px',
+                                        paddingRight: '20px'
                                     }}
                                 >
                                     The principles we return to on every project—from first

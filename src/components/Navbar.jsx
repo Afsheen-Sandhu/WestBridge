@@ -18,7 +18,17 @@ const Navbar = () => {
     const [connectHovered, setConnectHovered] = useState(false);
     const [isMobile, setIsMobile] = useState(typeof window !== 'undefined' ? window.innerWidth <= 768 : false);
     const [menuOpen, setMenuOpen] = useState(false);
+    const [scrolled, setScrolled] = useState(false);
     const { theme, toggleTheme } = useTheme();
+
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setScrolled(window.scrollY > 10);
+        };
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
 
 
     useEffect(() => {
@@ -52,12 +62,15 @@ const Navbar = () => {
                 paddingBottom: isMobile ? 16 : 24,
                 zIndex: 1000,
                 animation: 'fadeInDown 1s cubic-bezier(0.16, 1, 0.3, 1) forwards',
-                background: theme === 'dark'
-                    ? 'linear-gradient(to bottom, rgba(0,0,0,0.95), rgba(0,0,0,0.7), transparent)'
-                    : 'linear-gradient(to bottom, rgba(255,255,255,0.98), rgba(255,255,255,0.8), transparent)',
-                backdropFilter: 'blur(18px)',
-                WebkitBackdropFilter: 'blur(18px)',
-                transition: 'background 0.4s ease',
+                background: !scrolled 
+                    ? 'transparent' 
+                    : (theme === 'dark'
+                        ? 'linear-gradient(to bottom, rgba(0,0,0,0.95), rgba(0,0,0,0.7), transparent)'
+                        : 'linear-gradient(to bottom, rgba(255,255,255,0.98), rgba(255,255,255,0.8), transparent)'),
+                boxShadow: !scrolled ? 'none' : (theme === 'dark' ? '0 10px 30px rgba(0,0,0,0.5)' : '0 10px 30px rgba(0,0,0,0.05)'),
+                backdropFilter: !scrolled ? 'none' : 'blur(18px)',
+                WebkitBackdropFilter: !scrolled ? 'none' : 'blur(18px)',
+                transition: 'all 0.4s ease',
             }}
         >
             <div className="layout-outer">
