@@ -236,12 +236,13 @@ const About = () => {
 
                         {/* Our Values – new design */}
                         <div 
-                            className="w-full mx-auto"
+                            className="mx-auto"
                             style={{ 
-                                marginTop: 'clamp(80px, 15vw, 160px)',
-                                maxWidth: '1000px',
-                                paddingLeft: '20px',
-                                paddingRight: '20px',
+                                marginTop: 'clamp(120px, 20vw, 240px)',
+                                maxWidth: '1200px',
+                                width: '100%',
+                                paddingLeft: 'clamp(20px, 5vw, 80px)',
+                                paddingRight: 'clamp(20px, 5vw, 80px)',
                                 paddingBottom: '120px'
                             }}
                         >
