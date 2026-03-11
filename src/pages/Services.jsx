@@ -183,7 +183,7 @@ const Services = () => {
                     }}>
                         <img
                             src="/services-removebg-preview.webp"
-                            alt="Services Showcase"
+                            alt="WestBridge Digital Services Showcase - Web Design, Development and Branding"
                             style={{
                                 width: '100%',
                                 height: '100%',
@@ -213,7 +213,7 @@ const Services = () => {
                     }}>
                         <img
                             src="/work.webp"
-                            alt="Agency Portrait"
+                            alt="WestBridge Team Expertise and Creative Process"
                             style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                         />
                     </div>

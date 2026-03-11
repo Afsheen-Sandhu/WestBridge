@@ -137,7 +137,7 @@ const BlogDetail = () => {
                     }}>
                         <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
                             <div style={{ width: '32px', height: '32px', borderRadius: '50%', background: isDark ? '#222' : '#ddd', overflow: 'hidden' }}>
-                                <img src="/work.webp" alt={post.author} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                                <img src="/work.webp" alt={`Author ${post.author} - WestBridge Expert`} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                             </div>
                             <span style={{ fontSize: '14px', fontWeight: 700 }}>{post.author}</span>
                         </div>

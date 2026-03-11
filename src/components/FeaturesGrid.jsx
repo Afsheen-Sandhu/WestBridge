@@ -29,6 +29,7 @@ const FeatureCard = ({ title, description, children, className = '', cardIndex =
                     width={800}
                     height={600}
                     decoding="async"
+                    aria-hidden="true"
                     className="absolute w-full h-full object-cover"
                     style={{
                         objectPosition: variant.position,
@@ -100,7 +101,7 @@ const FeaturesGrid = () => {
                                 background: theme === 'dark' ? '#111' : '#eee',
                                 borderColor: theme === 'dark' ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.1)'
                             }}>
-                            <img src="/srv1.webp" alt="Discovery" width={800} height={450} decoding="async" className="w-full h-full object-cover object-center"
+                            <img src="/srv1.webp" alt="WestBridge Discovery and Strategy Phase - defining clear digital goals" width={800} height={450} decoding="async" className="w-full h-full object-cover object-center"
                                 style={{ opacity: theme === 'dark' ? 0.8 : 1 }} />
                         </div>
                     </FeatureCard>
@@ -116,7 +117,7 @@ const FeaturesGrid = () => {
                                 background: theme === 'dark' ? '#111' : '#eee',
                                 borderColor: theme === 'dark' ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.1)'
                             }}>
-                            <img src="/feature2.webp" alt="Mobile-First Design" width={550} height={450} decoding="async" className="w-full h-full object-cover object-center"
+                            <img src="/feature2.webp" alt="Mobile-First Web Design for Seamless User Experience across devices" width={550} height={450} decoding="async" className="w-full h-full object-cover object-center"
                                 style={{ opacity: theme === 'dark' ? 0.8 : 1 }} />
                         </div>
                     </FeatureCard>
@@ -135,7 +136,7 @@ const FeaturesGrid = () => {
                                 background: theme === 'dark' ? '#111' : '#eee',
                                 borderColor: theme === 'dark' ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.1)'
                             }}>
-                            <img src="/srv3.webp" alt="Conversion" width={550} height={450} decoding="async" className="w-full h-full object-cover object-center"
+                            <img src="/srv3.webp" alt="Conversion-Driven Web Development and Strategic User Journeys" width={550} height={450} decoding="async" className="w-full h-full object-cover object-center"
                                 style={{ opacity: theme === 'dark' ? 0.8 : 1 }} />
                         </div>
                     </FeatureCard>
@@ -151,7 +152,7 @@ const FeaturesGrid = () => {
                                 background: theme === 'dark' ? '#111' : '#eee',
                                 borderColor: theme === 'dark' ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.1)'
                             }}>
-                            <img src="/srv4.webp" alt="Pixel Perfect" width={800} height={450} decoding="async" className="w-full h-full object-cover object-center"
+                            <img src="/srv4.webp" alt="Pixel-Perfect Web Development and UI Precision by WestBridge Team" width={800} height={450} decoding="async" className="w-full h-full object-cover object-center"
                                 style={{ opacity: theme === 'dark' ? 0.8 : 1 }} />
                         </div>
                     </FeatureCard>
@@ -170,7 +171,7 @@ const FeaturesGrid = () => {
                                 background: 'transparent',
                                 borderColor: theme === 'dark' ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.1)'
                             }}>
-                            <img src="/srv5.webp" alt="CMS Dashboard" width={800} height={450} decoding="async" className="w-full h-full object-cover object-center"
+                            <img src="/srv5.webp" alt="Seamless CMS Launch and Powerful Content Management Dashboard" width={800} height={450} decoding="async" className="w-full h-full object-cover object-center"
                                 style={{ opacity: theme === 'dark' ? 0.8 : 1 }} />
                         </div>
                     </FeatureCard>
@@ -188,7 +189,7 @@ const FeaturesGrid = () => {
                             }}>
                             <img
                                 src="/srv6.webp"
-                                alt="Ronin Trading Academy"
+                                alt="Future-Ready Scalable Web Architecture - Case Study"
                                 width={550}
                                 height={450}
                                 decoding="async"

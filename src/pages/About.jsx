@@ -160,7 +160,7 @@ const About = () => {
                                         >
                                             <img
                                                 src="/junaid.webp"
-                                                alt="Junaid"
+                                                alt="Junaid Khan - Founder of WestBridge IT Solutions"
                                                 width={32}
                                                 height={32}
                                                 className="w-8 h-8 rounded-full object-cover"
@@ -171,6 +171,7 @@ const About = () => {
                                             href="https://www.linkedin.com/in/asgharjunaid/"
                                             target="_blank"
                                             rel="noopener noreferrer"
+                                            aria-label="Connect with Junaid Khan on LinkedIn"
                                             className="hover:opacity-75 transition-all duration-300 align-middle"
                                             style={{
                                                 color: theme === 'dark' ? '#fff' : '#000',
@@ -198,7 +199,7 @@ const About = () => {
                             <div className="relative w-full overflow-hidden border border-white/10">
                                 <img
                                     src="/about2.webp"
-                                    alt="WestBridge studio"
+                                    alt="Modern Creative Studio Workspace - WestBridge IT Solutions team environment"
                                     width={1200}
                                     height={520}
                                     className="w-full h-full object-cover"

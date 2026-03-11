@@ -112,7 +112,7 @@ const Blogs = () => {
                         border: `1px solid ${isDark ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.1)'}`,
                         flexShrink: 0,
                     }}>
-                        <img src="/work.webp" alt="Author" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                        <img src="/work.webp" alt="Asghar Junaid Khan - WestBridge Founder and Author" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                     </div>
                     <div style={{ textAlign: isMobile ? 'center' : 'left' }}>
                         <h2 style={{
