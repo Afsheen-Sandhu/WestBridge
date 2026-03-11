@@ -4,8 +4,9 @@ import { useTheme } from '../context/ThemeContext';
 
 // Replace these with your actual project image paths under /public
 const PROJECT_IMAGES = [
+  '/img11.webp',
   '/img1.webp',
-  '/work3.webp',
+  '/img5.webp',
   '/img17.webp',
   '/img24.webp',
   '/img8.webp',
@@ -19,6 +20,14 @@ const PROJECT_IMAGES = [
   '/img18.webp',
   '/img20.webp',
   '/img4.webp',
+  '/img16.webp',
+  '/img6.webp',
+  '/img10.webp',
+  '/img15.webp',
+  '/img7.webp',
+  '/img19.webp',
+  '/img21.webp',
+  '/img22.webp',
 ];
 
 const CARD_WIDTH = 380;

@@ -245,13 +245,14 @@ const About = () => {
                                     Our Values
                                 </h2>
                                 <p
-                                    className="mt-4 text-sm md:text-base max-w-[560px]"
+                                    className="mt-4 text-sm md:text-base max-w-[560px] mx-auto px-4 md:px-0"
                                     style={{
                                         color: theme === 'dark'
                                             ? 'rgba(255,255,255,0.6)'
                                             : 'rgba(0,0,0,0.6)',
-                                        paddingTop: 5,
-                                        paddingBottom: 5,
+                                        paddingTop: 8,
+                                        paddingBottom: 8,
+                                        lineHeight: 1.6
                                     }}
                                 >
                                     The principles we return to on every project—from first
