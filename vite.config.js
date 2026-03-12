@@ -9,26 +9,24 @@ export default defineConfig({
     tailwindcss(),
   ],
   build: {
-    // Use esbuild for minification (built-in, fast, no extra install needed)
     minify: 'esbuild',
     target: 'es2020',
-    // Inline small assets as base64 instead of separate requests
     assetsInlineLimit: 4096,
     rollupOptions: {
       output: {
-        // Manual chunk splitting — keeps each vendor separate so
-        // unchanged chunks stay cached and pages only load what they need
-        manualChunks: {
-          'react-vendor': ['react', 'react-dom'],
-          'router': ['react-router-dom'],
-          'icons': ['lucide-react'],
+        manualChunks(id) {
+          // Split heavy vendor libs into their own cached chunks
+          if (id.includes('node_modules')) {
+            if (id.includes('react-dom')) return 'react-vendor'
+            if (id.includes('react-router')) return 'router'
+            if (id.includes('lucide-react')) return 'icons'
+            // Keep remaining small node_modules in the default vendor chunk
+          }
         },
       },
     },
-    // Warn when a chunk exceeds 500 KiB
     chunkSizeWarningLimit: 500,
   },
-  // Speed up cold starts by pre-bundling heavy deps
   optimizeDeps: {
     include: ['react', 'react-dom', 'react-router-dom', 'lucide-react'],
   },

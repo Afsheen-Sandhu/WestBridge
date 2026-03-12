@@ -112,7 +112,7 @@ const Blogs = () => {
                         border: `1px solid ${isDark ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.1)'}`,
                         flexShrink: 0,
                     }}>
-                        <img src="/work.webp" alt="Asghar Junaid Khan - WestBridge Founder and Author" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                        <img src="/work.webp" alt="Asghar Junaid Khan - WestBridge Founder and Author" width={200} height={200} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                     </div>
                     <div style={{ textAlign: isMobile ? 'center' : 'left' }}>
                         <h2 style={{
@@ -187,6 +187,8 @@ const BlogCard = ({ post, isDark, isMobile }) => {
                 <img
                     src={post.image}
                     alt={post.title}
+                    width={600}
+                    height={480}
                     style={{
                         width: '100%',
                         height: '100%',
