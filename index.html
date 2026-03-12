@@ -6,15 +6,22 @@
     <meta name="description" content="WestBridge IT Solutions – Premium web design and development agency crafting high-performance digital experiences." />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WestBridge – Premium Web Experiences</title>
+    <!-- DNS preconnect for Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
-    <link rel="canonical" href="https://www.westbridgeitsolutions.com/" />
-    
-    <link rel="preload" href="/VisuvateBG2.avif" as="image" fetchpriority="high" />
-    <link rel="preload" href="/logo-white-removebg-preview.webp" as="image" />
 
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="canonical" href="https://www.westbridgeitsolutions.com/" />
+
+    <!-- Preload hero video (LCP element) -->
+    <link rel="preload" href="/canvas-animation.webm" as="video" type="video/webm" fetchpriority="high" />
+    <!-- Preload FeaturesGrid card background image -->
+    <link rel="preload" href="/VisuvateBG2.webp" as="image" />
+    <!-- Preload navbar logo -->
+    <link rel="preload" href="/logo-white-removebg-preview.webp" as="image" fetchpriority="high" />
+
+    <!-- Google Fonts — loaded NON-BLOCKING to avoid render-blocking (440ms penalty) -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&family=Playfair+Display:ital@0;1&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&family=Playfair+Display:ital@0;1&display=swap"></noscript>
 
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">

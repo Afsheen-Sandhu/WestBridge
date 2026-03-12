@@ -24,7 +24,7 @@ const FeatureCard = ({ title, description, children, className = '', cardIndex =
             {/* Background image - unique position, zoom & angle per card */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden>
                 <img
-                    src="/VisuvateBG2.avif"
+                    src="/VisuvateBG2.webp"
                     alt=""
                     width={800}
                     height={600}

@@ -260,8 +260,8 @@ const Navbar = () => {
                                 width: 36,
                                 height: 36,
                                 borderRadius: 999,
-                                border: '1px solid rgba(255,255,255,0.35)',
-                                background: 'rgba(0,0,0,0.6)',
+                                border: theme === 'dark' ? '1px solid rgba(255,255,255,0.35)' : '1px solid rgba(0,0,0,0.25)',
+                                background: theme === 'dark' ? 'rgba(0,0,0,0.6)' : 'rgba(0,0,0,0.06)',
                                 display: 'flex',
                                 alignItems: 'center',
                                 justifyContent: 'center',
@@ -272,7 +272,7 @@ const Navbar = () => {
                                     width: 16,
                                     height: 2,
                                     borderRadius: 999,
-                                    background: '#fff',
+                                    background: theme === 'dark' ? '#fff' : '#000',
                                     position: 'relative',
                                     transition: 'transform 0.25s ease, background 0.25s ease',
                                 }}
@@ -286,7 +286,7 @@ const Navbar = () => {
                                         top: -5,
                                         height: 2,
                                         borderRadius: 999,
-                                        background: '#fff',
+                                        background: theme === 'dark' ? '#fff' : '#000',
                                     }}
                                 />
                                 <span
@@ -298,7 +298,7 @@ const Navbar = () => {
                                         bottom: -5,
                                         height: 2,
                                         borderRadius: 999,
-                                        background: '#fff',
+                                        background: theme === 'dark' ? '#fff' : '#000',
                                     }}
                                 />
                             </span>
@@ -433,9 +433,13 @@ const Navbar = () => {
                                     fontSize: 14,
                                     cursor: 'pointer',
                                     transition: 'all 0.3s ease',
-                                    background: connectHovered ? '#fff' : 'transparent',
-                                    color: connectHovered ? '#000' : '#fff',
-                                    border: '1.3px solid rgba(255,255,255,0.4)',
+                                    background: connectHovered
+                                        ? (theme === 'dark' ? '#fff' : '#000')
+                                        : 'transparent',
+                                    color: connectHovered
+                                        ? (theme === 'dark' ? '#000' : '#fff')
+                                        : (theme === 'dark' ? '#fff' : '#000'),
+                                    border: theme === 'dark' ? '1.3px solid rgba(255,255,255,0.4)' : '1.3px solid rgba(0,0,0,0.35)',
                                 }}
                             >
                                 Let's Connect

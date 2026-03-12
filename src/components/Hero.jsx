@@ -18,8 +18,8 @@ const Hero = () => {
         loop
         muted
         playsInline
-        preload="metadata"
-        poster="/VisuvateBG2.webp"
+        preload="auto"
+        fetchPriority="high"
         aria-hidden="true"
         style={{
           position: 'absolute',
