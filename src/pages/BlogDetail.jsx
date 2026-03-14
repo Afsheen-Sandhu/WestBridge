@@ -220,7 +220,7 @@ const BlogDetail = () => {
             </article>
 
             <style>{`
-                .blog-content h3 {
+                .blog-content h2, .blog-content h3 {
                     font-size: 28px;
                     font-weight: 800;
                     margin: 48px 0 24px;

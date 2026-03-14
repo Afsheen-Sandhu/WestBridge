@@ -88,6 +88,7 @@ const OurWorksSlides = () => {
       style={{ background: theme === 'dark' ? '#000' : '#fff' }}
     >
       <div className="w-full px-4 sm:px-6 flex justify-center">
+        <h2 className="sr-only">Featured Projects Case Studies</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 w-full max-w-[1100px]">
           {PROJECT_SLIDES.map((project, index) => (
             <div key={index} className="w-full flex justify-center">

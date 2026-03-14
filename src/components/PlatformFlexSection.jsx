@@ -69,7 +69,7 @@ const PlatformFlexSection = () => {
               className="w-full flex-1 flex flex-col items-start justify-center"
               style={{ paddingLeft: '32px', paddingRight: '32px', paddingTop: '36px', paddingBottom: '36px' }}
             >
-              <h3
+              <h2
                 className="font-body text-left"
                 style={{
                   color: '#fff', // Always white as it sits on video/dark gradient overlay
@@ -83,7 +83,7 @@ const PlatformFlexSection = () => {
                 Platform flexibility.
                 <br />
                 Design consistency.
-              </h3>
+              </h2>
               <p
                 className="font-body text-left"
                 style={{

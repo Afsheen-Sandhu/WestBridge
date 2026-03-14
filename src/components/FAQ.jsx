@@ -72,36 +72,38 @@ const FAQ = () => {
                   transition: 'all 0.3s ease'
                 }}
               >
-                <button
-                  onClick={() => toggleFAQ(index)}
-                  style={{
-                    width: '100%',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'space-between',
-                    padding: '24px 32px',
-                    background: 'transparent',
-                    border: 'none',
-                    color: isDark ? '#fff' : '#000',
-                    textAlign: 'left',
-                    cursor: 'pointer',
-                    fontSize: 'clamp(16px, 2vw, 18px)',
-                    fontWeight: 600,
-                    fontFamily: "'Plus Jakarta Sans', sans-serif",
-                    letterSpacing: '-0.01em',
-                  }}
-                >
-                  {faq.question}
-                  <ChevronDown 
-                    size={20} 
-                    style={{ 
-                      flexShrink: 0, 
-                      transition: 'transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1)',
-                      transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)',
-                      opacity: 0.6
-                    }} 
-                  />
-                </button>
+                <h3 style={{ margin: 0, padding: 0 }}>
+                  <button
+                    onClick={() => toggleFAQ(index)}
+                    style={{
+                      width: '100%',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'space-between',
+                      padding: '24px 32px',
+                      background: 'transparent',
+                      border: 'none',
+                      color: isDark ? '#fff' : '#000',
+                      textAlign: 'left',
+                      cursor: 'pointer',
+                      fontSize: 'clamp(16px, 2vw, 18px)',
+                      fontWeight: 600,
+                      fontFamily: "'Plus Jakarta Sans', sans-serif",
+                      letterSpacing: '-0.01em',
+                    }}
+                  >
+                    {faq.question}
+                    <ChevronDown 
+                      size={20} 
+                      style={{ 
+                        flexShrink: 0, 
+                        transition: 'transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1)',
+                        transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)',
+                        opacity: 0.6
+                      }} 
+                    />
+                  </button>
+                </h3>
                 
                 <div 
                   style={{

@@ -11,10 +11,10 @@ export const blogPosts = [
         content: `
             <p>In the fast-paced world of digital product creation, there is a common temptation to jump straight into design and code. However, at WestBridge, we’ve learned that the most successful projects aren't built on code alone—they are built on a foundation of <strong>Strategic Discovery</strong>.</p>
             
-            <h3>What is Strategic Discovery?</h3>
+            <h2>What is Strategic Discovery?</h2>
             <p>Discovery is the process of uncovering the 'Why' behind a project. It involves deep-diving into business goals, user needs, and competitive landscapes. Without this phase, you are essentially building a house without a blueprint.</p>
             
-            <h3>The Pillars of a Strong Discovery Phase</h3>
+            <h2>The Pillars of a Strong Discovery Phase</h2>
             <ul>
                 <li><strong>Audience Mapping:</strong> Identifying exactly who will use the product and what problems it solves for them.</li>
                 <li><strong>Brand Voice Alignment:</strong> Ensuring the visual and textual language resonates with the brand's core values.</li>
@@ -23,7 +23,7 @@ export const blogPosts = [
 
             <blockquote>"Discovery is not about finding what's already there; it's about defining what needs to exist."</blockquote>
 
-            <h3>Why Discovery Saves Money</h3>
+            <h2>Why Discovery Saves Money</h2>
             <p>By spending time upfront to define requirements and user flows, we reduce the risk of "scope creep" and rework. A well-executed discovery phase can reduce development time by up to 30% by eliminating ambiguity and ensuring the team is aligned from day one.</p>
             
             <p>Ultimately, strategic discovery transforms a "website" into a business tool that drives results. It's the difference between a pretty interface and a powerful user experience.</p>
@@ -41,10 +41,10 @@ export const blogPosts = [
         content: `
             <p>The shift to mobile is no longer a trend; it is the reality of the digital landscape. With over 60% of global web traffic coming from mobile devices, a "responsive" site is no longer enough. You need to think <strong>Mobile-First</strong>.</p>
             
-            <h3>The Philosophy of Mobile-First</h3>
+            <h2>The Philosophy of Mobile-First</h2>
             <p>Mobile-first design is the practice of designing the smallest screen experience first and then scaling up for larger screens. This forces designers to prioritize content and functionality, stripping away the "fluff" that often clutters desktop designs.</p>
 
-            <h3>Why It Matters for SEO</h3>
+            <h2>Why It Matters for SEO</h2>
             <p>Google has moved to mobile-first indexing. This means the mobile version of your website is the starting point for what Google includes in their index and the baseline for how they determine rankings.</p>
             
             <ul>
@@ -53,7 +53,7 @@ export const blogPosts = [
                 <li><strong>Engagement:</strong> Simple, focused interfaces keep users on the page longer.</li>
             </ul>
 
-            <h3>Core Technical Principles</h3>
+            <h2>Core Technical Principles</h2>
             <p>At WestBridge, we utilize modern CSS techniques like Flexbox and Grid, along with optimized asset delivery (WebP images, SVG icons), to ensure that mobile experiences are lightning-fast and visually stunning.</p>
             
             <p>If your mobile experience feels like a secondary thought, you are leaving money on the table. Design for the device in your pocket first.</p>
@@ -71,17 +71,17 @@ export const blogPosts = [
         content: `
             <p>A beautiful website that doesn't convert is just a piece of art. At WestBridge, we believe that <strong>high-end aesthetics should always serve a conversion goal</strong>.</p>
             
-            <h3>The Psychology of Conversion</h3>
+            <h2>The Psychology of Conversion</h2>
             <p>Users make a decision about your brand within the first 3 seconds of landing on your site. Our job is to guide that split-second decision through visual hierarchy and clear value propositions.</p>
 
-            <h3>Key Conversion Drivers</h3>
+            <h2>Key Conversion Drivers</h2>
             <ol>
                 <li><strong>Clear Call to Actions (CTAs):</strong> Users should never have to guess what to do next.</li>
                 <li><strong>Trust Signals:</strong> Social proof, security badges, and professional design build the confidence necessary to convert.</li>
                 <li><strong>Reduced Friction:</strong> Every unnecessary form field or extra click is an opportunity for a user to leave.</li>
             </ol>
 
-            <h3>The Role of Data</h3>
+            <h2>The Role of Data</h2>
             <p>We use heatmaps, A/B testing, and user analytics to see where people are clicking and where they are dropping off. This allows us to make iterative improvements based on actual user behavior rather than guesswork.</p>
             
             <p>Conversion optimization isn't a one-time setup; it's a continuous process of refinement. When design and data align, your ROI potential becomes limitless.</p>
@@ -99,10 +99,10 @@ export const blogPosts = [
         content: `
             <p>Translating a complex Figma design into a living, breathing website is an exercise in precision. <strong>Pixel-perfect development</strong> isn't just about matching dimensions; it's about maintaining the integrity of the creative vision while ensuring technical excellence.</p>
             
-            <h3>The Developer's Eye</h3>
+            <h2>The Developer's Eye</h2>
             <p>A great developer sees more than just colors and shapes; they see fluid layouts, font rendering nuances, and spacing consistency. We treat padding and margins as essential components of the user experience.</p>
 
-            <h3>Modern Development Stack</h3>
+            <h2>Modern Development Stack</h2>
             <p>At WestBridge, we leverage the latest technologies to achieve this precision:</p>
             <ul>
                 <li><strong>React & Next.js:</strong> For building fast, component-based architectures.</li>
@@ -110,7 +110,7 @@ export const blogPosts = [
                 <li><strong>Framer Motion:</strong> For adding micro-animations that feel natural and premium.</li>
             </ul>
 
-            <h3>Accessibility is Pixel-Perfect Too</h3>
+            <h2>Accessibility is Pixel-Perfect Too</h2>
             <p>Correcting color contrast, ensuring keyboard navigability, and optimizing screen reader compatibility are just as important as the visual spacing. A site is only "perfect" if everyone can use it.</p>
             
             <p>Development is where the magic happens. It’s where static designs come to life and become functional tools for business growth.</p>
@@ -128,10 +128,10 @@ export const blogPosts = [
         content: `
             <p>A website should never be a "black box" that requires a developer for every small update. To scale effectively, your team needs a <strong>powerful Content Management System (CMS)</strong>.</p>
             
-            <h3>The Freedom of Self-Management</h3>
+            <h2>The Freedom of Self-Management</h2>
             <p>We build our digital products with one goal in mind: empowering the end-user. By creating custom, intuitive CMS structures, we allow marketing teams to update copy, swap images, and launch new blog posts in minutes, not days.</p>
 
-            <h3>Why CMS Choice Matters</h3>
+            <h2>Why CMS Choice Matters</h2>
             <p>Whether it's a headless CMS like Contentful or an integrated solution, the choice depends on your growth trajectory. A good CMS should be:</p>
             <ul>
                 <li><strong>Scalable:</strong> Able to handle hundreds of pages without slowing down.</li>
@@ -139,7 +139,7 @@ export const blogPosts = [
                 <li><strong>User-Friendly:</strong> Visual editors and clear labeling for non-technical users.</li>
             </ul>
 
-            <h3>Launch at the Speed of Business</h3>
+            <h2>Launch at the Speed of Business</h2>
             <p>In today's market, speed is a competitive advantage. If your website updates are tied up in a development queue, you are losing opportunities. A well-implemented CMS gives that power back to your team.</p>
         `
     },
@@ -155,15 +155,15 @@ export const blogPosts = [
         content: `
             <p>Technology evolves overnight. If you build your digital product for today, it will be obsolete tomorrow. <strong>Future-proofing</strong> is the art of building for change.</p>
             
-            <h3>Architectural Flexibility</h3>
+            <h2>Architectural Flexibility</h2>
             <p>We use modular code structures and microservices-oriented thinking to ensure that individual parts of your application can be updated without breaking the whole system.</p>
 
-            <h3>Performance as a Foundation</h3>
+            <h2>Performance as a Foundation</h2>
             <p>A "fast" site today might be slow compared to tomorrow's standards. We optimize for Core Web Vitals and utilize global CDNs to ensure your site is ready for whatever traffic spikes or technological shifts come next.</p>
             
             <blockquote>"The best way to predict the future is to create a system that can adapt to it."</blockquote>
 
-            <h3>AI and Emerging Tech</h3>
+            <h2>AI and Emerging Tech</h2>
             <p>Whether it's integrating AI chatbots or preparing for Web3, a future-proof foundation allows you to bolt on new technologies seamlessly as they become mainstream.</p>
             
             <p>At WestBridge, we don't just build websites; we build long-term digital assets that evolve alongside your business.</p>

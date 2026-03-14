@@ -87,6 +87,7 @@ const FeaturesGrid = () => {
                 padding: 'clamp(60px, 8vw, 120px) 0 clamp(80px, 12vw, 160px)'
             }}>
             <div className="w-full flex flex-col gap-6 lg:gap-8">
+                <h2 className="sr-only">Our Core Features and Methodology</h2>
 
                 {/* Row 1 */}
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-8">

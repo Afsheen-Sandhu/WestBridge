@@ -1,48 +1,203 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Main Pages -->
   <url>
     <loc>https://www.westbridgeitsolutions.com/</loc>
-    <lastmod>2026-03-11</lastmod>
+    <lastmod>2026-03-14</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://www.westbridgeitsolutions.com/about-us</loc>
-    <lastmod>2026-03-11</lastmod>
+    <lastmod>2026-03-14</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.westbridgeitsolutions.com/works</loc>
-    <lastmod>2026-03-11</lastmod>
+    <lastmod>2026-03-14</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.westbridgeitsolutions.com/services</loc>
-    <lastmod>2026-03-11</lastmod>
+    <lastmod>2026-03-14</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.westbridgeitsolutions.com/blogs</loc>
-    <lastmod>2026-03-11</lastmod>
+    <lastmod>2026-03-14</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.westbridgeitsolutions.com/templates</loc>
-    <lastmod>2026-03-11</lastmod>
+    <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.westbridgeitsolutions.com/approach</loc>
-    <lastmod>2026-03-11</lastmod>
+    <lastmod>2026-03-14</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.westbridgeitsolutions.com/careers</loc>
-    <lastmod>2026-03-11</lastmod>
+    <lastmod>2026-03-14</lastmod>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.westbridgeitsolutions.com/studio</loc>
-    <lastmod>2026-03-11</lastmod>
+    <lastmod>2026-03-14</lastmod>
     <priority>0.5</priority>
+  </url>
+
+  <!-- Work Case Studies -->
+  <url>
+    <loc>https://www.westbridgeitsolutions.com/works/murakami-city</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.westbridgeitsolutions.com/works/jf-vegan-cafe</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.westbridgeitsolutions.com/works/nidaba-spirit</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.westbridgeitsolutions.com/works/restaurant-gem</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.westbridgeitsolutions.com/works/ochi-design</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.westbridgeitsolutions.com/works/lento-agency</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.westbridgeitsolutions.com/works/bajgart-office</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.westbridgeitsolutions.com/works/kinective</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.westbridgeitsolutions.com/works/stampede-auto</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.westbridgeitsolutions.com/works/masons</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.westbridgeitsolutions.com/works/tranquil</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.westbridgeitsolutions.com/works/eclectic-lifestyle-co</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.westbridgeitsolutions.com/works/solstice-design</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.westbridgeitsolutions.com/works/fmig</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.westbridgeitsolutions.com/works/austo-entertainment</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.westbridgeitsolutions.com/works/bartosz-kolenda</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.westbridgeitsolutions.com/works/doze-studio</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.westbridgeitsolutions.com/works/brewitty</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.westbridgeitsolutions.com/works/jamm</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.westbridgeitsolutions.com/works/solidroad</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.westbridgeitsolutions.com/works/general-intelligence-co</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.westbridgeitsolutions.com/works/epiminds</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.westbridgeitsolutions.com/works/uptura</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.westbridgeitsolutions.com/works/well-designed</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Blog Insights -->
+  <url>
+    <loc>https://www.westbridgeitsolutions.com/blogs/strategic-discovery-web-development</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.westbridgeitsolutions.com/blogs/mobile-first-design-requirement</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.westbridgeitsolutions.com/blogs/maximizing-roi-conversion-strategy</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.westbridgeitsolutions.com/blogs/art-of-pixel-perfect-development</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.westbridgeitsolutions.com/blogs/scaling-cms-best-practices</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.westbridgeitsolutions.com/blogs/future-proofing-digital-infrastructure</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.7</priority>
   </url>
 </urlset>
