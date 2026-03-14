@@ -207,28 +207,51 @@ const WorkDetail = () => {
 
                 </div>
 
-                {/* ── Continue Exploring Area ── */}
+                {/* ── CTA & Continue Exploring ── */}
                 <div style={{
                     marginTop: '40px',
                     borderTop: `1px solid ${isDark ? 'rgba(255,255,255,0.06)' : 'rgba(0,0,0,0.08)'}`,
                     padding: '80px 24px',
-                    display: 'flex', flexDirection: 'column', alignItems: 'center'
+                    display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center'
                 }}>
-                    <span style={{ fontSize: '13px', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.12em', opacity: 0.5, marginBottom: '24px' }}>
-                        Ready for more?
-                    </span>
-                    <Link to="/works" style={{
-                        display: 'inline-flex', alignItems: 'center', gap: '12px',
-                        padding: '24px 64px', background: 'transparent',
-                        border: `1px solid ${isDark ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.1)'}`,
-                        borderRadius: '500px', color: isDark ? '#fff' : '#000',
-                        fontSize: '18px', fontWeight: 700, textDecoration: 'none', transition: 'all 0.3s ease'
-                    }} 
-                    onMouseEnter={e => { e.currentTarget.style.background = isDark ? '#fff' : '#000'; e.currentTarget.style.color = isDark ? '#000' : '#fff'; }}
-                    onMouseLeave={e => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.color = isDark ? '#fff' : '#000'; }}
-                    >
-                        Index of Works
-                    </Link>
+                    <h2 style={{ fontSize: 'clamp(28px, 4vw, 42px)', fontWeight: 800, letterSpacing: '-0.02em', marginBottom: '24px' }}>
+                        Like what you see?
+                    </h2>
+                    <p style={{ 
+                        fontSize: '18px', 
+                        color: isDark ? 'rgba(255,255,255,0.6)' : 'rgba(0,0,0,0.6)',
+                        maxWidth: '500px',
+                        marginBottom: '40px'
+                    }}>
+                        Let's collaborate to build something extraordinary for your brand.
+                    </p>
+
+                    <div style={{ display: 'flex', gap: '20px', flexWrap: 'wrap', justifyContent: 'center' }}>
+                        <Link to="/contact" style={{
+                            display: 'inline-flex', alignItems: 'center',
+                            padding: '18px 48px', background: isDark ? '#fff' : '#000',
+                            borderRadius: '100px', color: isDark ? '#000' : '#fff',
+                            fontSize: '16px', fontWeight: 700, textDecoration: 'none', transition: 'all 0.3s ease'
+                        }} 
+                        onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-4px)'; }}
+                        onMouseLeave={e => { e.currentTarget.style.transform = 'translateY(0)'; }}
+                        >
+                            Start your project
+                        </Link>
+
+                        <Link to="/works" style={{
+                            display: 'inline-flex', alignItems: 'center',
+                            padding: '18px 48px', background: 'transparent',
+                            border: `1px solid ${isDark ? 'rgba(255,255,255,0.15)' : 'rgba(0,0,0,0.15)'}`,
+                            borderRadius: '100px', color: isDark ? '#fff' : '#000',
+                            fontSize: '16px', fontWeight: 700, textDecoration: 'none', transition: 'all 0.3s ease'
+                        }} 
+                        onMouseEnter={e => { e.currentTarget.style.background = isDark ? 'rgba(255,255,255,0.05)' : 'rgba(0,0,0,0.05)'; }}
+                        onMouseLeave={e => { e.currentTarget.style.background = 'transparent'; }}
+                        >
+                            Back to Portfolio
+                        </Link>
+                    </div>
                 </div>
 
             </article>

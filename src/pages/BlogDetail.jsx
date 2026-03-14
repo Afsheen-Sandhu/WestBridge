@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { Link, useParams, useNavigate } from 'react-router-dom';
 import { useTheme } from '../context/ThemeContext';
 import { ArrowLeft, Clock, User, Calendar, Share2, Twitter, Linkedin, Facebook } from 'lucide-react';
 import { blogPosts } from '../data/blogData';
@@ -215,6 +215,52 @@ const BlogDetail = () => {
                             </button>
                         ))}
                     </div>
+                </div>
+
+                {/* ── Blog CTA Section ── */}
+                <div style={{
+                    marginTop: '80px',
+                    padding: '80px 40px',
+                    background: isDark ? 'rgba(255,255,255,0.02)' : 'rgba(0,0,0,0.02)',
+                    borderRadius: '32px',
+                    textAlign: 'center',
+                    border: `1px solid ${isDark ? 'rgba(255,255,255,0.05)' : 'rgba(0,0,0,0.05)'}`
+                }}>
+                    <h2 style={{
+                        fontSize: 'clamp(28px, 4vw, 36px)',
+                        fontWeight: 800,
+                        letterSpacing: '-0.02em',
+                        marginBottom: '20px',
+                        color: isDark ? '#fff' : '#000'
+                    }}>
+                        Ready to apply these <span style={{ fontFamily: "'Instrument Serif', serif", fontStyle: 'italic', fontWeight: 400 }}>insights?</span>
+                    </h2>
+                    <p style={{
+                        color: isDark ? 'rgba(255,255,255,0.6)' : 'rgba(0,0,0,0.6)',
+                        marginBottom: '32px',
+                        fontSize: '17px',
+                        maxWidth: '540px',
+                        margin: '0 auto 32px'
+                    }}>
+                        Our team specializes in turning these strategic principles into high-performance digital realities for your brand.
+                    </p>
+                    <Link 
+                        to="/contact"
+                        style={{
+                            display: 'inline-block',
+                            padding: '16px 40px',
+                            background: isDark ? '#fff' : '#000',
+                            color: isDark ? '#000' : '#fff',
+                            borderRadius: '100px',
+                            fontWeight: 700,
+                            textDecoration: 'none',
+                            transition: 'all 0.3s'
+                        }}
+                        onMouseEnter={e => e.currentTarget.style.transform = 'translateY(-4px)'}
+                        onMouseLeave={e => e.currentTarget.style.transform = 'translateY(0)'}
+                    >
+                        Partner with us
+                    </Link>
                 </div>
 
             </article>

@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { useTheme } from '../context/ThemeContext';
+import { Link } from 'react-router-dom';
 import GlowBadge from '../components/GlowBadge';
 import Breadcrumbs from '../components/Breadcrumbs';
 import SEO from '../components/SEO';
@@ -58,8 +59,31 @@ const Approach = () => {
                         Learn about our step-by-step process for delivering extraordinary digital results.
                     </p>
 
-                    <div className="mt-20 w-full flex justify-center py-20 border-t border-dashed border-white/10">
-                        <span className="text-sm uppercase tracking-[0.4em] opacity-40">Our process details coming soon</span>
+                    <div className="mt-20 w-full flex flex-col items-center py-20 border-t border-dashed border-white/10">
+                        <p style={{
+                            color: theme === 'dark' ? 'rgba(255,255,255,0.6)' : 'rgba(0,0,0,0.6)',
+                            marginBottom: '32px',
+                            fontSize: '18px'
+                        }}>
+                            Interested in our methodology? Let's talk about <strong>your</strong> project.
+                        </p>
+                        <Link 
+                            to="/contact"
+                            style={{
+                                display: 'inline-block',
+                                padding: '14px 32px',
+                                background: theme === 'dark' ? '#fff' : '#000',
+                                color: theme === 'dark' ? '#000' : '#fff',
+                                borderRadius: '100px',
+                                fontWeight: 700,
+                                textDecoration: 'none',
+                                transition: 'all 0.3s'
+                            }}
+                            onMouseEnter={e => e.currentTarget.style.transform = 'translateY(-4px)'}
+                            onMouseLeave={e => e.currentTarget.style.transform = 'translateY(0)'}
+                        >
+                            Let's Connect
+                        </Link>
                     </div>
                 </div>
             </section>

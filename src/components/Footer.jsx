@@ -58,20 +58,29 @@ const Footer = () => {
             </Link>
 
             {/* Headline */}
-            <h2 style={{
-              fontFamily: "'Plus Jakarta Sans', sans-serif",
-              fontWeight: 700,
-              fontSize: 'clamp(36px, 5vw, 72px)',
-              lineHeight: 1.05,
-              letterSpacing: '-0.03em',
-              color: theme === 'dark' ? '#fff' : '#000',
-              margin: '0 0 32px 0',
-            }}>
-              Let's make something{' '}
-              <em style={{ fontFamily: "'Instrument Serif', serif", fontStyle: 'italic', fontWeight: 400 }}>
-                extraordinary
-              </em>.
-            </h2>
+            <Link 
+              to="/contact"
+              style={{ textDecoration: 'none', display: 'block' }}
+            >
+              <h2 style={{
+                fontFamily: "'Plus Jakarta Sans', sans-serif",
+                fontWeight: 700,
+                fontSize: 'clamp(36px, 5vw, 72px)',
+                lineHeight: 1.05,
+                letterSpacing: '-0.03em',
+                color: theme === 'dark' ? '#fff' : '#000',
+                margin: '0 0 32px 0',
+                transition: 'transform 0.3s ease',
+              }}
+              onMouseEnter={e => e.currentTarget.style.transform = 'translateX(10px)'}
+              onMouseLeave={e => e.currentTarget.style.transform = 'translateX(0)'}
+              >
+                Let's make something{' '}
+                <em style={{ fontFamily: "'Instrument Serif', serif", fontStyle: 'italic', fontWeight: 400 }}>
+                  extraordinary
+                </em>.
+              </h2>
+            </Link>
 
             {/* Email CTA */}
             <a
@@ -186,7 +195,7 @@ const Footer = () => {
                   filter: theme === 'dark'
                     ? (imgHover ? 'grayscale(0%) contrast(1.2) brightness(1.2) drop-shadow(0 0 20px rgba(255,255,255,0.2))' : 'grayscale(100%) contrast(1.1)')
                     : (imgHover ? 'grayscale(0%) contrast(1.1) brightness(1.1)' : 'grayscale(100%) contrast(0.9)'),
-                  transition: 'all 0.6s cubic-bezier(0.23, 1, 0.32, 1)',
+                  transition: 'all 0.5s cubic-bezier(0.19, 1, 0.22, 1)',
                   cursor: 'pointer',
                 }}
               />

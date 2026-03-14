@@ -1,4 +1,5 @@
 import React, { useMemo, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { useTheme } from '../context/ThemeContext';
 
 import {
@@ -108,8 +109,8 @@ const ServicesGrid = () => {
           className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2 w-full sm:w-auto"
           style={{ paddingBottom: 8 }}
         >
-          <button
-            type="button"
+          <Link
+            to="/contact"
             className="rounded-full font-semibold transition-all duration-300 active:scale-95 flex-1 sm:flex-none justify-center cursor-pointer"
             style={{
               padding: '12px 24px',
@@ -120,13 +121,13 @@ const ServicesGrid = () => {
               minWidth: '160px',
               display: 'flex',
               alignItems: 'center',
+              textDecoration: 'none'
             }}
-            onClick={() => window.location.href = '/contact'}
           >
             Start a project
-          </button>
-          <button
-            type="button"
+          </Link>
+          <Link
+            to="/works"
             className="rounded-full font-semibold transition-all duration-300 active:scale-95 flex-1 sm:flex-none justify-center cursor-pointer"
             style={{
               padding: '12px 24px',
@@ -139,12 +140,12 @@ const ServicesGrid = () => {
               minWidth: '160px',
               display: 'flex',
               alignItems: 'center',
+              textDecoration: 'none'
             }}
             aria-label="See our portfolio works"
-            onClick={() => window.location.href = '/works'}
           >
             See our work
-          </button>
+          </Link>
         </div>
       </div>
 
@@ -282,8 +283,8 @@ const ServicesGrid = () => {
             </p>
 
             <div style={{ marginTop: '32px' }}>
-                <button
-                    onClick={() => window.location.href = '/contact'}
+                <Link
+                    to="/contact"
                     style={{
                         padding: '12px 28px',
                         background: theme === 'dark' ? '#fff' : '#000',
@@ -292,11 +293,13 @@ const ServicesGrid = () => {
                         borderRadius: '500px',
                         fontWeight: 700,
                         fontSize: '14px',
-                        cursor: 'pointer'
+                        cursor: 'pointer',
+                        textDecoration: 'none',
+                        display: 'inline-block'
                     }}
                 >
                     Discuss this service
-                </button>
+                </Link>
             </div>
           </div>
         </div>

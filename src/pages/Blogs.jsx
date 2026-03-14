@@ -134,7 +134,7 @@ const Blogs = () => {
                             letterSpacing: '-0.04em',
                             margin: '0 0 20px',
                         }}>
-                            Interested in a <em style={{ fontFamily: "'Instrument Serif', serif", fontStyle: 'italic', fontWeight: 400 }}>deeper dive?</em>
+                            Want a <em style={{ fontFamily: "'Instrument Serif', serif", fontStyle: 'italic', fontWeight: 400 }}>customized strategy?</em>
                         </h2>
                         <p style={{
                             fontSize: '16px',
@@ -142,10 +142,10 @@ const Blogs = () => {
                             margin: '0 0 32px',
                             maxWidth: '560px',
                         }}>
-                            Our strategy team helps businesses navigate the complex digital landscape with actionable insights and proven performance frameworks.
+                            Our expert team helps businesses translate these digital insights into scalable performance frameworks. Let's discuss your next move.
                         </p>
-                        <a
-                            href="/contact"
+                        <Link
+                            to="/contact"
                             style={{
                                 display: 'inline-flex',
                                 alignItems: 'center',
@@ -160,9 +160,9 @@ const Blogs = () => {
                                 transition: 'all 0.3s ease',
                             }}
                         >
-                            Read More Insights
+                            Let's Connect
                             <ArrowUpRight size={18} />
-                        </a>
+                        </Link>
                     </div>
                 </div>
 

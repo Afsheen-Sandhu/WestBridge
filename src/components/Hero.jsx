@@ -1,5 +1,6 @@
 import GlowBadge from './GlowBadge';
 import { useTheme } from '../context/ThemeContext';
+import { Link } from 'react-router-dom';
 
 
 const BRANDS = ["OASIS", "VERTEX", "NEXUS", "QUANTA", "EQUINOX", "AETHER", "LUMINA", "VANGUARD"];
@@ -113,7 +114,8 @@ const Hero = () => {
           className="flex flex-col sm:flex-row justify-center items-stretch sm:items-center gap-4 sm:gap-5 animate-fade-in-up w-full sm:w-auto"
           style={{ animationDelay: '600ms', maxWidth: '400px', margin: '0 auto' }}
         >
-          <button
+          <Link
+            to="/contact"
             className="font-semibold rounded-full transition-all duration-500 active:scale-95 flex-1 sm:flex-none justify-center"
             style={{
               padding: '12px 24px',
@@ -124,12 +126,13 @@ const Hero = () => {
               minWidth: '160px',
               display: 'flex',
               alignItems: 'center',
+              textDecoration: 'none'
             }}
             onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-6px)'; e.currentTarget.style.boxShadow = '0 20px 40px rgba(255,255,255,0.18)'; }}
             onMouseLeave={e => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = 'none'; }}
           >
             Get in touch
-          </button>
+          </Link>
 
           <button
             className="font-semibold rounded-full transition-all duration-500 active:scale-95 flex-1 sm:flex-none justify-center"

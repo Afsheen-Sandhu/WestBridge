@@ -15,6 +15,7 @@ const BlogDetail = lazy(() => import('./pages/BlogDetail'));
 const WorkDetail = lazy(() => import('./pages/WorkDetail'));
 const Templates  = lazy(() => import('./pages/Templates'));
 const Approach   = lazy(() => import('./pages/Approach'));
+const Contact    = lazy(() => import('./pages/Contact'));
 const Careers    = lazy(() => import('./pages/OtherPages').then(m => ({ default: m.Careers })));
 const Studio     = lazy(() => import('./pages/OtherPages').then(m => ({ default: m.Studio })));
 
@@ -40,6 +41,7 @@ function App() {
                 <Route path="/blogs/:slug" element={<BlogDetail />} />
                 <Route path="/templates"   element={<Templates />} />
                 <Route path="/approach"    element={<Approach />} />
+                <Route path="/contact"     element={<Contact />} />
                 <Route path="/careers"     element={<Careers />} />
                 <Route path="/studio"      element={<Studio />} />
               </Routes>

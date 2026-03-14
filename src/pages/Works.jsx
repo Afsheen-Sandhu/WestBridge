@@ -3,6 +3,7 @@ import { useTheme } from '../context/ThemeContext';
 import GlowBadge from '../components/GlowBadge';
 import Breadcrumbs from '../components/Breadcrumbs';
 import SEO from '../components/SEO';
+import { Link } from 'react-router-dom';
 import { ChevronDown, ArrowUpRight } from 'lucide-react';
 
 import { projectsData as projects } from '../data/projectsData';
@@ -233,6 +234,53 @@ const Works = () => {
                     ))}
                 </div>
 
+                {/* CTA Section */}
+                <div style={{
+                    marginBottom: '140px',
+                    padding: isMobile ? '64px 32px' : '100px 64px',
+                    background: isDark ? 'rgba(255,255,255,0.02)' : 'rgba(0,0,0,0.02)',
+                    borderRadius: '40px',
+                    textAlign: 'center',
+                    border: `1px solid ${isDark ? 'rgba(255,255,255,0.05)' : 'rgba(0,0,0,0.05)'}`
+                }}>
+                    <h2 style={{
+                        fontSize: 'clamp(32px, 4vw, 56px)',
+                        fontWeight: 800,
+                        letterSpacing: '-0.03em',
+                        marginBottom: '24px',
+                        color: isDark ? '#fff' : '#0a0a0a'
+                    }}>
+                        Have a project <br />
+                        <span style={{ fontFamily: "'Instrument Serif', serif", fontStyle: 'italic', fontWeight: 400 }}>in mind?</span>
+                    </h2>
+                    <p style={{
+                        color: isDark ? 'rgba(255,255,255,0.5)' : 'rgba(0,0,0,0.6)',
+                        marginBottom: '40px',
+                        fontSize: '18px',
+                        maxWidth: '500px',
+                        margin: '0 auto 40px'
+                    }}>
+                        Let's collaborate to build a digital experience that stands out.
+                    </p>
+                    <Link 
+                        to="/contact"
+                        style={{
+                            display: 'inline-block',
+                            padding: '16px 40px',
+                            background: isDark ? '#fff' : '#000',
+                            color: isDark ? '#000' : '#fff',
+                            borderRadius: '100px',
+                            fontWeight: 700,
+                            textDecoration: 'none',
+                            transition: 'all 0.3s'
+                        }}
+                        onMouseEnter={e => e.currentTarget.style.transform = 'translateY(-4px)'}
+                        onMouseLeave={e => e.currentTarget.style.transform = 'translateY(0)'}
+                    >
+                        Start a Conversation
+                    </Link>
+                </div>
+
             </section>
         </div>
     );
@@ -243,8 +291,8 @@ const ProjectCard = ({ project, theme, isMobile }) => {
     const isDark = theme === 'dark';
 
     return (
-        <div
-            onClick={() => window.location.href = `/works/${project.slug}`}
+        <Link
+            to={`/works/${project.slug}`}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
             style={{
@@ -257,6 +305,8 @@ const ProjectCard = ({ project, theme, isMobile }) => {
                 transition: 'all 0.5s cubic-bezier(0.19, 1, 0.22, 1)',
                 boxShadow: isHovered ? (isDark ? '0 20px 40px rgba(0,0,0,0.4)' : '0 20px 40px rgba(0,0,0,0.05)') : 'none',
                 transform: isHovered ? 'translateY(-8px)' : 'translateY(0)',
+                textDecoration: 'none',
+                display: 'block'
             }}
         >
             {/* Image */}
@@ -376,7 +426,7 @@ const ProjectCard = ({ project, theme, isMobile }) => {
                     <ArrowUpRight size={20} />
                 </a>
             </div>
-        </div>
+        </Link>
     );
 };
 

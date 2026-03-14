@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useTheme } from '../context/ThemeContext';
+import { Link } from 'react-router-dom';
 import GlowBadge from '../components/GlowBadge';
 import Breadcrumbs from '../components/Breadcrumbs';
 import SEO from '../components/SEO';
@@ -8,9 +9,13 @@ import { Target, Lightbulb, Users, Trophy, Play } from 'lucide-react';
 const About = () => {
     const { theme } = useTheme();
     const [imgHover, setImgHover] = useState(false);
+    const [isMobile, setIsMobile] = useState(typeof window !== 'undefined' ? window.innerWidth < 768 : false);
 
     useEffect(() => {
         window.scrollTo(0, 0);
+        const handleResize = () => setIsMobile(window.innerWidth < 768);
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
     }, []);
 
     const values = [
@@ -317,6 +322,51 @@ const About = () => {
                                     </div>
                                 ))}
                             </div>
+                        </div>
+
+                        {/* CTA Section */}
+                        <div style={{
+                            margin: '80px 0',
+                            padding: isMobile ? '64px 32px' : '100px 64px',
+                            background: isDark ? 'rgba(255,255,255,0.03)' : 'rgba(0,0,0,0.02)',
+                            borderRadius: '40px',
+                            textAlign: 'center',
+                            border: `1px solid ${isDark ? 'rgba(255,255,255,0.05)' : 'rgba(0,0,0,0.05)'}`
+                        }}>
+                            <h2 style={{
+                                fontSize: 'clamp(32px, 4vw, 56px)',
+                                fontWeight: 800,
+                                letterSpacing: '-0.03em',
+                                marginBottom: '24px',
+                                color: isDark ? '#fff' : '#000'
+                            }}>
+                                Ready to build something <br />
+                                <span style={{ fontFamily: "'Instrument Serif', serif", fontStyle: 'italic', fontWeight: 400 }}>extraordinary?</span>
+                            </h2>
+                            <p style={{
+                                color: isDark ? 'rgba(255,255,255,0.6)' : 'rgba(0,0,0,0.6)',
+                                marginBottom: '40px',
+                                fontSize: '18px'
+                            }}>
+                                Let's discuss your next project and how we can bring it to life.
+                            </p>
+                            <Link 
+                                to="/contact"
+                                style={{
+                                    display: 'inline-block',
+                                    padding: '16px 40px',
+                                    background: isDark ? '#fff' : '#000',
+                                    color: isDark ? '#000' : '#fff',
+                                    borderRadius: '100px',
+                                    fontWeight: 700,
+                                    textDecoration: 'none',
+                                    transition: 'all 0.3s'
+                                }}
+                                onMouseEnter={e => e.currentTarget.style.transform = 'translateY(-4px)'}
+                                onMouseLeave={e => e.currentTarget.style.transform = 'translateY(0)'}
+                            >
+                                Let's Connect
+                            </Link>
                         </div>
                     </div>
                 </div>

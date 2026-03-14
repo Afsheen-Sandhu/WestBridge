@@ -227,7 +227,8 @@ const Navbar = () => {
                                 </button>
 
                                 {/* Connect Button */}
-                                <button
+                                <Link
+                                    to="/contact"
                                     onMouseEnter={() => setConnectHovered(true)}
                                     onMouseLeave={() => setConnectHovered(false)}
                                     style={{
@@ -243,10 +244,12 @@ const Navbar = () => {
                                         border: theme === 'dark' ? '1.5px solid rgba(255,255,255,0.4)' : '1.5px solid rgba(0,0,0,0.3)',
                                         transform: connectHovered ? 'scale(1.04)' : 'scale(1)',
                                         whiteSpace: 'nowrap',
+                                        textDecoration: 'none',
+                                        display: 'inline-block'
                                     }}
                                 >
                                     Let's Connect
-                                </button>
+                                </Link>
                             </div>
                         </>
                     )}
@@ -422,7 +425,9 @@ const Navbar = () => {
                                 />
                             </div>
 
-                            <button
+                            <Link
+                                to="/contact"
+                                onClick={() => setMenuOpen(false)}
                                 onMouseEnter={() => setConnectHovered(true)}
                                 onMouseLeave={() => setConnectHovered(false)}
                                 style={{
@@ -441,10 +446,12 @@ const Navbar = () => {
                                         ? (theme === 'dark' ? '#000' : '#fff')
                                         : (theme === 'dark' ? '#fff' : '#000'),
                                     border: theme === 'dark' ? '1.3px solid rgba(255,255,255,0.4)' : '1.3px solid rgba(0,0,0,0.35)',
+                                    textDecoration: 'none',
+                                    textAlign: 'center'
                                 }}
                             >
                                 Let's Connect
-                            </button>
+                            </Link>
                         </div>
                     </div>
                 </div>
