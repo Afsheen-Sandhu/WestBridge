@@ -20,7 +20,7 @@ const Contact = () => {
 
     useEffect(() => {
         window.scrollTo(0, 0);
-        const handleResize = () => setIsMobile(window.innerWidth < 992);
+        const handleResize = () => setIsMobile(window.innerWidth < 768);
         window.addEventListener('resize', handleResize);
         return () => window.removeEventListener('resize', handleResize);
     }, []);
@@ -91,8 +91,8 @@ const Contact = () => {
             background: isDark ? '#000' : '#fff',
             color: isDark ? '#fff' : '#000',
             transition: 'background 0.4s ease',
-            paddingTop: 'clamp(140px, 15vw, 180px)',
-            paddingBottom: '100px'
+            paddingTop: isMobile ? '100px' : 'clamp(140px, 15vw, 180px)',
+            paddingBottom: isMobile ? '60px' : '100px'
         }}>
             <SEO 
                 title="Let's Connect | WestBridge IT Solutions"
@@ -103,18 +103,19 @@ const Contact = () => {
                 <div className="contact-grid" style={{ 
                     display: 'grid', 
                     gridTemplateColumns: isMobile ? '1fr' : '1.2fr 0.8fr', 
-                    gap: isMobile ? '64px' : '80px' 
+                    gap: isMobile ? '40px' : '80px' 
                 }}>
                     
                     {/* Left: Form */}
-                    <div className="contact-form-section" style={{ order: isMobile ? 2 : 1 }}>
-                        <div style={{ marginBottom: '64px' }}>
+                    <div className="contact-form-section" style={{ order: isMobile ? 1 : 1 }}>
+                        <div style={{ marginBottom: isMobile ? '40px' : '64px' }}>
                             <h1 className="contact-title" style={{
-                                fontSize: 'clamp(40px, 6vw, 84px)',
+                                fontSize: isMobile ? '38px' : 'clamp(40px, 6vw, 84px)',
                                 fontWeight: 800,
                                 letterSpacing: '-0.04em',
                                 lineHeight: 1.1,
-                                marginBottom: '24px'
+                                marginBottom: '24px',
+                                wordBreak: 'break-word'
                             }}>
                                 Let's build <br />
                                 <span style={{ fontFamily: "'Instrument Serif', serif", fontStyle: 'italic', fontWeight: 400 }}>the extraordinary.</span>
@@ -131,7 +132,7 @@ const Contact = () => {
 
                         {status === 'success' ? (
                             <div style={{
-                                padding: '48px',
+                                padding: isMobile ? '32px 24px' : '48px',
                                 background: isDark ? 'rgba(255,255,255,0.02)' : 'rgba(0,0,0,0.02)',
                                 border: `1px solid ${isDark ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.1)'}`,
                                 borderRadius: '24px',
@@ -301,9 +302,9 @@ const Contact = () => {
                     </div>
 
                     {/* Right: Info */}
-                    <div style={{ order: isMobile ? 1 : 2 }}>
+                    <div style={{ order: isMobile ? 2 : 2 }}>
                         <div className="contact-info-card" style={{
-                            padding: 'clamp(32px, 5vw, 48px)',
+                            padding: isMobile ? '32px 24px' : 'clamp(32px, 5vw, 48px)',
                             background: isDark ? 'rgba(255,255,255,0.03)' : 'rgba(0,0,0,0.02)',
                             borderRadius: '32px',
                             border: `1px solid ${isDark ? 'rgba(255,255,255,0.05)' : 'rgba(0,0,0,0.05)'}`,
@@ -376,46 +377,6 @@ const Contact = () => {
 
                 </div>
             </div>
-            <style>{`
-                @media (max-width: 768px) {
-                    .contact-container {
-                        padding-top: 100px !important;
-                        padding-bottom: 60px !important;
-                    }
-                    .contact-grid {
-                        gap: 48px !important;
-                    }
-                    .contact-form-section {
-                        padding-top: 0 !important;
-                    }
-                    .contact-info-card {
-                        padding: 32px 24px !important;
-                        margin-top: 0 !important;
-                    }
-                    .contact-title {
-                        font-size: 38px !important;
-                        margin-bottom: 16px !important;
-                    }
-                    .contact-description {
-                        font-size: 15px !important;
-                        margin-bottom: 40px !important;
-                    }
-                    .contact-submit-btn {
-                        padding: 16px !important;
-                        font-size: 15px !important;
-                    }
-                }
-
-                @media (max-width: 480px) {
-                    .contact-container {
-                        padding-left: 16px !important;
-                        padding-right: 16px !important;
-                    }
-                    .contact-title {
-                        font-size: 34px !important;
-                    }
-                }
-            `}</style>
         </div>
     );
 };
