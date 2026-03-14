@@ -113,6 +113,7 @@ const Works = () => {
                                     <img
                                         src="/work.webp"
                                         alt="Creative Digital Solutions Showcase - WestBridge Portfolio"
+                                        title="Our Digital Portfolio"
                                         style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                                     />
                                 </div>
@@ -263,6 +264,7 @@ const ProjectCard = ({ project, theme, isMobile }) => {
                 <img
                     src={project.image}
                     alt={`${project.name} - ${project.category} Web Design Project`}
+                    title={project.name}
                     style={{
                         width: '100%',
                         height: '100%',

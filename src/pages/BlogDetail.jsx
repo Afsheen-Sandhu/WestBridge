@@ -133,7 +133,14 @@ const BlogDetail = () => {
                     }}>
                         <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
                             <div style={{ width: '32px', height: '32px', borderRadius: '50%', background: isDark ? '#222' : '#ddd', overflow: 'hidden' }}>
-                                <img src="/work.webp" alt={`Author ${post.author} - WestBridge Expert`} width={32} height={32} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                                <img 
+                                    src="/work.webp" 
+                                    alt={`Author ${post.author} - WestBridge Expert`} 
+                                    title={`Author: ${post.author}`}
+                                    width={32} 
+                                    height={32} 
+                                    style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
+                                />
                             </div>
                             <span style={{ fontSize: '14px', fontWeight: 700 }}>{post.author}</span>
                         </div>
@@ -158,7 +165,7 @@ const BlogDetail = () => {
                     background: isDark ? '#111' : '#eee',
                     border: `1px solid ${isDark ? 'rgba(255,255,255,0.06)' : 'rgba(0,0,0,0.08)'}`,
                 }}>
-                    <img src={post.image} alt={post.title} width={900} height={506} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                    <img src={post.image} alt={post.title} title={post.title} width={900} height={506} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                 </div>
 
                 {/* ── Content Body ── */}

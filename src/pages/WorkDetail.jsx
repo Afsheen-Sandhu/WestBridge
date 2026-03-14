@@ -120,6 +120,7 @@ const WorkDetail = () => {
                     <img 
                         src={project.image} 
                         alt={`${project.name} Desktop Responsive Mockup`} 
+                        title={`Case Study: ${project.name}`}
                         style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
                     />
                     {/* Live Site Link Floating Button */}

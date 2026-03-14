@@ -174,6 +174,7 @@ const About = () => {
                                             <img
                                                 src="/junaid.webp"
                                                 alt="Junaid Khan - Founder of WestBridge IT Solutions"
+                                                title="Junaid Khan | Founder"
                                                 width={32}
                                                 height={32}
                                                 className="w-8 h-8 rounded-full object-cover"
@@ -213,6 +214,7 @@ const About = () => {
                                 <img
                                     src="/about2.webp"
                                     alt="Modern Creative Studio Workspace - WestBridge IT Solutions team environment"
+                                    title="WestBridge Creative Studio"
                                     width={1200}
                                     height={520}
                                     className="w-full h-full object-cover"
