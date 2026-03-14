@@ -84,7 +84,7 @@ const Footer = () => {
 
             {/* Email CTA */}
             <a
-              href="mailto:contact@westbridgeit.com"
+              href="mailto:support@westbridgeitsolutions.com"
               style={{
                 display: 'inline-flex',
                 alignItems: 'center',
@@ -99,7 +99,7 @@ const Footer = () => {
               onMouseEnter={e => e.currentTarget.style.color = theme === 'dark' ? '#fff' : '#000'}
               onMouseLeave={e => e.currentTarget.style.color = theme === 'dark' ? 'rgba(255,255,255,0.7)' : 'rgba(0,0,0,0.6)'}
             >
-              contact@westbridgeit.com
+              support@westbridgeitsolutions.com
               <ArrowUpRight size={16} strokeWidth={1.8} />
             </a>
 

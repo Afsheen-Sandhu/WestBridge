@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useTheme } from '../context/ThemeContext';
 import SEO from '../components/SEO';
-import { Send, MapPin, Mail, ArrowRight, Instagram, Linkedin, Twitter } from 'lucide-react';
+import { Send, MapPin, Mail, ArrowRight, Instagram, Linkedin, Twitter, ChevronDown } from 'lucide-react';
 
 const Contact = () => {
     const { theme } = useTheme();
@@ -25,14 +25,35 @@ const Contact = () => {
         return () => window.removeEventListener('resize', handleResize);
     }, []);
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         setStatus('sending');
-        // Simulate API call
-        setTimeout(() => {
-            setStatus('success');
-            setFormData({ name: '', email: '', company: '', projectType: 'Web Design', message: '' });
-        }, 1500);
+
+        try {
+            const response = await fetch('https://formspree.io/f/your_formspree_id', { // ← REPLACE THIS ID
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify({
+                    ...formData,
+                    _subject: `New WestBridge Inquiry from ${formData.name}`,
+                })
+            });
+
+            if (response.ok) {
+                setStatus('success');
+                setFormData({ name: '', email: '', company: '', projectType: 'Web Design', message: '' });
+            } else {
+                throw new Error('Failed to send');
+            }
+        } catch (error) {
+            console.error("Formspree Error:", error);
+            setStatus('error');
+            alert("Something went wrong. Please try emailing us directly at contact@westbridgeitsolutions.com");
+            setStatus('idle');
+        }
     };
 
     const handleChange = (e) => {
@@ -64,7 +85,7 @@ const Contact = () => {
     };
 
     return (
-        <div style={{
+        <div className="contact-container" style={{
             width: '100%',
             minHeight: '100vh',
             background: isDark ? '#000' : '#fff',
@@ -79,16 +100,16 @@ const Contact = () => {
             />
 
             <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 clamp(24px, 5vw, 64px)' }}>
-                <div style={{ 
+                <div className="contact-grid" style={{ 
                     display: 'grid', 
                     gridTemplateColumns: isMobile ? '1fr' : '1.2fr 0.8fr', 
                     gap: isMobile ? '64px' : '80px' 
                 }}>
                     
                     {/* Left: Form */}
-                    <div style={{ order: isMobile ? 2 : 1 }}>
+                    <div className="contact-form-section" style={{ order: isMobile ? 2 : 1 }}>
                         <div style={{ marginBottom: '64px' }}>
-                            <h1 style={{
+                            <h1 className="contact-title" style={{
                                 fontSize: 'clamp(40px, 6vw, 84px)',
                                 fontWeight: 800,
                                 letterSpacing: '-0.04em',
@@ -98,7 +119,7 @@ const Contact = () => {
                                 Let's build <br />
                                 <span style={{ fontFamily: "'Instrument Serif', serif", fontStyle: 'italic', fontWeight: 400 }}>the extraordinary.</span>
                             </h1>
-                            <p style={{
+                            <p className="contact-description" style={{
                                 fontSize: 'clamp(16px, 1.5vw, 19px)',
                                 color: isDark ? 'rgba(255,255,255,0.6)' : 'rgba(0,0,0,0.6)',
                                 maxWidth: '500px',
@@ -195,18 +216,35 @@ const Contact = () => {
                                     </div>
                                     <div>
                                         <label style={labelStyle}>Project Type</label>
-                                        <select 
-                                            name="projectType" 
-                                            value={formData.projectType} 
-                                            onChange={handleChange} 
-                                            style={{ ...inputStyle, appearance: 'none' }}
-                                        >
-                                            <option>Web Design</option>
-                                            <option>E-commerce</option>
-                                            <option>SaaS Platform</option>
-                                            <option>Mobile App</option>
-                                            <option>Other</option>
-                                        </select>
+                                        <div style={{ position: 'relative' }}>
+                                            <select 
+                                                name="projectType" 
+                                                value={formData.projectType} 
+                                                onChange={handleChange} 
+                                                style={{ 
+                                                    ...inputStyle, 
+                                                    appearance: 'none',
+                                                    cursor: 'pointer',
+                                                    paddingRight: '45px' // Space for icon
+                                                }}
+                                            >
+                                                <option style={{ background: isDark ? '#111' : '#fff', color: isDark ? '#fff' : '#000' }}>Web Design</option>
+                                                <option style={{ background: isDark ? '#111' : '#fff', color: isDark ? '#fff' : '#000' }}>E-commerce</option>
+                                                <option style={{ background: isDark ? '#111' : '#fff', color: isDark ? '#fff' : '#000' }}>SaaS Platform</option>
+                                                <option style={{ background: isDark ? '#111' : '#fff', color: isDark ? '#fff' : '#000' }}>Mobile App</option>
+                                                <option style={{ background: isDark ? '#111' : '#fff', color: isDark ? '#fff' : '#000' }}>Other</option>
+                                            </select>
+                                            <div style={{
+                                                position: 'absolute',
+                                                right: '16px',
+                                                top: '50%',
+                                                transform: 'translateY(-50%)',
+                                                pointerEvents: 'none',
+                                                color: isDark ? 'rgba(255,255,255,0.4)' : 'rgba(0,0,0,0.4)'
+                                            }}>
+                                                <ChevronDown size={18} />
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
 
@@ -224,6 +262,7 @@ const Contact = () => {
                                 </div>
 
                                 <button 
+                                    className="contact-submit-btn"
                                     type="submit" 
                                     disabled={status === 'sending'}
                                     style={{
@@ -263,7 +302,7 @@ const Contact = () => {
 
                     {/* Right: Info */}
                     <div style={{ order: isMobile ? 1 : 2 }}>
-                        <div style={{
+                        <div className="contact-info-card" style={{
                             padding: 'clamp(32px, 5vw, 48px)',
                             background: isDark ? 'rgba(255,255,255,0.03)' : 'rgba(0,0,0,0.02)',
                             borderRadius: '32px',
@@ -284,11 +323,11 @@ const Contact = () => {
                                     </div>
                                     <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
                                         <p style={labelStyle}>Write to us</p>
-                                        <a href="mailto:contact@westbridgeit.com" style={{ fontSize: '17px', fontWeight: 600, color: 'inherit', textDecoration: 'none', transition: 'opacity 0.2s' }}
+                                        <a href="mailto:support@westbridgeitsolutions.com" style={{ fontSize: '17px', fontWeight: 600, color: 'inherit', textDecoration: 'none', transition: 'opacity 0.2s' }}
                                            onMouseEnter={(e) => e.target.style.opacity = 0.7}
                                            onMouseLeave={(e) => e.target.style.opacity = 1}
                                         >
-                                            contact@westbridgeit.com
+                                            support@westbridgeitsolutions.com
                                         </a>
                                     </div>
                                 </div>
@@ -337,6 +376,46 @@ const Contact = () => {
 
                 </div>
             </div>
+            <style>{`
+                @media (max-width: 768px) {
+                    .contact-container {
+                        padding-top: 100px !important;
+                        padding-bottom: 60px !important;
+                    }
+                    .contact-grid {
+                        gap: 48px !important;
+                    }
+                    .contact-form-section {
+                        padding-top: 0 !important;
+                    }
+                    .contact-info-card {
+                        padding: 32px 24px !important;
+                        margin-top: 0 !important;
+                    }
+                    .contact-title {
+                        font-size: 38px !important;
+                        margin-bottom: 16px !important;
+                    }
+                    .contact-description {
+                        font-size: 15px !important;
+                        margin-bottom: 40px !important;
+                    }
+                    .contact-submit-btn {
+                        padding: 16px !important;
+                        font-size: 15px !important;
+                    }
+                }
+
+                @media (max-width: 480px) {
+                    .contact-container {
+                        padding-left: 16px !important;
+                        padding-right: 16px !important;
+                    }
+                    .contact-title {
+                        font-size: 34px !important;
+                    }
+                }
+            `}</style>
         </div>
     );
 };
