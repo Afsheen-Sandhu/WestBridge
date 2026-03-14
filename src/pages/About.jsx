@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { useTheme } from '../context/ThemeContext';
 import GlowBadge from '../components/GlowBadge';
 import Breadcrumbs from '../components/Breadcrumbs';
+import SEO from '../components/SEO';
+import { Target, Lightbulb, Users, Trophy, Play } from 'lucide-react';
 
 const About = () => {
     const { theme } = useTheme();
@@ -49,6 +51,10 @@ const About = () => {
             className="w-full transition-colors duration-400"
             style={{ background: theme === 'dark' ? '#000' : '#fff' }}
         >
+            <SEO
+                title="About Us | WestBridge IT Solutions"
+                description="Learn about WestBridge IT Solutions, our mission, values, and the team behind our premium web design and development services."
+            />
             <section
                 className="w-full"
                 style={{
@@ -68,11 +74,11 @@ const About = () => {
                             }}
                         >
                             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginBottom: 32 }}>
-                                <Breadcrumbs 
+                                <Breadcrumbs
                                     items={[
                                         { label: 'Home', path: '/' },
                                         { label: 'About', path: '/about-us' }
-                                    ]} 
+                                    ]}
                                 />
                                 <GlowBadge>Our Story</GlowBadge>
                             </div>

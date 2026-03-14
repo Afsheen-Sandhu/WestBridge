@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useTheme } from '../context/ThemeContext';
 import GlowBadge from '../components/GlowBadge';
 import Breadcrumbs from '../components/Breadcrumbs';
+import SEO from '../components/SEO';
 import {
     Globe,
     PenTool,
@@ -100,6 +101,10 @@ const Services = () => {
             fontFamily: "'Plus Jakarta Sans', sans-serif",
             transition: 'background 0.4s ease',
         }}>
+            <SEO 
+                title="Our Services | WestBridge IT Solutions"
+                description="Explore our range of digital services including web design, eCommerce solutions, CMS integration, and technical SEO optimization."
+            />
             <section style={{
                 width: '100%',
                 maxWidth: '1400px',

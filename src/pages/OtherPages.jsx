@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useTheme } from '../context/ThemeContext';
 import GlowBadge from '../components/GlowBadge';
+import SEO from '../components/SEO';
 
 const PlaceholderPage = ({ title, subtitle, badge }) => {
     const { theme } = useTheme();
@@ -11,6 +12,10 @@ const PlaceholderPage = ({ title, subtitle, badge }) => {
 
     return (
         <div className="w-full transition-colors duration-400" style={{ background: theme === 'dark' ? '#000' : '#fff' }}>
+            <SEO 
+                title={`${badge} | WestBridge IT Solutions`}
+                description={subtitle}
+            />
             <section
                 className="w-full flex flex-col items-center"
                 style={{

@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useTheme } from '../context/ThemeContext';
 import GlowBadge from '../components/GlowBadge';
 import Breadcrumbs from '../components/Breadcrumbs';
+import SEO from '../components/SEO';
 
 const Templates = () => {
     const { theme } = useTheme();
@@ -12,6 +13,10 @@ const Templates = () => {
 
     return (
         <div className="w-full transition-colors duration-400" style={{ background: theme === 'dark' ? '#000' : '#fff' }}>
+            <SEO 
+                title="Premium Templates | WestBridge IT Solutions"
+                description="Browse our collection of premium, high-performance web templates designed for modern businesses and agencies."
+            />
             <section
                 className="w-full flex flex-col items-center"
                 style={{

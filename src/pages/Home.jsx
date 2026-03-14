@@ -2,6 +2,7 @@ import { Suspense, lazy, useEffect } from 'react';
 import Hero from '../components/Hero';
 import ProjectCarousels from '../components/ProjectCarousels';
 import OurWorksSlides from '../components/OurWorksSlides';
+import SEO from '../components/SEO';
 
 const FeaturesGrid = lazy(() => import('../components/FeaturesGrid'));
 const ServicesGrid = lazy(() => import('../components/ServicesGrid'));
@@ -25,6 +26,10 @@ const Home = () => {
 
     return (
         <>
+            <SEO 
+                title="WestBridge IT Solutions | Custom Web Design & Development Agency"
+                description="Surrey's premier web design & development agency. We create custom websites, mobile apps, and software solutions that grow your business. Get a free quote today!"
+            />
             <Hero />
             <ProjectCarousels />
             <OurWorksSlides />

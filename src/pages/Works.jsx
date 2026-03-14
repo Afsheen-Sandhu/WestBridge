@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useTheme } from '../context/ThemeContext';
 import GlowBadge from '../components/GlowBadge';
 import Breadcrumbs from '../components/Breadcrumbs';
+import SEO from '../components/SEO';
 import { ChevronDown, ArrowUpRight } from 'lucide-react';
 
 import { projectsData as projects } from '../data/projectsData';
@@ -46,6 +47,10 @@ const Works = () => {
             fontFamily: "'Plus Jakarta Sans', sans-serif",
             transition: 'background 0.4s ease',
         }}>
+            <SEO 
+                title="Our Works | WestBridge IT Solutions"
+                description="Explore our portfolio of extraordinary digital solutions, ranging from high-end restaurant websites to complex B2B SaaS platforms."
+            />
             <section style={{
                 width: '100%',
                 maxWidth: '1400px',

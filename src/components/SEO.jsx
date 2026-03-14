@@ -3,8 +3,8 @@ import { Helmet } from 'react-helmet-async';
 import { useLocation } from 'react-router-dom';
 
 const SEO = ({ 
-    title = 'WestBridge IT Solutions', 
-    description = 'WestBridge IT Solutions is a premium web design and development agency crafting engaging, high-performance digital experiences and robust software solutions.', 
+    title = 'WestBridge IT Solutions | Custom Web Design & Development Agency', 
+    description = "Surrey's premier web design & development agency. We create custom websites, mobile apps, and software solutions that grow your business. Get a free quote today!", 
     robots = 'index, follow',
     keywords = 'web design, development agency, software solutions, IT services'
 }) => {

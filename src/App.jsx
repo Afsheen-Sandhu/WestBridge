@@ -28,7 +28,6 @@ function App() {
     <HelmetProvider>
       <Router>
         <SmoothScroll>
-          <SEO />
           <Layout>
             <Suspense fallback={<PageLoader />}>
               <Routes>

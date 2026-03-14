@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useTheme } from '../context/ThemeContext';
 import GlowBadge from '../components/GlowBadge';
 import Breadcrumbs from '../components/Breadcrumbs';
+import SEO from '../components/SEO';
 
 const Approach = () => {
     const { theme } = useTheme();
@@ -12,6 +13,10 @@ const Approach = () => {
 
     return (
         <div className="w-full transition-colors duration-400" style={{ background: theme === 'dark' ? '#000' : '#fff' }}>
+            <SEO 
+                title="Our Approach | WestBridge IT Solutions"
+                description="Discover our methodology and creative process for delivering high-performance, design-first digital experiences."
+            />
             <section
                 className="w-full flex flex-col items-center"
                 style={{
