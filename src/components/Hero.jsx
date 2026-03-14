@@ -55,8 +55,23 @@ const Hero = () => {
           <GlowBadge>Design In Details</GlowBadge>
         </div>
 
-        {/* Hero Heading */}
-        <h1
+        {/* SEO-friendly H1 (visually hidden) */}
+        <h1 className="sr-only" style={{
+            position: 'absolute',
+            width: '1px',
+            height: '1px',
+            padding: '0',
+            margin: '-1px',
+            overflow: 'hidden',
+            clip: 'rect(0, 0, 0, 0)',
+            whiteSpace: 'nowrap',
+            borderWidth: '0',
+        }}>
+            Premium Web Design & Development for Bold Brands
+        </h1>
+
+        {/* Hero Heading (Visible Layout) */}
+        <div
           className="mb-10 sm:mb-12 flex flex-col gap-2"
           style={{ fontSize: 'clamp(34px, 9vw, 120px)', lineHeight: 0.95, letterSpacing: '-0.04em' }}
         >
@@ -76,7 +91,7 @@ const Hero = () => {
               Impact
             </span>
           </div>
-        </h1>
+        </div>
 
         {/* Subtitle */}
         <p
