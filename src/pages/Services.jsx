@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useTheme } from '../context/ThemeContext';
 import GlowBadge from '../components/GlowBadge';
+import Breadcrumbs from '../components/Breadcrumbs';
 import {
     Globe,
     PenTool,
@@ -116,6 +117,12 @@ const Services = () => {
                     alignItems: 'flex-start',
                 }}>
                     <div style={{ marginBottom: '28px' }}>
+                        <Breadcrumbs 
+                            items={[
+                                { label: 'Home', path: '/' },
+                                { label: 'Services', path: '/services' }
+                            ]} 
+                        />
                         <GlowBadge>Our Expertise</GlowBadge>
                     </div>
 

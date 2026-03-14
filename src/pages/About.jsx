@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useTheme } from '../context/ThemeContext';
 import GlowBadge from '../components/GlowBadge';
+import Breadcrumbs from '../components/Breadcrumbs';
 
 const About = () => {
     const { theme } = useTheme();
@@ -66,7 +67,13 @@ const About = () => {
                                 textAlign: 'center',
                             }}
                         >
-                            <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 32 }}>
+                            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginBottom: 32 }}>
+                                <Breadcrumbs 
+                                    items={[
+                                        { label: 'Home', path: '/' },
+                                        { label: 'About', path: '/about-us' }
+                                    ]} 
+                                />
                                 <GlowBadge>Our Story</GlowBadge>
                             </div>
 

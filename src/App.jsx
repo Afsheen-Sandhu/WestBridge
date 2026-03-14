@@ -10,6 +10,7 @@ const Works      = lazy(() => import('./pages/Works'));
 const Services   = lazy(() => import('./pages/Services'));
 const Blogs      = lazy(() => import('./pages/Blogs'));
 const BlogDetail = lazy(() => import('./pages/BlogDetail'));
+const WorkDetail = lazy(() => import('./pages/WorkDetail'));
 const Templates  = lazy(() => import('./pages/Templates'));
 const Approach   = lazy(() => import('./pages/Approach'));
 const Careers    = lazy(() => import('./pages/OtherPages').then(m => ({ default: m.Careers })));
@@ -30,6 +31,7 @@ function App() {
               <Route path="/"            element={<Home />} />
               <Route path="/about-us"    element={<About />} />
               <Route path="/works"       element={<Works />} />
+              <Route path="/works/:slug" element={<WorkDetail />} />
               <Route path="/services"    element={<Services />} />
               <Route path="/blogs"       element={<Blogs />} />
               <Route path="/blogs/:slug" element={<BlogDetail />} />

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useTheme } from '../context/ThemeContext';
 import GlowBadge from '../components/GlowBadge';
+import Breadcrumbs from '../components/Breadcrumbs';
 import { Calendar, User, ArrowUpRight, Search } from 'lucide-react';
 import { blogPosts } from '../data/blogData';
 
@@ -40,6 +41,12 @@ const Blogs = () => {
                     borderBottom: `1px solid ${isDark ? 'rgba(255,255,255,0.06)' : 'rgba(0,0,0,0.08)'}`,
                 }}>
                     <div style={{ marginBottom: '28px' }}>
+                        <Breadcrumbs 
+                            items={[
+                                { label: 'Home', path: '/' },
+                                { label: 'Journal', path: '/blogs' }
+                            ]} 
+                        />
                         <GlowBadge>Our Journal</GlowBadge>
                     </div>
 

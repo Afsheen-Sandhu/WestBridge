@@ -3,6 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import { useTheme } from '../context/ThemeContext';
 import { ArrowLeft, Clock, User, Calendar, Share2, Twitter, Linkedin, Facebook } from 'lucide-react';
 import { blogPosts } from '../data/blogData';
+import Breadcrumbs from '../components/Breadcrumbs';
 
 const BlogDetail = () => {
     const { slug } = useParams();
@@ -79,25 +80,14 @@ const BlogDetail = () => {
                 padding: 'clamp(120px, 15vw, 180px) 24px 0',
             }}>
 
-                {/* ── Back Link ── */}
-                <Link to="/blogs" 
-                    aria-label="Back to all blog posts"
-                    style={{
-                    display: 'inline-flex',
-                    alignItems: 'center',
-                    gap: '12px',
-                    color: isDark ? 'rgba(255,255,255,0.7)' : 'rgba(0,0,0,0.65)',
-                    textDecoration: 'none',
-                    fontSize: '12px',
-                    fontWeight: 800,
-                    textTransform: 'uppercase',
-                    letterSpacing: '0.12em',
-                    marginBottom: '48px',
-                    transition: 'all 0.3s ease',
-                }} onMouseEnter={e => e.currentTarget.style.color = isDark ? '#fff' : '#000'} onMouseLeave={e => e.currentTarget.style.color = ''}>
-                    <ArrowLeft size={16} aria-hidden="true" />
-                    Back to Journal
-                </Link>
+                {/* ── Breadcrumbs ── */}
+                <Breadcrumbs 
+                    items={[
+                        { label: 'Home', path: '/' },
+                        { label: 'Journal', path: '/blogs' },
+                        { label: post.title }
+                    ]} 
+                />
 
                 {/* ── Category & Title ── */}
                 <div style={{ marginBottom: '40px' }}>

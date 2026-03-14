@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useTheme } from '../context/ThemeContext';
 import GlowBadge from '../components/GlowBadge';
+import Breadcrumbs from '../components/Breadcrumbs';
 
 const Approach = () => {
     const { theme } = useTheme();
@@ -18,7 +19,13 @@ const Approach = () => {
                 }}
             >
                 <div className="w-full max-w-[1000px] px-8 flex flex-col items-center text-center">
-                    <div className="flex justify-center w-full mb-8">
+                    <div className="flex flex-col items-center justify-center w-full mb-8">
+                        <Breadcrumbs 
+                            items={[
+                                { label: 'Home', path: '/' },
+                                { label: 'Approach', path: '/approach' }
+                            ]} 
+                        />
                         <GlowBadge>Methodology</GlowBadge>
                     </div>
 
