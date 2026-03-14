@@ -25,11 +25,11 @@ const FeatureCard = ({ title, description, children, className = '', cardIndex =
             <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden>
                 <img
                     src="/VisuvateBG2.webp"
-                    alt=""
+                    alt="WestBridge Abstract Background Pattern"
+                    title="WestBridge Design Element"
                     width={800}
                     height={600}
                     decoding="async"
-                    aria-hidden="true"
                     className="absolute w-full h-full object-cover"
                     style={{
                         objectPosition: variant.position,
@@ -101,7 +101,7 @@ const FeaturesGrid = () => {
                                 background: theme === 'dark' ? '#111' : '#eee',
                                 borderColor: theme === 'dark' ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.1)'
                             }}>
-                            <img src="/srv1.webp" alt="WestBridge Discovery and Strategy Phase - defining clear digital goals" width={800} height={450} decoding="async" className="w-full h-full object-cover object-center"
+                            <img src="/srv1.webp" alt="WestBridge Discovery and Strategy Phase - defining clear digital goals for Surrey businesses" title="Strategic Discovery Phase" width={800} height={450} decoding="async" className="w-full h-full object-cover object-center"
                                 style={{ opacity: theme === 'dark' ? 0.8 : 1 }} />
                         </div>
                     </FeatureCard>
@@ -117,7 +117,7 @@ const FeaturesGrid = () => {
                                 background: theme === 'dark' ? '#111' : '#eee',
                                 borderColor: theme === 'dark' ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.1)'
                             }}>
-                            <img src="/feature2.webp" alt="Mobile-First Web Design for Seamless User Experience across devices" width={550} height={450} decoding="async" className="w-full h-full object-cover object-center"
+                            <img src="/feature2.webp" alt="Mobile-First Web Design for Seamless User Experience across all devices" title="Mobile-First Design Excellence" width={550} height={450} decoding="async" className="w-full h-full object-cover object-center"
                                 style={{ opacity: theme === 'dark' ? 0.8 : 1 }} />
                         </div>
                     </FeatureCard>
@@ -136,7 +136,7 @@ const FeaturesGrid = () => {
                                 background: theme === 'dark' ? '#111' : '#eee',
                                 borderColor: theme === 'dark' ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.1)'
                             }}>
-                            <img src="/srv3.webp" alt="Conversion-Driven Web Development and Strategic User Journeys" width={550} height={450} decoding="async" className="w-full h-full object-cover object-center"
+                            <img src="/srv3.webp" alt="Conversion-Driven Web Development and Strategic User Journeys to increase ROI" title="Conversion-Focused Development" width={550} height={450} decoding="async" className="w-full h-full object-cover object-center"
                                 style={{ opacity: theme === 'dark' ? 0.8 : 1 }} />
                         </div>
                     </FeatureCard>
@@ -152,7 +152,7 @@ const FeaturesGrid = () => {
                                 background: theme === 'dark' ? '#111' : '#eee',
                                 borderColor: theme === 'dark' ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.1)'
                             }}>
-                            <img src="/srv4.webp" alt="Pixel-Perfect Web Development and UI Precision by WestBridge Team" width={800} height={450} decoding="async" className="w-full h-full object-cover object-center"
+                            <img src="/srv4.webp" alt="Pixel-Perfect Web Development and UI Precision by WestBridge Expert Team" title="Pixel-Perfect Engineering" width={800} height={450} decoding="async" className="w-full h-full object-cover object-center"
                                 style={{ opacity: theme === 'dark' ? 0.8 : 1 }} />
                         </div>
                     </FeatureCard>
@@ -171,7 +171,7 @@ const FeaturesGrid = () => {
                                 background: 'transparent',
                                 borderColor: theme === 'dark' ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.1)'
                             }}>
-                            <img src="/srv5.webp" alt="Seamless CMS Launch and Powerful Content Management Dashboard" width={800} height={450} decoding="async" className="w-full h-full object-cover object-center"
+                            <img src="/srv5.webp" alt="Seamless CMS Launch and Powerful Content Management Dashboard for effortlessly updates" title="Custom CMS Solutions" width={800} height={450} decoding="async" className="w-full h-full object-cover object-center"
                                 style={{ opacity: theme === 'dark' ? 0.8 : 1 }} />
                         </div>
                     </FeatureCard>
@@ -189,7 +189,8 @@ const FeaturesGrid = () => {
                             }}>
                             <img
                                 src="/srv6.webp"
-                                alt="Future-Ready Scalable Web Architecture - Case Study"
+                                alt="Future-Ready Scalable Web Architecture - Case Study for long-term growth"
+                                title="Future-Ready Scalability"
                                 width={550}
                                 height={450}
                                 decoding="async"

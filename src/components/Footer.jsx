@@ -46,7 +46,14 @@ const Footer = () => {
               to="/"
               style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '40px', textDecoration: 'none' }}
             >
-              <img src={theme === 'dark' ? "/logo-white-removebg-preview.webp" : "/logo-black-removebg-preview.webp"} alt="WB" width={24} height={24} style={{ height: '24px', width: 'auto' }} />
+              <img 
+                src={theme === 'dark' ? "/logo-white-removebg-preview.webp" : "/logo-black-removebg-preview.webp"} 
+                alt="WestBridge IT Solutions Logo" 
+                title="WestBridge IT Solutions"
+                width={24} 
+                height={24} 
+                style={{ height: '24px', width: 'auto' }} 
+              />
               <span style={{ color: theme === 'dark' ? '#fff' : '#000', fontWeight: 700, fontSize: '16px', letterSpacing: '-0.02em' }}>WestBridge</span>
             </Link>
 
@@ -163,7 +170,8 @@ const Footer = () => {
               }} />
               <img
                 src="/city2.webp"
-                alt="City Illustration"
+                alt="Surrey City Illustration - WestBridge IT Solutions Digital Presence"
+                title="WestBridge in Surrey"
                 width={380}
                 height={420}
                 onMouseEnter={() => setImgHover(true)}

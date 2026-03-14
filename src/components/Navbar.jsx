@@ -91,7 +91,8 @@ const Navbar = () => {
                     >
                         <img
                             src={theme === 'dark' ? "/logo-white-removebg-preview.webp" : "/logo-black-removebg-preview.webp"}
-                            alt="WestBridge"
+                            alt="WestBridge IT Solutions - Custom Web Design & Development Agency"
+                            title="WestBridge IT Solutions"
                             width={isMobile ? 48 : (theme === 'dark' ? 85 : 64)}
                             height={isMobile ? 48 : (theme === 'dark' ? 85 : 64)}
                             loading="eager"

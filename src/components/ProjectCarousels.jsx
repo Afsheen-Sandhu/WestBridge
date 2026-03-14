@@ -4,30 +4,30 @@ import { useTheme } from '../context/ThemeContext';
 
 // Replace these with your actual project image paths under /public
 const PROJECT_IMAGES = [
-  '/img11.webp',
-  '/img1.webp',
-  '/img5.webp',
-  '/img17.webp',
-  '/img24.webp',
-  '/img8.webp',
-  '/img2.webp',
-  '/img13.webp',
-  '/img9.webp',
-  '/img14.webp',
-  '/img23.webp',
-  '/img12.webp',
-  '/img3.webp',
-  '/img18.webp',
-  '/img20.webp',
-  '/img4.webp',
-  '/img16.webp',
-  '/img6.webp',
-  '/img10.webp',
-  '/img15.webp',
-  '/img7.webp',
-  '/img19.webp',
-  '/img21.webp',
-  '/img22.webp',
+  { src: '/img11.webp', alt: 'Tranquil SaaS Marketing Platform - High-speed web application with smooth interactions', title: 'Tranquil SaaS Web Platform' },
+  { src: '/img1.webp', alt: 'Murakami City Fine Dining Experience - Elegant restaurant website with reservation system', title: 'Murakami City Restaurant Website' },
+  { src: '/img5.webp', alt: 'Ochi Design Agency Portfolio - Interactive 3D web showcase with advanced motion', title: 'Ochi Design Portfolio' },
+  { src: '/img17.webp', alt: 'Doze Studio Creative Portal - Experimental WebGL 3D storytelling experience', title: 'Doze Studio Creative Website' },
+  { src: '/img24.webp', alt: 'Well Designed eCommerce Lifestyle Store - Premium Grecian lifestyle online shop', title: 'Well Designed eCommerce Platform' },
+  { src: '/img8.webp', alt: 'Kinective Fitness Community Platform - Custom fitness booking and scheduling site', title: 'Kinective Fitness Web App' },
+  { src: '/img2.webp', alt: 'JF Vegan Cafe Organic UI - Sustainable food brand website with fluid design', title: 'JF Vegan Cafe Website' },
+  { src: '/img13.webp', alt: 'Solstice Interior Design Showcase - High-resolution interior design portfolio', title: 'Solstice Design Portfolio' },
+  { src: '/img9.webp', alt: 'Stampede Auto Performance Dealership - Automotive inventory and filtering platform', title: 'Stampede Auto Website' },
+  { src: '/img14.webp', alt: 'FMIG Healthcare Corporate Portal - Multi-lingual medical group infrastructure', title: 'FMIG Corporate Website' },
+  { src: '/img23.webp', alt: 'Uptura Digital Agency Hub - Modern agency portfolio with glassmorphism', title: 'Uptura Agency Website' },
+  { src: '/img12.webp', alt: 'Eclectic Lifestyle Co Digital Magazine - Editorial-style lifestyle publication', title: 'Eclectic Lifestyle Magazine' },
+  { src: '/img3.webp', alt: 'Nidaba Spirit Artisanal eCommerce - Luxury Italian craft spirit storefront', title: 'Nidaba Spirit Online Shop' },
+  { src: '/img18.webp', alt: 'Brewitty Creative Narrative Website - Conversational B2B marketing platform', title: 'Brewitty Creative Portfolio' },
+  { src: '/img20.webp', alt: 'Solidroad AI Training SaaS - Interactive SaaS platform for AI development', title: 'Solidroad AI Platform' },
+  { src: '/img4.webp', alt: 'Restaurant Gem Polished Dining UI - Fass facelift for modern dining', title: 'Restaurant Gem Facelift' },
+  { src: '/img16.webp', alt: 'Bartosz Kolenda Developer Hub - Ultra-fast minimalist developer portfolio', title: 'Bartosz Kolenda Portfolio' },
+  { src: '/img6.webp', alt: 'Lento Agency Typography Portfolio - Strategic design agency web infrastructure', title: 'Lento Agency Website' },
+  { src: '/img10.webp', alt: 'Masons Italian Fashion Store - International luxury fashion eCommerce platform', title: 'Masons Luxury Fashion Shop' },
+  { src: '/img15.webp', alt: 'Austo Entertainment Live Portal - Media-rich event production website', title: 'Austo Entertainment Website' },
+  { src: '/img7.webp', alt: 'Bajgart Office Brutalist UI - Architectural firm digital translation', title: 'Bajgart Office Website' },
+  { src: '/img19.webp', alt: 'Jamm Modern Food Brand UI - Fast and loud food franchise application', title: 'Jamm Food Brand Website' },
+  { src: '/img21.webp', alt: 'General Intelligence Co Think Tank - Stark brutalist digital infrastructure', title: 'GIC Think Tank Website' },
+  { src: '/img22.webp', alt: 'Epiminds Agency Insights Hub - Interconnected CMS and case study platform', title: 'Epiminds Agency Website' },
 ];
 
 const CARD_WIDTH = 380;
@@ -72,7 +72,7 @@ const ProjectCarousels = () => {
         height: rowHeight,
       }}
     >
-      {[...images, ...images].map((src, i) => (
+      {[...images, ...images].map((img, i) => (
         <div
           key={i}
           className="shrink-0 overflow-hidden rounded-xl transition-all duration-400"
@@ -84,11 +84,11 @@ const ProjectCarousels = () => {
           }}
         >
           <img
-            src={src}
-            alt=""
+            src={img.src}
+            alt={img.alt}
+            title={img.title}
             width={CARD_WIDTH}
             height={rowHeight}
-            aria-hidden="true"
             className="w-full h-full object-cover"
             loading="lazy"
             onError={(e) => {
