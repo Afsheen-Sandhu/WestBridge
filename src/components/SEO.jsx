@@ -25,6 +25,7 @@ const SEO = ({
             <meta name="keywords" content={keywords} />
             <meta name="robots" content={robots} />
             <meta name="googlebot" content={robots} />
+            <meta name="X-Robots-Tag" content={robots} />
             <link rel="canonical" href={canonicalUrl} />
             <link rel="publisher" href={baseUrl} />
             
