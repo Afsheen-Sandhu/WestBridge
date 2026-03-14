@@ -46,7 +46,7 @@ const WorkDetail = () => {
         }}>
             {/* SEO Meta Tags via Helmet */}
             <SEO 
-                title={`${project.name} | WestBridge Case Study`}
+                title={`${project.name} Case Study | WestBridge IT Solutions Portfolio`}
                 description={project.overview}
                 keywords={`${project.name}, ${project.category}, web design case study, WestBridge IT Solutions`}
             />

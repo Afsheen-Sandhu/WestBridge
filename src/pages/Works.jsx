@@ -48,7 +48,7 @@ const Works = () => {
             transition: 'background 0.4s ease',
         }}>
             <SEO 
-                title="Our Works | WestBridge IT Solutions"
+                title="Our Works | WestBridge IT Solutions | Web Development Portfolio"
                 description="Explore our portfolio of extraordinary digital solutions, ranging from high-end restaurant websites to complex B2B SaaS platforms."
             />
             <section style={{

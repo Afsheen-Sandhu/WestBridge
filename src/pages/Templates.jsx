@@ -14,7 +14,7 @@ const Templates = () => {
     return (
         <div className="w-full transition-colors duration-400" style={{ background: theme === 'dark' ? '#000' : '#fff' }}>
             <SEO 
-                title="Premium Templates | WestBridge IT Solutions"
+                title="Premium Templates | WestBridge IT Solutions | High-End Web Shells"
                 description="Browse our collection of premium, high-performance web templates designed for modern businesses and agencies."
             />
             <section

@@ -5,7 +5,7 @@ import GlowBadge from '../components/GlowBadge';
 import Breadcrumbs from '../components/Breadcrumbs';
 import SEO from '../components/SEO';
 import { Calendar, User, ArrowUpRight, Search } from 'lucide-react';
-import { blogData as posts } from '../data/blogData';
+import { blogPosts } from '../data/blogData';
 
 const Blogs = () => {
     const { theme } = useTheme();
@@ -29,7 +29,7 @@ const Blogs = () => {
             transition: 'background 0.4s ease',
         }}>
             <SEO 
-                title="Blogs & Insights | WestBridge IT Solutions"
+                title="Blogs & Insights | WestBridge IT Solutions | Tech Strategy News"
                 description="Stay updated with the latest trends in web design, development, and digital strategy from the experts at WestBridge IT Solutions."
             />
             <section style={{

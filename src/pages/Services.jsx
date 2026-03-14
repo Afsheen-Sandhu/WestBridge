@@ -102,7 +102,7 @@ const Services = () => {
             transition: 'background 0.4s ease',
         }}>
             <SEO 
-                title="Our Services | WestBridge IT Solutions"
+                title="Our Services | WestBridge IT Solutions | Digital Product Agency"
                 description="Explore our range of digital services including web design, eCommerce solutions, CMS integration, and technical SEO optimization."
             />
             <section style={{

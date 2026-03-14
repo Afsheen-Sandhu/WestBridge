@@ -14,7 +14,7 @@ const Approach = () => {
     return (
         <div className="w-full transition-colors duration-400" style={{ background: theme === 'dark' ? '#000' : '#fff' }}>
             <SEO 
-                title="Our Approach | WestBridge IT Solutions"
+                title="Our Approach | WestBridge IT Solutions | Creative Design Process"
                 description="Discover our methodology and creative process for delivering high-performance, design-first digital experiences."
             />
             <section

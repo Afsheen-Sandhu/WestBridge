@@ -52,8 +52,8 @@ const About = () => {
             style={{ background: theme === 'dark' ? '#000' : '#fff' }}
         >
             <SEO
-                title="About Us | WestBridge IT Solutions"
-                description="Learn about WestBridge IT Solutions, our mission, values, and the team behind our premium web design and development services."
+                title="About Us | WestBridge IT Solutions | Expert Web Design Company"
+                description="Learn about WestBridge IT Solutions, our mission, values, and the team behind our premier web design and development services."
             />
             <section
                 className="w-full"

@@ -92,7 +92,7 @@ const FeaturesGrid = () => {
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-8">
                     <FeatureCard
                         title="Discovery First"
-                        description="We begin by defining clear goals, understanding your audience, and aligning with your brand voice to set a strong foundation."
+                        description="Defining clear goals and audience insights to set a strong foundation."
                         className="lg:col-span-7"
                         cardIndex={0}
                     >
@@ -108,7 +108,7 @@ const FeaturesGrid = () => {
 
                     <FeatureCard
                         title="Mobile-First Design"
-                        description="Every layout is designed for seamless mobile-first experiences, ensuring performance across all devices."
+                        description="Seamless experiences prioritized for mobile users across all devices."
                         className="lg:col-span-5"
                         cardIndex={1}
                     >
@@ -127,7 +127,7 @@ const FeaturesGrid = () => {
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-8">
                     <FeatureCard
                         title="Conversion-Driven"
-                        description="Websites built with strategy, designed to engage audiences, and crafted to turn visitors into customers."
+                        description="Strategic user journeys designed to turn visitors into customers."
                         className="lg:col-span-5"
                         cardIndex={2}
                     >
@@ -143,7 +143,7 @@ const FeaturesGrid = () => {
 
                     <FeatureCard
                         title="Pixel-Perfect Development"
-                        description="Designed and developed with pixel-perfect precision, delivering high performance and easy updates."
+                        description="Precision engineering for high performance and easy scalability."
                         className="lg:col-span-7"
                         cardIndex={3}
                     >
@@ -162,7 +162,7 @@ const FeaturesGrid = () => {
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-8">
                     <FeatureCard
                         title="Seamless CMS Launch"
-                        description="Launched seamlessly with a powerful CMS, allowing you to update and manage your website content effortlessly after going live."
+                        description="Manage your content effortlessly with our powerful, intuitive dashboards."
                         className="lg:col-span-7"
                         cardIndex={4}
                     >
@@ -178,7 +178,7 @@ const FeaturesGrid = () => {
 
                     <FeatureCard
                         title="Future-Ready"
-                        description="Websites designed to be scalable and future-ready, adapting as your business grows."
+                        description="Scalable architectures that adapt as your business and tech evolve."
                         className="lg:col-span-5"
                         cardIndex={5}
                     >

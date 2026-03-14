@@ -9,6 +9,7 @@ const ServicesGrid = lazy(() => import('../components/ServicesGrid'));
 const PlatformFlexSection = lazy(() => import('../components/PlatformFlexSection'));
 const ServiceTicker = lazy(() => import('../components/ServiceTicker'));
 const FAQ = lazy(() => import('../components/FAQ'));
+const DetailedProcess = lazy(() => import('../components/DetailedProcess'));
 
 const Home = () => {
     useEffect(() => {
@@ -35,6 +36,7 @@ const Home = () => {
             <OurWorksSlides />
             <Suspense fallback={<div className="h-40" />}>
                 <FeaturesGrid />
+                <DetailedProcess />
                 <ServicesGrid />
                 <PlatformFlexSection />
                 <FAQ />

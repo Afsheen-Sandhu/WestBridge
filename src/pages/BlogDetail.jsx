@@ -59,7 +59,7 @@ const BlogDetail = () => {
             paddingBottom: '120px',
         }}>
             <SEO 
-                title={`${post.title} | WestBridge Blog`}
+                title={`${post.title} | WestBridge IT Solutions Tech Blog & Insights`}
                 description={post.excerpt}
                 keywords={`${post.category}, ${post.title}, WestBridge IT Solutions`}
             />
