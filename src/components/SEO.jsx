@@ -28,6 +28,8 @@ const SEO = ({
             <meta name="X-Robots-Tag" content={robots} />
             <link rel="canonical" href={canonicalUrl} />
             <link rel="publisher" href={baseUrl} />
+            <meta name="publisher" content="WestBridge IT Solutions" />
+            <meta name="author" content="WestBridge IT Solutions" />
             
             {/* Open Graph */}
             <meta property="og:title" content={title} />
