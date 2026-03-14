@@ -16,11 +16,12 @@ const Contact = () => {
     });
 
     const [status, setStatus] = useState('idle'); // idle, sending, success
-    const [isMobile, setIsMobile] = useState(typeof window !== 'undefined' ? window.innerWidth < 992 : false);
+    const [isMobile, setIsMobile] = useState(typeof window !== 'undefined' ? window.innerWidth < 1100 : false);
 
     useEffect(() => {
         window.scrollTo(0, 0);
-        const handleResize = () => setIsMobile(window.innerWidth < 768);
+        const handleResize = () => setIsMobile(window.innerWidth < 1024);
+        handleResize(); // Initial check
         window.addEventListener('resize', handleResize);
         return () => window.removeEventListener('resize', handleResize);
     }, []);
@@ -63,7 +64,7 @@ const Contact = () => {
     // Shared styles
     const inputStyle = {
         width: '100%',
-        padding: '16px 20px',
+        padding: isMobile ? (window.innerWidth < 480 ? '14px 16px' : '16px 20px') : '16px 20px',
         background: isDark ? 'rgba(255,255,255,0.03)' : 'rgba(0,0,0,0.02)',
         border: `1px solid ${isDark ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.1)'}`,
         borderRadius: '12px',
@@ -91,34 +92,36 @@ const Contact = () => {
             background: isDark ? '#000' : '#fff',
             color: isDark ? '#fff' : '#000',
             transition: 'background 0.4s ease',
-            paddingTop: isMobile ? '100px' : 'clamp(140px, 15vw, 180px)',
-            paddingBottom: isMobile ? '60px' : '100px'
+            paddingTop: isMobile ? '120px' : 'clamp(140px, 15vw, 180px)',
+            paddingBottom: isMobile ? '80px' : '100px',
+            overflowX: 'hidden'
         }}>
             <SEO 
                 title="Let's Connect | WestBridge IT Solutions"
                 description="Ready to start your next premium digital project? Get in touch with our expert team today."
             />
 
-            <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 clamp(24px, 5vw, 64px)' }}>
+            <div className="layout-inner" style={{ margin: '0 auto' }}>
                 <div className="contact-grid" style={{ 
                     display: 'grid', 
                     gridTemplateColumns: isMobile ? '1fr' : '1.2fr 0.8fr', 
-                    gap: isMobile ? '40px' : '80px' 
+                    gap: isMobile ? '48px' : '80px' 
                 }}>
                     
                     {/* Left: Form */}
                     <div className="contact-form-section" style={{ order: isMobile ? 1 : 1 }}>
                         <div style={{ marginBottom: isMobile ? '40px' : '64px' }}>
                             <h1 className="contact-title" style={{
-                                fontSize: isMobile ? '38px' : 'clamp(40px, 6vw, 84px)',
+                                fontSize: isMobile ? 'clamp(32px, 8vw, 56px)' : 'clamp(56px, 6vw, 84px)',
                                 fontWeight: 800,
                                 letterSpacing: '-0.04em',
-                                lineHeight: 1.1,
-                                marginBottom: '24px',
-                                wordBreak: 'break-word'
+                                lineHeight: 1.05,
+                                marginBottom: isMobile ? '20px' : '24px',
+                                wordBreak: 'break-word',
+                                overflowWrap: 'anywhere'
                             }}>
-                                Let's build <br />
-                                <span style={{ fontFamily: "'Instrument Serif', serif", fontStyle: 'italic', fontWeight: 400 }}>the extraordinary.</span>
+                                Scale your <br />
+                                <span style={{ fontFamily: "'Instrument Serif', serif", fontStyle: 'italic', fontWeight: 400 }}>digital legacy.</span>
                             </h1>
                             <p className="contact-description" style={{
                                 fontSize: 'clamp(16px, 1.5vw, 19px)',
@@ -170,8 +173,8 @@ const Contact = () => {
                             <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '32px' }}>
                                 <div style={{ 
                                     display: 'grid', 
-                                    gridTemplateColumns: isMobile ? '1fr' : '1fr 1fr', 
-                                    gap: '24px' 
+                                    gridTemplateColumns: (isMobile && window.innerWidth < 768) ? '1fr' : '1fr 1fr', 
+                                    gap: isMobile ? '16px' : '24px' 
                                 }}>
                                     <div>
                                         <label style={labelStyle}>Full Name</label>
@@ -201,8 +204,8 @@ const Contact = () => {
 
                                 <div style={{ 
                                     display: 'grid', 
-                                    gridTemplateColumns: isMobile ? '1fr' : '1fr 1fr', 
-                                    gap: '24px' 
+                                    gridTemplateColumns: (isMobile && window.innerWidth < 768) ? '1fr' : '1fr 1fr', 
+                                    gap: isMobile ? '16px' : '24px' 
                                 }}>
                                     <div>
                                         <label style={labelStyle}>Company (Optional)</label>
@@ -304,7 +307,7 @@ const Contact = () => {
                     {/* Right: Info */}
                     <div style={{ order: isMobile ? 2 : 2 }}>
                         <div className="contact-info-card" style={{
-                            padding: isMobile ? '32px 24px' : 'clamp(32px, 5vw, 48px)',
+                            padding: isMobile ? (window.innerWidth < 480 ? '24px 20px' : '32px 24px') : 'clamp(32px, 5vw, 48px)',
                             background: isDark ? 'rgba(255,255,255,0.03)' : 'rgba(0,0,0,0.02)',
                             borderRadius: '32px',
                             border: `1px solid ${isDark ? 'rgba(255,255,255,0.05)' : 'rgba(0,0,0,0.05)'}`,
@@ -324,7 +327,14 @@ const Contact = () => {
                                     </div>
                                     <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
                                         <p style={labelStyle}>Write to us</p>
-                                        <a href="mailto:support@westbridgeitsolutions.com" style={{ fontSize: '17px', fontWeight: 600, color: 'inherit', textDecoration: 'none', transition: 'opacity 0.2s' }}
+                                        <a href="mailto:support@westbridgeitsolutions.com" style={{ 
+                                            fontSize: '17px', 
+                                            fontWeight: 600, 
+                                            color: 'inherit', 
+                                            textDecoration: 'none', 
+                                            transition: 'opacity 0.2s',
+                                            wordBreak: 'break-all'
+                                        }}
                                            onMouseEnter={(e) => e.target.style.opacity = 0.7}
                                            onMouseLeave={(e) => e.target.style.opacity = 1}
                                         >

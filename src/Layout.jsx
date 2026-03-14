@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import WhatsAppIcon from './components/WhatsAppIcon';
 
 const Layout = ({ children }) => {
   return (
@@ -15,6 +16,7 @@ const Layout = ({ children }) => {
       </main>
 
       <Footer />
+      <WhatsAppIcon />
     </div>
   );
 };

@@ -87,69 +87,69 @@ const ServicesGrid = () => {
         overflowX: 'clip'
       }}
     >
-      <div
-        className="w-full flex flex-col lg:flex-row lg:items-center items-start justify-between gap-6 lg:gap-10"
-        style={{ paddingBottom: '32px' }}
-      >
-        <h2
-          className="font-body leading-tight"
-          style={{
-            color: theme === 'dark' ? '#fff' : '#000',
-            fontSize: 'clamp(30px, 3.6vw, 52px)',
-            letterSpacing: '-0.03em',
-            fontWeight: 600,
-          }}
-        >
-          Elevate your
-          <br />
-          digital footprint.
-        </h2>
-
         <div
-          className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2 w-full sm:w-auto"
-          style={{ paddingBottom: 8 }}
+          className="w-full flex flex-col lg:flex-row lg:items-center items-start justify-between gap-6 lg:gap-10"
+          style={{ paddingBottom: '32px' }}
         >
-          <Link
-            to="/contact"
-            className="rounded-full font-semibold transition-all duration-300 active:scale-95 flex-1 sm:flex-none justify-center cursor-pointer"
+          <h2
+            className="font-body leading-tight"
             style={{
-              padding: '12px 24px',
-              fontSize: '14px',
-              background: theme === 'dark' ? '#fff' : '#000',
-              color: theme === 'dark' ? '#000' : '#fff',
-              border: `1px solid ${theme === 'dark' ? 'rgba(255,255,255,0.15)' : 'rgba(0,0,0,0.15)'}`,
-              minWidth: '160px',
-              display: 'flex',
-              alignItems: 'center',
-              textDecoration: 'none'
-            }}
-          >
-            Start a project
-          </Link>
-          <Link
-            to="/works"
-            className="rounded-full font-semibold transition-all duration-300 active:scale-95 flex-1 sm:flex-none justify-center cursor-pointer"
-            style={{
-              padding: '12px 24px',
-              fontSize: '14px',
-              background: theme === 'dark' ? 'rgba(255,255,255,0.12)' : 'rgba(0,0,0,0.06)',
               color: theme === 'dark' ? '#fff' : '#000',
-              border: `1px solid ${theme === 'dark' ? 'rgba(255,255,255,0.15)' : 'rgba(0,0,0,0.15)'}`,
-              backdropFilter: 'blur(12px)',
-              WebkitBackdropFilter: 'blur(12px)',
-              minWidth: '160px',
-              display: 'flex',
-              alignItems: 'center',
-              textDecoration: 'none'
+              fontSize: 'clamp(30px, 3.6vw, 52px)',
+              letterSpacing: '-0.03em',
+              fontWeight: 600,
             }}
-            aria-label="See our portfolio works"
           >
-            See our work
-          </Link>
-        </div>
-      </div>
+            Elevate your
+            <br />
+            digital footprint.
+          </h2>
 
-      <div className="grid gap-3 sm:gap-5 grid-cols-2 sm:grid-cols-2 lg:grid-cols-5 w-full">
+          <div
+            className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2 w-full sm:w-auto"
+            style={{ paddingBottom: 8 }}
+          >
+            <Link
+              to="/contact"
+              className="rounded-full font-semibold transition-all duration-300 active:scale-95 flex-1 sm:flex-none justify-center cursor-pointer"
+              style={{
+                padding: '12px 24px',
+                fontSize: '14px',
+                background: theme === 'dark' ? '#fff' : '#000',
+                color: theme === 'dark' ? '#000' : '#fff',
+                border: `1px solid ${theme === 'dark' ? 'rgba(255,255,255,0.15)' : 'rgba(0,0,0,0.15)'}`,
+                minWidth: '160px',
+                display: 'flex',
+                alignItems: 'center',
+                textDecoration: 'none'
+              }}
+            >
+              Start a project
+            </Link>
+            <Link
+              to="/works"
+              className="rounded-full font-semibold transition-all duration-300 active:scale-95 flex-1 sm:flex-none justify-center cursor-pointer"
+              style={{
+                padding: '12px 24px',
+                fontSize: '14px',
+                background: theme === 'dark' ? 'rgba(255,255,255,0.12)' : 'rgba(0,0,0,0.06)',
+                color: theme === 'dark' ? '#fff' : '#000',
+                border: `1px solid ${theme === 'dark' ? 'rgba(255,255,255,0.15)' : 'rgba(0,0,0,0.15)'}`,
+                backdropFilter: 'blur(12px)',
+                WebkitBackdropFilter: 'blur(12px)',
+                minWidth: '160px',
+                display: 'flex',
+                alignItems: 'center',
+                textDecoration: 'none'
+              }}
+              aria-label="See our portfolio works"
+            >
+              See our work
+            </Link>
+          </div>
+        </div>
+
+        <div className="grid gap-3 sm:gap-5 grid-cols-2 sm:grid-cols-2 lg:grid-cols-5 w-full">
         {services.map((service, idx) => {
           const isHovered = hovered === idx;
           const { title, Icon } = service;

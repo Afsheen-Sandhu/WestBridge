@@ -271,7 +271,7 @@ const BlogDetail = () => {
                     font-weight: 800;
                     margin: 48px 0 24px;
                     letter-spacing: -0.02em;
-                    color: \${isDark ? '#fff' : '#000'};
+                    color: ${isDark ? '#fff' : '#000'};
                 }
                 .blog-content p {
                     margin-bottom: 24px;
@@ -286,12 +286,12 @@ const BlogDetail = () => {
                 .blog-content blockquote {
                     margin: 48px 0;
                     padding: 32px 40px;
-                    background: \${isDark ? 'rgba(255,255,255,0.03)' : 'rgba(0,0,0,0.03)'};
+                    background: ${isDark ? 'rgba(255,255,255,0.03)' : 'rgba(0,0,0,0.03)'};
                     border-radius: 24px;
                     font-family: 'Instrument Serif', serif;
                     font-style: italic;
                     font-size: 24px;
-                    color: \${isDark ? 'rgba(255,255,255,0.9)' : 'rgba(0,0,0,0.9)'};
+                    color: ${isDark ? 'rgba(255,255,255,0.9)' : 'rgba(0,0,0,0.9)'};
                     line-height: 1.4;
                     text-align: center;
                 }

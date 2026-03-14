@@ -8,6 +8,7 @@ import { Target, Lightbulb, Users, Trophy, Play } from 'lucide-react';
 
 const About = () => {
     const { theme } = useTheme();
+    const isDark = theme === 'dark';
     const [imgHover, setImgHover] = useState(false);
     const [isMobile, setIsMobile] = useState(typeof window !== 'undefined' ? window.innerWidth < 768 : false);
 

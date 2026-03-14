@@ -200,7 +200,6 @@ const FeaturesGrid = () => {
                         </div>
                     </FeatureCard>
                 </div>
-
             </div>
         </section>
     );

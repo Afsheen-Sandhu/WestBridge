@@ -50,7 +50,7 @@ const Hero = () => {
       />
 
       {/* Main hero content */}
-      <div className="relative w-full max-w-[1400px] mx-auto flex flex-col items-center text-center z-10 flex-1 pb-12 md:pb-20" style={{ paddingTop: 'clamp(200px, 28vh, 320px)' }}>
+      <div className="relative w-full flex flex-col items-center text-center z-10 flex-1 pb-12 md:pb-20" style={{ paddingTop: 'clamp(200px, 28vh, 320px)' }}>
         {/* Glow Badge */}
         <div className="mb-20 md:mb-14 animate-fade-in-down">
           <GlowBadge>Design In Details</GlowBadge>
