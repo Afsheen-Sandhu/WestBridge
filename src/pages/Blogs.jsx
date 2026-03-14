@@ -3,8 +3,9 @@ import { Link } from 'react-router-dom';
 import { useTheme } from '../context/ThemeContext';
 import GlowBadge from '../components/GlowBadge';
 import Breadcrumbs from '../components/Breadcrumbs';
+import SEO from '../components/SEO';
 import { Calendar, User, ArrowUpRight, Search } from 'lucide-react';
-import { blogPosts } from '../data/blogData';
+import { blogData as posts } from '../data/blogData';
 
 const Blogs = () => {
     const { theme } = useTheme();
@@ -27,6 +28,10 @@ const Blogs = () => {
             fontFamily: "'Plus Jakarta Sans', sans-serif",
             transition: 'background 0.4s ease',
         }}>
+            <SEO 
+                title="Blogs & Insights | WestBridge IT Solutions"
+                description="Stay updated with the latest trends in web design, development, and digital strategy from the experts at WestBridge IT Solutions."
+            />
             <section style={{
                 width: '100%',
                 maxWidth: '1400px',

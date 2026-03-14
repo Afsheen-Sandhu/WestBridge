@@ -219,7 +219,7 @@ const Works = () => {
                 <div style={{
                     display: 'grid',
                     gridTemplateColumns: isMobile ? '1fr' : (isTablet ? 'repeat(2, 1fr)' : 'repeat(3, 1fr)'),
-                    gap: isMobile ? '32px' : '48px', // Increased gap for a more spacious feel
+                    gap: isMobile ? '20px' : '32px',
                     marginBottom: '140px',
                 }}>
                     {filteredProjects.map((project) => (
@@ -247,7 +247,7 @@ const ProjectCard = ({ project, theme, isMobile }) => {
                 cursor: 'pointer',
                 background: isDark ? '#0d0d0d' : '#fff',
                 border: `1px solid ${isDark ? 'rgba(255,255,255,0.06)' : 'rgba(0,0,0,0.08)'}`,
-                borderRadius: isMobile ? '24px' : '32px', // Added radius for desktop cards
+                borderRadius: isMobile ? '12px' : '16px',
                 transition: 'all 0.5s cubic-bezier(0.19, 1, 0.22, 1)',
                 boxShadow: isHovered ? (isDark ? '0 20px 40px rgba(0,0,0,0.4)' : '0 20px 40px rgba(0,0,0,0.05)') : 'none',
                 transform: isHovered ? 'translateY(-8px)' : 'translateY(0)',
@@ -276,16 +276,18 @@ const ProjectCard = ({ project, theme, isMobile }) => {
                     pointerEvents: 'none',
                 }}>
                     <div style={{
-                        width: '80px', height: '80px',
-                        borderRadius: '50%',
-                        background: 'rgba(255,255,255,1)',
                         display: 'flex', alignItems: 'center', justifyContent: 'center',
-                        color: '#000',
+                        color: '#fff',
                         opacity: isHovered ? 1 : 0,
-                        transform: isHovered ? 'scale(1)' : 'scale(0.8)',
+                        transform: isHovered ? 'translateY(0)' : 'translateY(10px)',
                         transition: 'all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1)',
+                        fontWeight: 500,
+                        fontFamily: "'Playfair Display', serif",
+                        fontStyle: 'italic',
+                        fontSize: 'clamp(18px, 2vw, 24px)',
+                        letterSpacing: '0.02em',
                     }}>
-                        <ArrowUpRight size={32} />
+                        View project
                     </div>
                 </div>
 
@@ -315,7 +317,7 @@ const ProjectCard = ({ project, theme, isMobile }) => {
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'space-between',
-                padding: isMobile ? '24px' : '28px 32px',
+                padding: isMobile ? '16px 20px' : '20px 24px',
                 borderTop: `1px solid ${isDark ? 'rgba(255,255,255,0.06)' : 'rgba(0,0,0,0.08)'}`,
             }}>
                 <div style={{ minWidth: 0 }}>
@@ -356,20 +358,12 @@ const ProjectCard = ({ project, theme, isMobile }) => {
                         height: '44px',
                         borderRadius: '50%',
                         border: `1px solid ${isDark ? 'rgba(255,255,255,0.15)' : 'rgba(0,0,0,0.15)'}`,
-                        color: isDark ? '#fff' : '#000',
+                        color: isHovered ? '#000' : (isDark ? '#fff' : '#000'),
+                        background: isHovered ? '#fff' : 'transparent',
                         textDecoration: 'none',
                         transition: 'all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1)',
                         flexShrink: 0,
-                    }}
-                    onMouseEnter={e => {
-                        e.currentTarget.style.background = isDark ? '#fff' : '#000';
-                        e.currentTarget.style.color = isDark ? '#000' : '#fff';
-                        e.currentTarget.style.transform = 'translateY(-4px)';
-                    }}
-                    onMouseLeave={e => {
-                        e.currentTarget.style.background = 'transparent';
-                        e.currentTarget.style.color = isDark ? '#fff' : '#000';
-                        e.currentTarget.style.transform = 'translateY(0)';
+                        transform: isHovered ? 'translateY(-4px)' : 'translateY(0)',
                     }}
                 >
                     <ArrowUpRight size={20} />

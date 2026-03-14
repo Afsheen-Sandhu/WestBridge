@@ -4,6 +4,7 @@ import { useTheme } from '../context/ThemeContext';
 import { ArrowLeft, Clock, User, Calendar, Share2, Twitter, Linkedin, Facebook } from 'lucide-react';
 import { blogPosts } from '../data/blogData';
 import Breadcrumbs from '../components/Breadcrumbs';
+import SEO from '../components/SEO';
 
 const BlogDetail = () => {
     const { slug } = useParams();
@@ -57,6 +58,11 @@ const BlogDetail = () => {
             transition: 'background 0.4s ease',
             paddingBottom: '120px',
         }}>
+            <SEO 
+                title={`${post.title} | WestBridge Blog`}
+                description={post.excerpt}
+                keywords={`${post.category}, ${post.title}, WestBridge IT Solutions`}
+            />
             {/* ── Progress Bar ── */}
             <div style={{
                 position: 'fixed',

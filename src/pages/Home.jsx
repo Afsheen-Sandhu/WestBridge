@@ -7,6 +7,7 @@ const FeaturesGrid = lazy(() => import('../components/FeaturesGrid'));
 const ServicesGrid = lazy(() => import('../components/ServicesGrid'));
 const PlatformFlexSection = lazy(() => import('../components/PlatformFlexSection'));
 const ServiceTicker = lazy(() => import('../components/ServiceTicker'));
+const FAQ = lazy(() => import('../components/FAQ'));
 
 const Home = () => {
     useEffect(() => {
@@ -31,6 +32,7 @@ const Home = () => {
                 <FeaturesGrid />
                 <ServicesGrid />
                 <PlatformFlexSection />
+                <FAQ />
                 <ServiceTicker />
             </Suspense>
         </>

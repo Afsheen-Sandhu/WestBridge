@@ -2,6 +2,8 @@ import React, { lazy, Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Layout from './Layout';
 import SmoothScroll from './components/SmoothScroll';
+import SEO from './components/SEO';
+import { HelmetProvider } from 'react-helmet-async';
 
 // Lazy-load all pages — only the current route's JS is downloaded
 const Home       = lazy(() => import('./pages/Home'));
@@ -23,27 +25,30 @@ const PageLoader = () => (
 
 function App() {
   return (
-    <Router>
-      <SmoothScroll>
-        <Layout>
-          <Suspense fallback={<PageLoader />}>
-            <Routes>
-              <Route path="/"            element={<Home />} />
-              <Route path="/about-us"    element={<About />} />
-              <Route path="/works"       element={<Works />} />
-              <Route path="/works/:slug" element={<WorkDetail />} />
-              <Route path="/services"    element={<Services />} />
-              <Route path="/blogs"       element={<Blogs />} />
-              <Route path="/blogs/:slug" element={<BlogDetail />} />
-              <Route path="/templates"   element={<Templates />} />
-              <Route path="/approach"    element={<Approach />} />
-              <Route path="/careers"     element={<Careers />} />
-              <Route path="/studio"      element={<Studio />} />
-            </Routes>
-          </Suspense>
-        </Layout>
-      </SmoothScroll>
-    </Router>
+    <HelmetProvider>
+      <Router>
+        <SmoothScroll>
+          <SEO />
+          <Layout>
+            <Suspense fallback={<PageLoader />}>
+              <Routes>
+                <Route path="/"            element={<Home />} />
+                <Route path="/about-us"    element={<About />} />
+                <Route path="/works"       element={<Works />} />
+                <Route path="/works/:slug" element={<WorkDetail />} />
+                <Route path="/services"    element={<Services />} />
+                <Route path="/blogs"       element={<Blogs />} />
+                <Route path="/blogs/:slug" element={<BlogDetail />} />
+                <Route path="/templates"   element={<Templates />} />
+                <Route path="/approach"    element={<Approach />} />
+                <Route path="/careers"     element={<Careers />} />
+                <Route path="/studio"      element={<Studio />} />
+              </Routes>
+            </Suspense>
+          </Layout>
+        </SmoothScroll>
+      </Router>
+    </HelmetProvider>
   );
 }
 

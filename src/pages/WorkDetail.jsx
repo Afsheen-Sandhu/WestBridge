@@ -4,6 +4,7 @@ import { useTheme } from '../context/ThemeContext';
 import Breadcrumbs from '../components/Breadcrumbs';
 import { ArrowLeft, ArrowUpRight, CheckCircle2 } from 'lucide-react';
 import { projectsData } from '../data/projectsData';
+import SEO from '../components/SEO';
 
 const WorkDetail = () => {
     const { slug } = useParams();
@@ -43,7 +44,13 @@ const WorkDetail = () => {
             transition: 'background 0.4s ease',
             paddingBottom: '120px',
         }}>
-            
+            {/* SEO Meta Tags via Helmet */}
+            <SEO 
+                title={`${project.name} | WestBridge Case Study`}
+                description={project.overview}
+                keywords={`${project.name}, ${project.category}, web design case study, WestBridge IT Solutions`}
+            />
+
             {/* JSON-LD Schema for SEO */}
             <script type="application/ld+json" dangerouslySetInnerHTML={{
                 __html: JSON.stringify({
