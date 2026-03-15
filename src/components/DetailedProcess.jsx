@@ -14,6 +14,9 @@ const DetailedProcess = () => {
     }, []);
 
     const isMobile = windowWidth <= 768;
+    const isSm = windowWidth < 640;
+
+    if (isSm) return null;
 
     return (
         <section 

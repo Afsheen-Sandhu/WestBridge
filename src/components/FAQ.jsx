@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useTheme } from '../context/ThemeContext';
 import { ChevronDown } from 'lucide-react';
 
@@ -29,6 +29,13 @@ const FAQ = () => {
   const { theme } = useTheme();
   const isDark = theme === 'dark';
   const [openIndex, setOpenIndex] = useState(null);
+  const [isSm, setIsSm] = useState(typeof window !== 'undefined' && window.innerWidth < 640);
+
+  useEffect(() => {
+    const onResize = () => setIsSm(window.innerWidth < 640);
+    window.addEventListener('resize', onResize);
+    return () => window.removeEventListener('resize', onResize);
+  }, []);
 
   const toggleFAQ = (index) => {
     setOpenIndex(openIndex === index ? null : index);
@@ -38,7 +45,7 @@ const FAQ = () => {
     <section 
       style={{ 
         width: '100%', 
-        padding: 'clamp(80px, 10vw, 160px) 24px',
+        padding: isSm ? '48px 16px' : 'clamp(80px, 10vw, 160px) 24px',
         background: isDark ? '#000' : '#fff',
         transition: 'background 0.4s ease'
       }}
@@ -46,18 +53,18 @@ const FAQ = () => {
       <div style={{ maxWidth: '800px', margin: '0 auto' }}>
         <h2 
           style={{ 
-            fontSize: 'clamp(40px, 6vw, 64px)', 
+            fontSize: isSm ? '26px' : 'clamp(40px, 6vw, 64px)', 
             fontWeight: 700, 
             textAlign: 'center', 
             letterSpacing: '-0.04em',
             color: isDark ? '#fff' : '#000',
-            marginBottom: '64px'
+            marginBottom: isSm ? '32px' : '64px'
           }}
         >
           Frequently Asked <span style={{ fontFamily: "'Instrument Serif', serif", fontStyle: 'italic', fontWeight: 400 }}>Questions</span>
         </h2>
 
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: isSm ? '10px' : '16px' }}>
           {faqData.map((faq, index) => {
             const isOpen = openIndex === index;
             
@@ -66,7 +73,7 @@ const FAQ = () => {
                 key={index}
                 style={{
                   border: `1px solid ${isDark ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.1)'}`,
-                  borderRadius: '16px',
+                  borderRadius: isSm ? '12px' : '16px',
                   overflow: 'hidden',
                   background: isDark ? 'rgba(255,255,255,0.02)' : 'rgba(0,0,0,0.02)',
                   transition: 'all 0.3s ease'
@@ -80,13 +87,13 @@ const FAQ = () => {
                       display: 'flex',
                       alignItems: 'center',
                       justifyContent: 'space-between',
-                      padding: '24px 32px',
+                      padding: isSm ? '16px 18px' : '24px 32px',
                       background: 'transparent',
                       border: 'none',
                       color: isDark ? '#fff' : '#000',
                       textAlign: 'left',
                       cursor: 'pointer',
-                      fontSize: 'clamp(16px, 2vw, 18px)',
+                      fontSize: isSm ? '14px' : 'clamp(16px, 2vw, 18px)',
                       fontWeight: 600,
                       fontFamily: "'Plus Jakarta Sans', sans-serif",
                       letterSpacing: '-0.01em',
@@ -94,7 +101,7 @@ const FAQ = () => {
                   >
                     {faq.question}
                     <ChevronDown 
-                      size={20} 
+                      size={isSm ? 18 : 20} 
                       style={{ 
                         flexShrink: 0, 
                         transition: 'transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1)',
@@ -115,7 +122,7 @@ const FAQ = () => {
                   <div style={{ overflow: 'hidden' }}>
                     <div 
                       style={{ 
-                        padding: '0 32px 32px', 
+                        padding: isSm ? '0 18px 18px' : '0 32px 32px', 
                         opacity: isOpen ? 1 : 0,
                         transition: 'opacity 0.4s cubic-bezier(0.165, 0.84, 0.44, 1)'
                       }}
@@ -124,8 +131,8 @@ const FAQ = () => {
                         style={{ 
                           margin: 0,
                           color: isDark ? 'rgba(255,255,255,0.6)' : 'rgba(0,0,0,0.6)',
-                          lineHeight: 1.7,
-                          fontSize: '16px'
+                          lineHeight: 1.65,
+                          fontSize: isSm ? '14px' : '16px'
                         }}
                       >
                         {faq.answer}
