@@ -26,19 +26,21 @@ const CRAWLER_USER_AGENTS = [
 const SITE_URL = 'https://www.westbridgeitsolutions.com';
 
 export const config = {
-  matcher: [
-    // Run for page routes; skip static assets
-    '/((?!assets/|_next/|api|.*\\.(js|css|ico|webp|png|jpg|jpeg|gif|svg|woff2?|xml|txt|map)).*)',
-  ],
+  matcher: ['/(?:(?!_next/|api).*)'],
 };
 
+const STATIC_EXT = /\.(js|css|ico|webp|png|jpg|jpeg|gif|svg|woff2?|xml|txt|map)(\?|$)/i;
+
 export default function middleware(request) {
+  const url = new URL(request.url);
+  if (url.pathname.startsWith('/assets/') || STATIC_EXT.test(url.pathname)) {
+    return next();
+  }
   const ua = (request.headers.get('user-agent') || '').toLowerCase();
   const isCrawler = CRAWLER_USER_AGENTS.some((bot) => ua.includes(bot));
 
   const prerenderBase = process.env.PRERENDER_SERVICE_URL;
   if (isCrawler && prerenderBase) {
-    const url = new URL(request.url);
     const path = url.pathname + url.search;
     // Prerender.io-style: base + full site URL (e.g. https://service.prerender.io/https://www.westbridgeitsolutions.com/about-us)
     const prerenderUrl = new URL(prerenderBase.replace(/\/?$/, '/') + SITE_URL + path);
