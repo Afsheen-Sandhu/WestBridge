@@ -63,4 +63,4 @@ export default defineConfig(async () => ({
   optimizeDeps: {
     include: ['react', 'react-dom', 'react-router-dom', 'lucide-react'],
   },
-})
+}));
