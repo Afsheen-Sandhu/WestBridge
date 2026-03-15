@@ -25,10 +25,7 @@ const CRAWLER_USER_AGENTS = [
 
 const SITE_URL = 'https://www.westbridgeitsolutions.com';
 
-export const config = {
-  // Match all routes; static assets are skipped in the handler (no regex/lookahead — Vercel matcher is strict)
-  matcher: ['/:path*'],
-};
+// No matcher = middleware runs on every route (Vercel default). Static assets skipped in handler.
 
 const STATIC_EXT = /\.(js|css|ico|webp|png|jpg|jpeg|gif|svg|woff2?|xml|txt|map)(\?|$)/i;
 
