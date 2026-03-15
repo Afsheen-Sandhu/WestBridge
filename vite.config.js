@@ -3,39 +3,43 @@ import path from 'path'
 import { fileURLToPath } from 'url'
 import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
-import vitePrerender from 'vite-plugin-prerender-esm-fix'
-import { prerenderRoutes } from './prerender-routes.js'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
-// Skip prerender on Vercel — no Chrome/Puppeteer in serverless build. Run locally for full prerendered build.
-const skipPrerender = process.env.VERCEL === '1'
+// Prerender only when explicitly enabled (Puppeteer needs Chrome; Vercel/CI don't have it, so build would hang). Local: ENABLE_PRERENDER=1 npm run build
+const runPrerender = process.env.ENABLE_PRERENDER === '1'
+
+/** Prerender plugin only when not on Vercel/CI (avoids loading Puppeteer and hanging the build) */
+async function getPrerenderPlugin() {
+  if (!runPrerender) return []
+  const vitePrerender = (await import('vite-plugin-prerender-esm-fix')).default
+  const { prerenderRoutes } = await import('./prerender-routes.js')
+  return [
+    vitePrerender({
+      staticDir: path.join(__dirname, 'dist'),
+      routes: prerenderRoutes,
+      renderer: new vitePrerender.PuppeteerRenderer({
+        renderAfterDocumentEvent: 'prerender-ready',
+        renderAfterTime: 2000,
+        maxConcurrentRoutes: 2,
+        headless: true,
+      }),
+      postProcess(renderedRoute) {
+        if (renderedRoute.route.endsWith('.html')) {
+          renderedRoute.outputPath = path.join(__dirname, 'dist', renderedRoute.route)
+        }
+        return renderedRoute
+      },
+    }),
+  ]
+}
 
 // https://vite.dev/config/
-export default defineConfig({
+export default defineConfig(async () => ({
   plugins: [
     react(),
     tailwindcss(),
-    ...(skipPrerender
-      ? []
-      : [
-          vitePrerender({
-            staticDir: path.join(__dirname, 'dist'),
-            routes: prerenderRoutes,
-            renderer: new vitePrerender.PuppeteerRenderer({
-              renderAfterDocumentEvent: 'prerender-ready',
-              renderAfterTime: 2000,
-              maxConcurrentRoutes: 2,
-              headless: true,
-            }),
-            postProcess(renderedRoute) {
-              if (renderedRoute.route.endsWith('.html')) {
-                renderedRoute.outputPath = path.join(__dirname, 'dist', renderedRoute.route)
-              }
-              return renderedRoute
-            },
-          }),
-        ]),
+    ...(await getPrerenderPlugin()),
   ],
   build: {
     minify: 'esbuild',
