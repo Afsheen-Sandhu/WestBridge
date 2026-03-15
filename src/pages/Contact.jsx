@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useTheme } from '../context/ThemeContext';
 import SEO from '../components/SEO';
-import { Send, MapPin, Mail, ArrowRight, Instagram, Linkedin, Twitter, ChevronDown } from 'lucide-react';
+import { Send, MapPin, Mail, Phone, ArrowRight, Instagram, Linkedin, Twitter, ChevronDown } from 'lucide-react';
 
 const Contact = () => {
     const { theme } = useTheme();
@@ -97,8 +97,8 @@ const Contact = () => {
             overflowX: 'hidden'
         }}>
             <SEO 
-                title="Let's Connect | WestBridge IT Solutions"
-                description="Ready to start your next premium digital project? Get in touch with our expert team today."
+                title="Contact Us | Surrey, BC | WestBridge IT Solutions"
+                description="Get in touch with our Surrey, BC team. Ready to start your next digital project? Call (604) 365-7605 or send a message today."
             />
 
             <div className="layout-inner" style={{ margin: '0 auto' }}>
@@ -349,13 +349,28 @@ const Contact = () => {
                                         background: isDark ? 'rgba(255,255,255,0.05)' : 'rgba(0,0,0,0.05)',
                                         display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0
                                     }}>
+                                        <Phone size={18} />
+                                    </div>
+                                    <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
+                                        <p style={labelStyle}>Call us (Surrey, BC)</p>
+                                        <a href="tel:+16043657605" style={{ fontSize: '17px', fontWeight: 600, color: 'inherit', textDecoration: 'none', wordBreak: 'break-all' }}>
+                                            (604) 365-7605
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div style={{ display: 'flex', gap: '20px' }}>
+                                    <div style={{ 
+                                        width: '44px', height: '44px', borderRadius: '12px', 
+                                        background: isDark ? 'rgba(255,255,255,0.05)' : 'rgba(0,0,0,0.05)',
+                                        display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0
+                                    }}>
                                         <MapPin size={18} />
                                     </div>
                                     <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
                                         <p style={labelStyle}>Our Headquarters</p>
                                         <p style={{ fontSize: '17px', fontWeight: 600, margin: 0, lineHeight: 1.5 }}>
-                                            Surrey, British Columbia <br />
-                                            Canada
+                                            Surrey, BC, Canada
                                         </p>
                                     </div>
                                 </div>

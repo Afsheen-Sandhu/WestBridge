@@ -8,27 +8,34 @@ import { prerenderRoutes } from './prerender-routes.js'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
+// Skip prerender on Vercel — no Chrome/Puppeteer in serverless build. Run locally for full prerendered build.
+const skipPrerender = process.env.VERCEL === '1'
+
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [
     react(),
     tailwindcss(),
-    vitePrerender({
-      staticDir: path.join(__dirname, 'dist'),
-      routes: prerenderRoutes,
-      renderer: new vitePrerender.PuppeteerRenderer({
-        renderAfterDocumentEvent: 'prerender-ready',
-        renderAfterTime: 2000,
-        maxConcurrentRoutes: 2,
-        headless: true,
-      }),
-      postProcess(renderedRoute) {
-        if (renderedRoute.route.endsWith('.html')) {
-          renderedRoute.outputPath = path.join(__dirname, 'dist', renderedRoute.route)
-        }
-        return renderedRoute
-      },
-    }),
+    ...(skipPrerender
+      ? []
+      : [
+          vitePrerender({
+            staticDir: path.join(__dirname, 'dist'),
+            routes: prerenderRoutes,
+            renderer: new vitePrerender.PuppeteerRenderer({
+              renderAfterDocumentEvent: 'prerender-ready',
+              renderAfterTime: 2000,
+              maxConcurrentRoutes: 2,
+              headless: true,
+            }),
+            postProcess(renderedRoute) {
+              if (renderedRoute.route.endsWith('.html')) {
+                renderedRoute.outputPath = path.join(__dirname, 'dist', renderedRoute.route)
+              }
+              return renderedRoute
+            },
+          }),
+        ]),
   ],
   build: {
     minify: 'esbuild',

@@ -117,10 +117,23 @@ const Footer = () => {
                   Location
                 </p>
                 <p style={{ fontSize: '13px', color: theme === 'dark' ? 'rgba(255,255,255,0.8)' : 'rgba(0,0,0,0.8)', margin: '0 0 4px', fontWeight: 500 }}>
-                  Surrey, Canada
+                  Surrey, BC, Canada
                 </p>
                 <p style={{ fontSize: '13px', color: theme === 'dark' ? 'rgba(255,255,255,0.4)' : 'rgba(0,0,0,0.4)', margin: 0, lineHeight: 1.6 }}>
-                  Working globally across<br />multiple timezones.
+                  Serving Surrey, Vancouver<br />&amp; across Canada.
+                </p>
+              </div>
+
+              {/* Phone */}
+              <div>
+                <p style={{ fontSize: 10, letterSpacing: '0.18em', textTransform: 'uppercase', color: theme === 'dark' ? 'rgba(255,255,255,0.25)' : 'rgba(0,0,0,0.25)', margin: '0 0 12px', fontWeight: 600 }}>
+                  Phone
+                </p>
+                <a href="tel:+16043657605" style={{ fontSize: '13px', color: theme === 'dark' ? 'rgba(255,255,255,0.8)' : 'rgba(0,0,0,0.8)', fontWeight: 500, textDecoration: 'none', display: 'block', marginBottom: '4px' }}>
+                  (604) 365-7605
+                </a>
+                <p style={{ fontSize: '13px', color: theme === 'dark' ? 'rgba(255,255,255,0.4)' : 'rgba(0,0,0,0.4)', margin: 0, lineHeight: 1.6 }}>
+                  Local to British Columbia
                 </p>
               </div>
 

@@ -3,10 +3,10 @@ import { Helmet } from 'react-helmet-async';
 import { useLocation } from 'react-router-dom';
 
 const SEO = ({ 
-    title = 'WestBridge IT Solutions | Custom Web Design & Development Agency', 
-    description = "Surrey's premier web design & development agency. We build custom websites, mobile apps, and software that grow your business. Get a free quote today!", 
+    title = 'Web Design Agency Surrey, BC | WestBridge IT Solutions', 
+    description = "Web design & development agency in Surrey, BC. We build custom websites, mobile apps, and software for businesses across Surrey, Vancouver & Canada. Get a free quote.", 
     robots = 'index, follow',
-    keywords = 'web design, development agency, software solutions, IT services'
+    keywords = 'web design Surrey BC, development agency Vancouver, software solutions Canada, IT services Surrey'
 }) => {
     const location = useLocation();
     const baseUrl = 'https://www.westbridgeitsolutions.com';

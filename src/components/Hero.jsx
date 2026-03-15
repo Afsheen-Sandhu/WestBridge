@@ -68,7 +68,7 @@ const Hero = () => {
             whiteSpace: 'nowrap',
             borderWidth: '0',
         }}>
-            Premium Web Design & Development for Bold Brands
+            Web Design Agency Surrey, BC — Premium Web Design & Development for Bold Brands
         </h1>
 
         {/* Hero Heading (Visible Layout) */}
@@ -103,10 +103,22 @@ const Hero = () => {
             animationDelay: '400ms',
             fontWeight: 400,
             marginTop: '28px',
-            marginBottom: '40px',
+            marginBottom: '8px',
           }}
         >
           Premium websites crafted for bold brands.
+        </p>
+        <p
+          className="animate-fade-in-up"
+          style={{
+            fontSize: 'clamp(13px, 1.5vw, 16px)',
+            color: theme === 'dark' ? 'rgba(255,255,255,0.5)' : 'rgba(0,0,0,0.5)',
+            animationDelay: '450ms',
+            fontWeight: 500,
+            marginBottom: '40px',
+          }}
+        >
+          Based in Surrey, BC — serving Vancouver &amp; Canada.
         </p>
 
         {/* CTA Buttons */}

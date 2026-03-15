@@ -10,6 +10,7 @@ const PlatformFlexSection = lazy(() => import('../components/PlatformFlexSection
 const ServiceTicker = lazy(() => import('../components/ServiceTicker'));
 const FAQ = lazy(() => import('../components/FAQ'));
 const DetailedProcess = lazy(() => import('../components/DetailedProcess'));
+const Testimonials = lazy(() => import('../components/Testimonials'));
 
 const Home = () => {
     useEffect(() => {
@@ -28,14 +29,15 @@ const Home = () => {
     return (
         <>
             <SEO 
-                title="WestBridge IT Solutions | Custom Web Design & Development Agency"
-                description="Surrey's premier web design & development agency. We create custom websites, mobile apps, and software solutions that grow your business. Get a free quote today!"
+                title="Web Design Agency Surrey, BC | WestBridge IT Solutions"
+                description="Web design & development agency in Surrey, BC. We create custom websites, mobile apps, and software for Surrey, Vancouver & Canada. Get a free quote today."
             />
             <Hero />
             <ProjectCarousels />
             <OurWorksSlides />
             <Suspense fallback={<div className="h-40" />}>
                 <FeaturesGrid />
+                <Testimonials />
                 <DetailedProcess />
                 <ServicesGrid />
                 <PlatformFlexSection />
