@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useTheme } from '../context/ThemeContext';
 import SEO from '../components/SEO';
-import { Send, MapPin, Mail, Phone, ArrowRight, Instagram, Linkedin, Twitter, ChevronDown } from 'lucide-react';
+import { Send, MapPin, Mail, Phone, ArrowRight, Instagram, Linkedin, Facebook, ChevronDown } from 'lucide-react';
 
 const Contact = () => {
     const { theme } = useTheme();
@@ -390,22 +390,51 @@ const Contact = () => {
                             <div style={{ marginTop: '64px', borderTop: `1px solid ${isDark ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.1)'}`, paddingTop: '40px' }}>
                                 <p style={labelStyle}>Connect with us</p>
                                 <div style={{ display: 'flex', gap: '12px' }}>
-                                    {[Instagram, Linkedin, Twitter].map((Icon, i) => (
-                                        <a 
-                                            key={i} 
-                                            href="#" 
-                                            style={{ 
-                                                width: '40px', height: '40px', borderRadius: '10px',
-                                                border: `1px solid ${isDark ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.1)'}`,
-                                                display: 'flex', alignItems: 'center', justifyContent: 'center',
-                                                color: 'inherit', transition: 'all 0.3s ease'
-                                            }}
-                                            onMouseEnter={(e) => { e.currentTarget.style.background = isDark ? '#fff' : '#000'; e.currentTarget.style.color = isDark ? '#000' : '#fff'; }}
-                                            onMouseLeave={(e) => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.color = 'inherit'; }}
-                                        >
-                                            <Icon size={18} />
-                                        </a>
-                                    ))}
+                                    <a 
+                                        href="https://www.facebook.com/share/1BagdZTBVW/?mibextid=wwXIfr" 
+                                        target="_blank" 
+                                        rel="noreferrer" 
+                                        style={{ 
+                                            width: '40px', height: '40px', borderRadius: '10px',
+                                            border: `1px solid ${isDark ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.1)'}`,
+                                            display: 'flex', alignItems: 'center', justifyContent: 'center',
+                                            color: 'inherit', transition: 'all 0.3s ease'
+                                        }}
+                                        onMouseEnter={(e) => { e.currentTarget.style.background = isDark ? '#fff' : '#000'; e.currentTarget.style.color = isDark ? '#000' : '#fff'; }}
+                                        onMouseLeave={(e) => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.color = 'inherit'; }}
+                                    >
+                                        <Facebook size={18} />
+                                    </a>
+                                    <a 
+                                        href="https://www.instagram.com/westbridgeitsolutions?igsh=emZmcjg4d2Rybmdm&utm_source=qr" 
+                                        target="_blank" 
+                                        rel="noreferrer" 
+                                        style={{ 
+                                            width: '40px', height: '40px', borderRadius: '10px',
+                                            border: `1px solid ${isDark ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.1)'}`,
+                                            display: 'flex', alignItems: 'center', justifyContent: 'center',
+                                            color: 'inherit', transition: 'all 0.3s ease'
+                                        }}
+                                        onMouseEnter={(e) => { e.currentTarget.style.background = isDark ? '#fff' : '#000'; e.currentTarget.style.color = isDark ? '#000' : '#fff'; }}
+                                        onMouseLeave={(e) => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.color = 'inherit'; }}
+                                    >
+                                        <Instagram size={18} />
+                                    </a>
+                                    <a 
+                                        href="https://www.linkedin.com/company/westbridgeitsolutions" 
+                                        target="_blank" 
+                                        rel="noreferrer" 
+                                        style={{ 
+                                            width: '40px', height: '40px', borderRadius: '10px',
+                                            border: `1px solid ${isDark ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.1)'}`,
+                                            display: 'flex', alignItems: 'center', justifyContent: 'center',
+                                            color: 'inherit', transition: 'all 0.3s ease'
+                                        }}
+                                        onMouseEnter={(e) => { e.currentTarget.style.background = isDark ? '#fff' : '#000'; e.currentTarget.style.color = isDark ? '#000' : '#fff'; }}
+                                        onMouseLeave={(e) => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.color = 'inherit'; }}
+                                    >
+                                        <Linkedin size={18} />
+                                    </a>
                                 </div>
                             </div>
                         </div>

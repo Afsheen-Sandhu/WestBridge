@@ -223,7 +223,7 @@ const ServicesGrid = () => {
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            padding: '20px',
+            padding: '16px',
             background: 'rgba(0,0,0,0.8)',
             backdropFilter: 'blur(10px)',
           }}
@@ -233,12 +233,14 @@ const ServicesGrid = () => {
             style={{
               maxWidth: '600px',
               width: '100%',
+              maxHeight: '90vh',
               background: theme === 'dark' ? '#0a0a0a' : '#fff',
               border: `1px solid ${theme === 'dark' ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.1)'}`,
               borderRadius: '24px',
-              padding: '40px',
+              padding: 'clamp(20px, 4vw, 40px)',
               position: 'relative',
               boxShadow: '0 32px 64px rgba(0,0,0,0.5)',
+              overflowY: 'auto',
             }}
             onClick={e => e.stopPropagation()}
           >
@@ -263,7 +265,7 @@ const ServicesGrid = () => {
             </div>
 
             <h3 style={{
-              fontSize: '28px',
+              fontSize: 'clamp(20px, 4vw, 26px)',
               fontWeight: 800,
               color: theme === 'dark' ? '#fff' : '#000',
               marginBottom: '16px',
@@ -274,8 +276,8 @@ const ServicesGrid = () => {
             </h3>
 
             <p style={{
-              fontSize: '16px',
-              lineHeight: 1.8,
+              fontSize: 'clamp(14px, 2.8vw, 16px)',
+              lineHeight: 1.6,
               color: theme === 'dark' ? 'rgba(255,255,255,0.7)' : 'rgba(0,0,0,0.7)',
               margin: 0
             }}>

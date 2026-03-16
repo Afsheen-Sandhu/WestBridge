@@ -143,27 +143,57 @@ const Footer = () => {
                   Follow
                 </p>
                 <div style={{ display: 'flex', gap: '20px', marginTop: '4px' }}>
-                  {[
-                    { Icon: Instagram, label: 'Instagram' },
-                    { Icon: Facebook, label: 'Facebook' },
-                    { Icon: Twitter, label: 'Twitter' },
-                    { Icon: Linkedin, label: 'LinkedIn' }
-                  ].map(({ Icon, label }, i) => (
-                    <button
-                      key={i}
-                      aria-label={label}
-                      style={{
-                        background: 'none', border: 'none', padding: 0, cursor: 'pointer',
-                        color: theme === 'dark' ? 'rgba(255,255,255,0.4)' : 'rgba(0,0,0,0.4)',
-                        display: 'flex', alignItems: 'center',
-                        transition: 'color 0.3s',
-                      }}
-                      onMouseEnter={e => e.currentTarget.style.color = theme === 'dark' ? '#fff' : '#000'}
-                      onMouseLeave={e => e.currentTarget.style.color = theme === 'dark' ? 'rgba(255,255,255,0.4)' : 'rgba(0,0,0,0.4)'}
-                    >
-                      <Icon size={17} strokeWidth={1.5} />
-                    </button>
-                  ))}
+                  <a
+                    href="https://www.facebook.com/share/1BagdZTBVW/?mibextid=wwXIfr"
+                    aria-label="Facebook"
+                    target="_blank"
+                    rel="noreferrer"
+                    style={{
+                      color: theme === 'dark' ? 'rgba(255,255,255,0.4)' : 'rgba(0,0,0,0.4)',
+                      display: 'flex',
+                      alignItems: 'center',
+                      transition: 'color 0.3s',
+                      textDecoration: 'none',
+                    }}
+                    onMouseEnter={e => e.currentTarget.style.color = theme === 'dark' ? '#fff' : '#000'}
+                    onMouseLeave={e => e.currentTarget.style.color = theme === 'dark' ? 'rgba(255,255,255,0.4)' : 'rgba(0,0,0,0.4)'}
+                  >
+                    <Facebook size={17} strokeWidth={1.5} />
+                  </a>
+                  <a
+                    href="https://www.instagram.com/westbridgeitsolutions?igsh=emZmcjg4d2Rybmdm&utm_source=qr"
+                    aria-label="Instagram"
+                    target="_blank"
+                    rel="noreferrer"
+                    style={{
+                      color: theme === 'dark' ? 'rgba(255,255,255,0.4)' : 'rgba(0,0,0,0.4)',
+                      display: 'flex',
+                      alignItems: 'center',
+                      transition: 'color 0.3s',
+                      textDecoration: 'none',
+                    }}
+                    onMouseEnter={e => e.currentTarget.style.color = theme === 'dark' ? '#fff' : '#000'}
+                    onMouseLeave={e => e.currentTarget.style.color = theme === 'dark' ? 'rgba(255,255,255,0.4)' : 'rgba(0,0,0,0.4)'}
+                  >
+                    <Instagram size={17} strokeWidth={1.5} />
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/company/westbridgeitsolutions"
+                    aria-label="LinkedIn"
+                    target="_blank"
+                    rel="noreferrer"
+                    style={{
+                      color: theme === 'dark' ? 'rgba(255,255,255,0.4)' : 'rgba(0,0,0,0.4)',
+                      display: 'flex',
+                      alignItems: 'center',
+                      transition: 'color 0.3s',
+                      textDecoration: 'none',
+                    }}
+                    onMouseEnter={e => e.currentTarget.style.color = theme === 'dark' ? '#fff' : '#000'}
+                    onMouseLeave={e => e.currentTarget.style.color = theme === 'dark' ? 'rgba(255,255,255,0.4)' : 'rgba(0,0,0,0.4)'}
+                  >
+                    <Linkedin size={17} strokeWidth={1.5} />
+                  </a>
                 </div>
               </div>
             </div>
