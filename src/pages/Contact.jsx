@@ -31,23 +31,34 @@ const Contact = () => {
         setStatus('sending');
 
         try {
+            const body = new FormData();
+            body.append('name', formData.name);
+            body.append('email', formData.email);
+            body.append('company', formData.company);
+            body.append('projectType', formData.projectType);
+            body.append('message', formData.message);
+            body.append('_subject', `New WestBridge Inquiry from ${formData.name}`);
+
             const response = await fetch('https://formspree.io/f/mojkknld', {
                 method: 'POST',
                 headers: {
-                    'Content-Type': 'application/json',
                     'Accept': 'application/json'
                 },
-                body: JSON.stringify({
-                    ...formData,
-                    _subject: `New WestBridge Inquiry from ${formData.name}`,
-                })
+                body
             });
 
             if (response.ok) {
                 setStatus('success');
                 setFormData({ name: '', email: '', company: '', projectType: 'Web Design', message: '' });
             } else {
-                throw new Error('Failed to send');
+                let details = '';
+                try {
+                    const data = await response.json();
+                    details = data?.error ? ` (${data.error})` : '';
+                } catch {
+                    // ignore JSON parse failures
+                }
+                throw new Error(`Failed to send${details}`);
             }
         } catch (error) {
             console.error("Formspree Error:", error);
