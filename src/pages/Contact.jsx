@@ -31,7 +31,7 @@ const Contact = () => {
         setStatus('sending');
 
         try {
-            const response = await fetch('https://formspree.io/f/your_formspree_id', { // ← REPLACE THIS ID
+            const response = await fetch('https://formspree.io/f/mojkknld', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
