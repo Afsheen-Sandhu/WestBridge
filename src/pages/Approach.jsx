@@ -1,9 +1,11 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, Suspense, lazy } from 'react';
 import { useTheme } from '../context/ThemeContext';
 import { Link } from 'react-router-dom';
 import GlowBadge from '../components/GlowBadge';
 import Breadcrumbs from '../components/Breadcrumbs';
 import SEO from '../components/SEO';
+
+const DetailedProcess = lazy(() => import('../components/DetailedProcess'));
 
 const Approach = () => {
     const { theme } = useTheme();
@@ -58,6 +60,10 @@ const Approach = () => {
                     >
                         Learn about our step-by-step process for delivering extraordinary digital results.
                     </p>
+
+                    <Suspense fallback={<div className="h-40" />}>
+                        <DetailedProcess />
+                    </Suspense>
 
                     <div className="mt-20 w-full flex flex-col items-center py-20 border-t border-dashed border-white/10">
                         <p style={{

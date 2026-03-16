@@ -9,7 +9,6 @@ const ServicesGrid = lazy(() => import('../components/ServicesGrid'));
 const PlatformFlexSection = lazy(() => import('../components/PlatformFlexSection'));
 const ServiceTicker = lazy(() => import('../components/ServiceTicker'));
 const FAQ = lazy(() => import('../components/FAQ'));
-const DetailedProcess = lazy(() => import('../components/DetailedProcess'));
 const Testimonials = lazy(() => import('../components/Testimonials'));
 
 const Home = () => {
@@ -38,7 +37,6 @@ const Home = () => {
             <Suspense fallback={<div className="h-40" />}>
                 <FeaturesGrid />
                 <Testimonials />
-                <DetailedProcess />
                 <ServicesGrid />
                 <PlatformFlexSection />
                 <FAQ />
