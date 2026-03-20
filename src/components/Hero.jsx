@@ -145,7 +145,8 @@ const Hero = () => {
             Get in touch
           </Link>
 
-          <button
+          <Link
+            to="/works"
             className="font-semibold rounded-full transition-all duration-500 active:scale-95 flex-1 sm:flex-none justify-center"
             style={{
               padding: '12px 24px',
@@ -157,12 +158,13 @@ const Hero = () => {
               minWidth: '160px',
               display: 'flex',
               alignItems: 'center',
+              textDecoration: 'none',
             }}
             onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-6px)'; e.currentTarget.style.background = 'rgba(255,255,255,0.15)'; }}
-            onMouseLeave={e => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.background = 'rgba(255,255,255,0.08)'; }}
+            onMouseLeave={e => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.background = theme === 'dark' ? 'rgba(255,255,255,0.08)' : 'rgba(0,0,0,0.04)'; }}
           >
             See our work
-          </button>
+          </Link>
         </div>
       </div>
 

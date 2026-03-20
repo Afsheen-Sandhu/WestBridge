@@ -1,5 +1,6 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { useTheme } from '../context/ThemeContext';
+import { Link } from 'react-router-dom';
 
 
 // Replace these with your actual project image paths under /public
@@ -131,8 +132,8 @@ const ProjectCarousels = () => {
               We build digital experiences that hold attention and move the needle. Strong visuals and clear strategy help your brand stand out and turn visitors into customers—without the friction.
             </p>
             <div className="flex flex-col sm:flex-row flex-wrap gap-4 items-stretch sm:items-center">
-              <button
-                type="button"
+              <Link
+                to="/about-us"
                 className="font-semibold rounded-full transition-all duration-300 active:scale-95 flex-1 sm:flex-none justify-center"
                 aria-label="Learn more about WestBridge"
                 style={{
@@ -144,18 +145,19 @@ const ProjectCarousels = () => {
                   minWidth: '160px',
                   display: 'flex',
                   alignItems: 'center',
+                  textDecoration: 'none',
                 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.background = 'rgba(255,255,255,0.18)';
+                  e.currentTarget.style.background = theme === 'dark' ? 'rgba(255,255,255,0.18)' : 'rgba(0,0,0,0.18)';
                 }}
                 onMouseLeave={(e) => {
-                  e.currentTarget.style.background = 'rgba(255,255,255,0.12)';
+                  e.currentTarget.style.background = theme === 'dark' ? 'rgba(255,255,255,0.12)' : 'rgba(0,0,0,0.12)';
                 }}
               >
                 About us
-              </button>
-              <button
-                type="button"
+              </Link>
+              <Link
+                to="/works"
                 className="font-semibold rounded-full transition-all duration-300 active:scale-95 flex-1 sm:flex-none justify-center"
                 aria-label="View our work portfolio"
                 style={{
@@ -167,16 +169,17 @@ const ProjectCarousels = () => {
                   minWidth: '160px',
                   display: 'flex',
                   alignItems: 'center',
+                  textDecoration: 'none',
                 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.background = 'rgba(255,255,255,0.12)';
+                  e.currentTarget.style.background = theme === 'dark' ? 'rgba(255,255,255,0.12)' : 'rgba(0,0,0,0.12)';
                 }}
                 onMouseLeave={(e) => {
-                  e.currentTarget.style.background = 'rgba(255,255,255,0.06)';
+                  e.currentTarget.style.background = theme === 'dark' ? 'rgba(255,255,255,0.06)' : 'rgba(0,0,0,0.06)';
                 }}
               >
                 See our work
-              </button>
+              </Link>
             </div>
           </div>
 

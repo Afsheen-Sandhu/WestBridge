@@ -1,5 +1,6 @@
 import React, { useMemo, useState } from 'react';
 import { useTheme } from '../context/ThemeContext';
+import { Link } from 'react-router-dom';
 
 
 const PlatformFlexSection = () => {
@@ -98,8 +99,8 @@ const PlatformFlexSection = () => {
                 No matter the platform, our design language stays consistent, refined, responsive, and built to perform.
               </p>
 
-              <button
-                type="button"
+              <Link
+                to="/works"
                 className="rounded-full font-semibold transition-all duration-300 active:scale-95"
                 style={{
                   padding: '12px 24px',
@@ -109,6 +110,8 @@ const PlatformFlexSection = () => {
                   border: '1px solid rgba(255,255,255,0.14)',
                   backdropFilter: 'blur(12px)',
                   WebkitBackdropFilter: 'blur(12px)',
+                  textDecoration: 'none',
+                  display: 'inline-block',
                 }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.background = 'rgba(255,255,255,0.16)';
@@ -120,7 +123,7 @@ const PlatformFlexSection = () => {
                 }}
               >
                 See our work
-              </button>
+              </Link>
             </div>
           </div>
         </div>
