@@ -17,8 +17,9 @@ const Approach = () => {
     return (
         <div className="w-full transition-colors duration-400" style={{ background: theme === 'dark' ? '#000' : '#fff' }}>
             <SEO 
-                title="Our Approach | WestBridge IT Solutions | Creative Design Process"
-                description="Discover our methodology and creative process for delivering high-performance, design-first digital experiences."
+                title="Our Web Design Process | Surrey, BC | WestBridge IT Solutions"
+                description="Discover how our web design agency in Surrey, BC delivers custom websites for Canadian businesses. Our proven process ensures every project is on-time, on-budget & built to rank."
+                keywords="web design process Surrey BC, custom website development Canada, how we build websites Surrey, web development company Surrey BC, professional web design Surrey Canada, website design methodology Canada, web design agency Surrey BC"
             />
             <section
                 className="w-full flex flex-col items-center"
@@ -58,7 +59,7 @@ const Approach = () => {
                             maxWidth: '850px'
                         }}
                     >
-                        Learn about our step-by-step process for delivering extraordinary digital results.
+                        Our step-by-step process for delivering extraordinary digital results — built for small businesses, restaurants, healthcare clinics, and growing brands across Surrey, BC and Canada.
                     </p>
 
                     <Suspense fallback={<div className="h-40" />}>

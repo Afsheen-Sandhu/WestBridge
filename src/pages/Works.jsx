@@ -49,8 +49,9 @@ const Works = () => {
             transition: 'background 0.4s ease',
         }}>
             <SEO 
-                title="Our Works | WestBridge IT Solutions | Web Development Portfolio"
-                description="Explore our portfolio of extraordinary digital solutions, ranging from high-end restaurant websites to complex B2B SaaS platforms."
+                title="Web Design Portfolio Surrey, BC | Restaurant, Gym, Ecommerce & Healthcare Websites | WestBridge"
+                description="Browse our web design portfolio in Surrey, BC. We've built websites for restaurants, gyms, ecommerce stores, healthcare clinics, SaaS companies & creative agencies across Canada."
+                keywords="portfolio website design Canada, artist portfolio website Surrey BC, creative portfolio website Canada, restaurant website design Surrey, food business website Surrey BC, gym website design Canada, fitness studio website Surrey BC, ecommerce website Surrey Canada, healthcare website design Canada, medical clinic website Surrey BC, SaaS website design Canada, agency website design Canada, creative agency website Surrey BC"
             />
             <section style={{
                 width: '100%',
@@ -130,7 +131,7 @@ const Works = () => {
                                 margin: '0 0 32px 0',
                                 maxWidth: '420px',
                             }}>
-                                We partner with visionary brands to create highly performant, accessible, and emotionally resonant digital products.
+                                We partner with visionary brands to create highly performant, accessible digital products — from restaurant and healthcare websites in Surrey, BC to ecommerce stores and SaaS platforms across Canada.
                             </p>
 
                             <div style={{

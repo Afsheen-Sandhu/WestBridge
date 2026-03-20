@@ -29,8 +29,9 @@ const Blogs = () => {
             transition: 'background 0.4s ease',
         }}>
             <SEO 
-                title="Blogs & Insights | WestBridge IT Solutions | Tech Strategy News"
-                description="Stay updated with the latest trends in web design, development, and digital strategy from the experts at WestBridge IT Solutions."
+                title="Web Design Blog | Surrey, BC Tips, Trends & Insights | WestBridge"
+                description="Web design tips, digital strategy insights & industry trends for Canadian businesses. Expert advice from WestBridge IT Solutions, your web design agency in Surrey, BC."
+                keywords="web design blog Canada, web design tips Surrey BC, digital strategy Canada, website design insights British Columbia, small business web design tips Canada, ecommerce tips Canada, website performance Canada, web design trends Surrey BC"
             />
             <section style={{
                 width: '100%',
@@ -86,7 +87,7 @@ const Blogs = () => {
                                 margin: '0 0 32px 0',
                                 maxWidth: '420px',
                             }}>
-                                Exploring the intersection of design strategy, performance engineering, and the future of digital product experiences.
+                                Web design strategy, performance engineering, and digital growth insights — written for small businesses and entrepreneurs in Surrey, BC and across Canada.
                             </p>
                         </div>
                     </div>

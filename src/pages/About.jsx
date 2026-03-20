@@ -58,8 +58,9 @@ const About = () => {
             style={{ background: theme === 'dark' ? '#000' : '#fff' }}
         >
             <SEO
-                title="About Us | WestBridge IT Solutions | Expert Web Design Company"
-                description="Learn about WestBridge IT Solutions, our mission, values, and the team behind our premier web design and development services."
+                title="About WestBridge | Web Design Agency Surrey, BC | IT Solutions Canada"
+                description="WestBridge IT Solutions is a professional web design agency based in Surrey, BC. We build custom websites for small businesses, restaurants, healthcare & more across Canada."
+                keywords="web design agency Surrey BC, IT solutions Surrey BC, professional web design Surrey Canada, web development company Surrey BC, small business website Surrey, affordable web design Surrey Canada, custom website Surrey British Columbia, website development Surrey BC, Canadian web design agency, web development company Canada"
             />
             <section
                 className="w-full"
@@ -121,11 +122,11 @@ const About = () => {
                                     textAlign: 'center',
                                 }}
                             >
-                                We are a Canada-based digital solutions company dedicated to
+                                We are a professional web design agency based in Surrey, BC, dedicated to
                                 building modern, high-performing websites and digital experiences
-                                for businesses around the world. Our team specializes in both
+                                for businesses across Surrey, Vancouver, and Canada. Our team specialises in both
                                 creative design and functional development, ensuring every project
-                                is visually engaging, technically robust, and optimized for growth.
+                                is visually engaging, technically robust, and optimised for growth.
                             </p>
 
                             <div
@@ -146,9 +147,9 @@ const About = () => {
                                     }}
                                 >
                                     From custom web development to powerful no-code and CMS
-                                    platforms, we provide tailored solutions using technologies like
-                                    WordPress, Webflow, and Shopify. Whether it's a business
-                                    website, an e-commerce store, or a scalable web platform, we
+                                    platforms, we provide affordable web design solutions using technologies like
+                                    WordPress, Webflow, and Shopify. Whether it's a small business
+                                    website in Surrey BC, an e-commerce store, or a scalable web platform, we
                                     focus on delivering solutions that are fast, secure, and
                                     user-friendly.
                                 </p>

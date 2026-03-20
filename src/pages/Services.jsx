@@ -102,8 +102,9 @@ const Services = () => {
             transition: 'background 0.4s ease',
         }}>
             <SEO 
-                title="Our Services | WestBridge IT Solutions | Digital Product Agency"
-                description="Explore our range of digital services including web design, eCommerce solutions, CMS integration, and technical SEO optimization."
+                title="Web Design Services Surrey, BC | Ecommerce, SaaS & Business Websites | WestBridge"
+                description="Professional website development in Surrey, BC. We design custom websites for restaurants, gyms, ecommerce stores, SaaS, healthcare & small businesses across Canada."
+                keywords="website development Surrey BC, custom website development Canada, ecommerce website development Canada, online store design Surrey BC, Shopify developer Surrey BC, WooCommerce developer Canada, restaurant website design Canada, gym website design Canada, healthcare website design Canada, SaaS website design Canada, portfolio website design Canada, lifestyle brand website Canada, agency website design Canada, small business web design Canada, professional website design Canada"
             />
             <section style={{
                 width: '100%',
@@ -163,7 +164,7 @@ const Services = () => {
                                 margin: '0 0 32px 0',
                                 maxWidth: '420px',
                             }}>
-                                We offer a full spectrum of digital services designed to scale your business and elevate your brand through strategic design and high-performance engineering.
+                                We offer a full spectrum of digital services — from custom website development and ecommerce solutions to SaaS platforms and IT support — designed to scale your Surrey, BC or Canada-wide business.
                             </p>
                         </div>
                     </div>

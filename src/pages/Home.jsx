@@ -29,7 +29,8 @@ const Home = () => {
         <>
             <SEO 
                 title="Web Design Agency Surrey, BC | WestBridge IT Solutions"
-                description="Web design & development agency in Surrey, BC. We create custom websites, mobile apps, and software for Surrey, Vancouver & Canada. Get a free quote today."
+                description="Top-rated web design agency in Surrey, BC. We build custom websites & IT solutions for small businesses, restaurants, gyms, healthcare, ecommerce & SaaS across Surrey & Canada."
+                keywords="web design agency Surrey BC, website development Surrey BC, custom website Surrey British Columbia, affordable web design Surrey Canada, web designer near me Surrey BC, IT solutions Surrey BC, small business website Surrey, web development company Surrey BC, professional web design Surrey Canada, website builder Surrey BC, custom website development Canada, affordable web design Canada, small business web design Canada, Canadian web design agency, restaurant website design Canada, ecommerce website development Canada, gym website design Canada, healthcare website design Canada, SaaS website design Canada, portfolio website design Canada, Shopify developer Surrey BC, WooCommerce developer Canada, how much does a website cost in Surrey BC, best web design agency for restaurants in Canada"
             />
             <Hero />
             <ProjectCarousels />

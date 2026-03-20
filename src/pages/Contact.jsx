@@ -108,8 +108,9 @@ const Contact = () => {
             overflowX: 'hidden'
         }}>
             <SEO 
-                title="Contact Us | Surrey, BC | WestBridge IT Solutions"
-                description="Get in touch with our Surrey, BC team. Ready to start your next digital project? Call (604) 365-7605 or send a message today."
+                title="Contact WestBridge | Affordable Web Design Surrey, BC | Get a Free Quote"
+                description="Get in touch with our web design agency in Surrey, BC. Ask how much a website costs, request a free quote, or start your project. Call (604) 365-7605 today."
+                keywords="affordable web design Surrey Canada, web designer near me Surrey BC, how much does a website cost in Surrey BC, how to get a website for my business in Surrey, IT solutions Surrey BC, web design agency Surrey BC, professional web design Surrey Canada, small business website Surrey, website development Surrey BC, custom website Surrey British Columbia, contact web designer Surrey BC, get a website for my business Surrey"
             />
 
             <div className="layout-inner" style={{ margin: '0 auto' }}>
@@ -140,7 +141,7 @@ const Contact = () => {
                                 maxWidth: '500px',
                                 lineHeight: 1.6
                             }}>
-                                Have a project in mind? Fill out the form below and we'll get back to you within 24 hours.
+                                Wondering how much a website costs in Surrey, BC? Fill out the form below and our web design team will get back to you within 24 hours with a free, no-obligation quote.
                             </p>
                         </div>
 

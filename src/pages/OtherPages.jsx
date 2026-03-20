@@ -62,7 +62,7 @@ const PlaceholderPage = ({ title, subtitle, badge }) => {
 export const Careers = () => (
     <PlaceholderPage
         title={<>Join Our <br /><span className="font-accent italic font-normal opacity-90">Team</span></>}
-        subtitle="We're always looking for talented individuals to help us build the future of digital solutions."
+        subtitle="We're always looking for talented individuals to help us build the future of digital solutions — custom websites, IT solutions, and web experiences for businesses across Surrey, BC and Canada."
         badge="Opportunity"
     />
 );
@@ -70,7 +70,7 @@ export const Careers = () => (
 export const Studio = () => (
     <PlaceholderPage
         title={<>Inside the <br /><span className="font-accent italic font-normal opacity-90">Studio</span></>}
-        subtitle="A look behind the scenes at how we bring extraordinary ideas to life."
+        subtitle="A look behind the scenes at how our web design agency in Surrey, BC brings extraordinary ideas to life for businesses across Canada."
         badge="Creative"
     />
 );

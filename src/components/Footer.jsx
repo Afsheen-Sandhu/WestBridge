@@ -120,7 +120,7 @@ const Footer = () => {
                   Surrey, BC, Canada
                 </p>
                 <p style={{ fontSize: '13px', color: theme === 'dark' ? 'rgba(255,255,255,0.4)' : 'rgba(0,0,0,0.4)', margin: 0, lineHeight: 1.6 }}>
-                  Serving Surrey, Vancouver<br />&amp; across Canada.
+                  Professional web design agency<br />serving Surrey, BC &amp; all of Canada.
                 </p>
               </div>
 
@@ -257,7 +257,7 @@ const Footer = () => {
           {/* Brand blurb */}
           <div>
             <p style={{ color: theme === 'dark' ? 'rgba(255,255,255,0.3)' : 'rgba(0,0,0,0.5)', fontSize: '13px', lineHeight: 1.75, maxWidth: '260px', margin: 0 }}>
-              Crafting luxury digital experiences for brands that value details and lasting impact.
+              Web design agency in Surrey, BC &mdash; building custom websites &amp; IT solutions for small businesses across Canada.
             </p>
           </div>
 

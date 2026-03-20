@@ -56,7 +56,6 @@ const Hero = () => {
           <GlowBadge>Design In Details</GlowBadge>
         </div>
 
-        {/* SEO-friendly H1 (visually hidden) */}
         <h1 className="sr-only" style={{
             position: 'absolute',
             width: '1px',
@@ -68,7 +67,7 @@ const Hero = () => {
             whiteSpace: 'nowrap',
             borderWidth: '0',
         }}>
-            Web Design Agency Surrey, BC — Premium Web Design & Development for Bold Brands
+            Web Design Agency Surrey, BC — Custom Website Development &amp; IT Solutions for Small Businesses Across Surrey &amp; Canada
         </h1>
 
         {/* Hero Heading (Visible Layout) */}
@@ -106,7 +105,7 @@ const Hero = () => {
             marginBottom: '8px',
           }}
         >
-          Premium websites crafted for bold brands.
+          Custom websites & IT solutions for bold brands.
         </p>
         <p
           className="animate-fade-in-up"
@@ -118,7 +117,7 @@ const Hero = () => {
             marginBottom: '40px',
           }}
         >
-          Based in Surrey, BC — serving Vancouver &amp; Canada.
+          Web design agency in Surrey, BC &mdash; serving small businesses across Vancouver &amp; Canada.
         </p>
 
         {/* CTA Buttons */}
