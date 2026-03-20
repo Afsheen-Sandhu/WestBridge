@@ -245,6 +245,7 @@ const Contact = () => {
                                                 }}
                                             >
                                                 <option style={{ background: isDark ? '#111' : '#fff', color: isDark ? '#fff' : '#000' }}>Web Design</option>
+                                                <option style={{ background: isDark ? '#111' : '#fff', color: isDark ? '#fff' : '#000' }}>Website Development</option>
                                                 <option style={{ background: isDark ? '#111' : '#fff', color: isDark ? '#fff' : '#000' }}>E-commerce</option>
                                                 <option style={{ background: isDark ? '#111' : '#fff', color: isDark ? '#fff' : '#000' }}>SaaS Platform</option>
                                                 <option style={{ background: isDark ? '#111' : '#fff', color: isDark ? '#fff' : '#000' }}>Mobile App</option>
