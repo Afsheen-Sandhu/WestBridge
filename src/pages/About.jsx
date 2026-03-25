@@ -356,11 +356,12 @@ const About = () => {
                                 to="/contact"
                                 style={{
                                     display: 'inline-block',
-                                    padding: '16px 40px',
+                                    padding: isMobile ? '12px 22px' : '16px 40px',
                                     background: isDark ? '#fff' : '#000',
                                     color: isDark ? '#000' : '#fff',
                                     borderRadius: '100px',
                                     fontWeight: 700,
+                                    fontSize: isMobile ? '14px' : '16px',
                                     textDecoration: 'none',
                                     transition: 'all 0.3s'
                                 }}
