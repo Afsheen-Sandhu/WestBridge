@@ -12,6 +12,7 @@ const Blogs = () => {
     const [windowWidth, setWindowWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 1400);
     const isDark = theme === 'dark';
     const isMobile = windowWidth <= 768;
+    const isSmallMobile = windowWidth <= 480;
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -151,11 +152,11 @@ const Blogs = () => {
                                 display: 'inline-flex',
                                 alignItems: 'center',
                                 gap: '12px',
-                                padding: '16px 36px',
+                                padding: isSmallMobile ? '10px 18px' : (isMobile ? '12px 22px' : '16px 36px'),
                                 background: isDark ? '#fff' : '#000',
                                 color: isDark ? '#000' : '#fff',
                                 borderRadius: '500px',
-                                fontSize: '14px',
+                                fontSize: isSmallMobile ? '13px' : '14px',
                                 fontWeight: 700,
                                 textDecoration: 'none',
                                 transition: 'all 0.3s ease',

@@ -13,28 +13,18 @@ const Hero = () => {
       className="relative min-h-screen flex flex-col items-center overflow-hidden transition-colors duration-400"
       style={{ background: theme === 'dark' ? '#000' : '#fff' }}
     >
-      {/* Video Background */}
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        preload="auto"
-        fetchPriority="high"
+      {/* Background */}
+      <div
         aria-hidden="true"
         style={{
           position: 'absolute',
-          top: 0,
-          left: 0,
-          width: '100%',
-          height: '100%',
-          objectFit: 'cover',
+          inset: 0,
           zIndex: 0,
-          opacity: 0.55,
+          background: theme === 'dark'
+            ? 'radial-gradient(60% 65% at 50% 35%, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0.02) 32%, rgba(0,0,0,0) 70%)'
+            : 'radial-gradient(60% 65% at 50% 35%, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0.02) 32%, rgba(255,255,255,0) 70%)',
         }}
-      >
-        <source src="/canvas-animation.webm" type="video/webm" />
-      </video>
+      />
 
       {/* Theme-aware overlay */}
       <div
