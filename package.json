@@ -5,7 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "dev:full": "vercel dev",
+    "build:knowledge": "node scripts/build-chat-knowledge.mjs",
+    "build": "node scripts/build-chat-knowledge.mjs && vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },

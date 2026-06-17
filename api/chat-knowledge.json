@@ -1,0 +1,729 @@
+{
+  "version": 1,
+  "generatedAt": "2026-06-17T09:54:45.930Z",
+  "company": {
+    "name": "WestBridge IT Solutions",
+    "tagline": "Web design & development agency in Surrey, BC, Canada",
+    "email": "support@westbridgeitsolutions.com",
+    "phone": "+1-604-365-7605",
+    "whatsapp": "+1-604-365-7605",
+    "location": "Surrey, British Columbia, Canada",
+    "site": "https://www.westbridgeitsolutions.com",
+    "pages": {
+      "contact": "/contact",
+      "services": "/services",
+      "works": "/works",
+      "blogs": "/blogs",
+      "approach": "/approach",
+      "about": "/about-us"
+    }
+  },
+  "chunks": [
+    {
+      "id": "company",
+      "tags": [
+        "westbridge",
+        "about",
+        "agency",
+        "surrey",
+        "contact",
+        "who"
+      ],
+      "text": "WestBridge IT Solutions — Web design & development agency in Surrey, BC, Canada. Email: support@westbridgeitsolutions.com. Phone: +1-604-365-7605. Location: Surrey, British Columbia, Canada."
+    },
+    {
+      "id": "process",
+      "tags": [
+        "process",
+        "approach",
+        "methodology",
+        "how we work"
+      ],
+      "text": "Process: discovery call → strategy & wireframes → design → development → launch → ongoing support. Collaborative and transparent at every stage."
+    },
+    {
+      "id": "service-crafted-websites",
+      "tags": [
+        "website",
+        "react",
+        "nextjs",
+        "seo"
+      ],
+      "text": "Service — Crafted Websites: High-performance sites with React, Next.js, responsive design, SEO."
+    },
+    {
+      "id": "service-website-redesign",
+      "tags": [
+        "redesign",
+        "ui",
+        "ux",
+        "audit"
+      ],
+      "text": "Service — Website Redesign: Modern facelifts, UI/UX audits, conversion-focused redesigns."
+    },
+    {
+      "id": "service-ecommerce-solutions",
+      "tags": [
+        "ecommerce",
+        "shopify",
+        "store",
+        "shop"
+      ],
+      "text": "Service — eCommerce Solutions: Shopify, secure payments, inventory sync, conversion-focused stores."
+    },
+    {
+      "id": "service-cms-&-dynamic-sites",
+      "tags": [
+        "cms",
+        "headless",
+        "content"
+      ],
+      "text": "Service — CMS & Dynamic Sites: Headless CMS, custom dashboards, scalable content systems."
+    },
+    {
+      "id": "service-landing-pages",
+      "tags": [
+        "landing",
+        "marketing",
+        "leads"
+      ],
+      "text": "Service — Landing Pages: Conversion-centered landing pages, A/B testing, fast load times."
+    },
+    {
+      "id": "service-consistent-identity",
+      "tags": [
+        "branding",
+        "identity",
+        "logo",
+        "design system"
+      ],
+      "text": "Service — Consistent Identity: Style guides, design systems, logos, cohesive brand language."
+    },
+    {
+      "id": "service-motion-design",
+      "tags": [
+        "animation",
+        "motion",
+        "gsap",
+        "lottie"
+      ],
+      "text": "Service — Motion Design: Lottie, GSAP, micro-interactions, engaging animations."
+    },
+    {
+      "id": "service-ux-strategy",
+      "tags": [
+        "ux",
+        "strategy",
+        "wireframe",
+        "research"
+      ],
+      "text": "Service — UX Strategy: User testing, wireframing, journey mapping, data-driven planning."
+    },
+    {
+      "id": "service-performance",
+      "tags": [
+        "performance",
+        "speed",
+        "seo",
+        "core web vitals"
+      ],
+      "text": "Service — Performance: Core Web Vitals, code splitting, CDN, technical SEO optimization."
+    },
+    {
+      "id": "service-ongoing-support",
+      "tags": [
+        "support",
+        "maintenance",
+        "hosting"
+      ],
+      "text": "Service — Ongoing Support: Security patches, content updates, proactive monitoring after launch."
+    },
+    {
+      "id": "faq-how-do-i-get-started",
+      "tags": [
+        "start",
+        "begin",
+        "contact"
+      ],
+      "text": "FAQ: how do i get started? Reach out via the contact form or WhatsApp. We schedule a discovery call, then provide a tailored proposal and roadmap.",
+      "faqKey": "how do i get started",
+      "faqAnswer": "Reach out via the contact form or WhatsApp. We schedule a discovery call, then provide a tailored proposal and roadmap."
+    },
+    {
+      "id": "faq-how-involved-do-i-need-t",
+      "tags": [
+        "involvement",
+        "process"
+      ],
+      "text": "FAQ: how involved do i need to be? Collaborative partnership. We handle design and dev; your feedback at strategy, design approval, and final review is key.",
+      "faqKey": "how involved do i need to be",
+      "faqAnswer": "Collaborative partnership. We handle design and dev; your feedback at strategy, design approval, and final review is key."
+    },
+    {
+      "id": "faq-how-long-does-it-take-to",
+      "tags": [
+        "timeline",
+        "duration",
+        "how long"
+      ],
+      "text": "FAQ: how long does it take to build a website? Standard corporate sites: 4–8 weeks. Complex eCommerce or custom apps: 10–16 weeks. Timeline depends on scope.",
+      "faqKey": "how long does it take to build a website",
+      "faqAnswer": "Standard corporate sites: 4–8 weeks. Complex eCommerce or custom apps: 10–16 weeks. Timeline depends on scope."
+    },
+    {
+      "id": "faq-do-you-provide-support-a",
+      "tags": [
+        "support",
+        "maintenance",
+        "after launch"
+      ],
+      "text": "FAQ: do you provide support after launch? Yes. We offer maintenance and support packages for security, updates, and performance.",
+      "faqKey": "do you provide support after launch",
+      "faqAnswer": "Yes. We offer maintenance and support packages for security, updates, and performance."
+    },
+    {
+      "id": "faq-responsive-and-ecommerce",
+      "tags": [
+        "responsive",
+        "ecommerce",
+        "mobile"
+      ],
+      "text": "FAQ: responsive and ecommerce websites? Every site is fully responsive. We build high-converting eCommerce on Shopify, WooCommerce, and headless solutions.",
+      "faqKey": "responsive and ecommerce websites",
+      "faqAnswer": "Every site is fully responsive. We build high-converting eCommerce on Shopify, WooCommerce, and headless solutions."
+    },
+    {
+      "id": "project-murakami-city",
+      "tags": [
+        "food",
+        "restaurant",
+        "murakami",
+        "city",
+        "murakami-city",
+        "ui/ux",
+        "design",
+        "frontend",
+        "development",
+        "cms",
+        "integration",
+        "react",
+        "next.js",
+        "framer",
+        "motion"
+      ],
+      "text": "Portfolio — Murakami City (Food & Restaurant): A digital culinary journey. Services: UI/UX Design, Frontend Development, CMS Integration. Link: /works/murakami-city"
+    },
+    {
+      "id": "project-jf-vegan-cafe",
+      "tags": [
+        "food",
+        "restaurant",
+        "jf",
+        "vegan",
+        "cafe",
+        "jf-vegan-cafe",
+        "web",
+        "design",
+        "photography",
+        "art",
+        "direction",
+        "development",
+        "webflow",
+        "javascript",
+        "gsap"
+      ],
+      "text": "Portfolio — JF Vegan Cafe (Food & Restaurant): Fresh, plant-based web design. Services: Web Design, Photography Art Direction, Development. Link: /works/jf-vegan-cafe"
+    },
+    {
+      "id": "project-nidaba-spirit",
+      "tags": [
+        "food",
+        "restaurant",
+        "nidaba",
+        "spirit",
+        "nidaba-spirit",
+        "branding",
+        "web",
+        "development",
+        "ecommerce",
+        "shopify",
+        "react",
+        "tailwind",
+        "css"
+      ],
+      "text": "Portfolio — Nidaba Spirit (Food & Restaurant): The spirit of Italian craft. Services: Branding, Web Development, eCommerce. Link: /works/nidaba-spirit"
+    },
+    {
+      "id": "project-restaurant-gem",
+      "tags": [
+        "food",
+        "restaurant",
+        "restaurant",
+        "gem",
+        "restaurant-gem",
+        "website",
+        "redesign",
+        "seo",
+        "optimization",
+        "copywriting",
+        "next.js",
+        "sanity",
+        "cms",
+        "vercel"
+      ],
+      "text": "Portfolio — Restaurant Gem (Food & Restaurant): A polished dining experience online. Services: Website Redesign, SEO Optimization, Copywriting. Link: /works/restaurant-gem"
+    },
+    {
+      "id": "project-ochi-design",
+      "tags": [
+        "agency",
+        "ochi",
+        "design",
+        "ochi-design",
+        "motion",
+        "design",
+        "frontend",
+        "engineering",
+        "react",
+        "three.js",
+        "lenis"
+      ],
+      "text": "Portfolio — Ochi Design (Agency): Pushing the boundaries of web animation. Services: Motion Design, Frontend Engineering. Link: /works/ochi-design"
+    },
+    {
+      "id": "project-lento-agency",
+      "tags": [
+        "agency",
+        "lento",
+        "agency",
+        "lento-agency",
+        "ui/ux",
+        "design",
+        "development",
+        "next.js",
+        "tailwind",
+        "css",
+        "sanity"
+      ],
+      "text": "Portfolio — Lento Agency (Agency): Strategic design, executed flawlessly. Services: UI/UX Design, Development. Link: /works/lento-agency"
+    },
+    {
+      "id": "project-bajgart-office",
+      "tags": [
+        "creative",
+        "bajgart",
+        "office",
+        "bajgart-office",
+        "web",
+        "design",
+        "development",
+        "webflow",
+        "gsap"
+      ],
+      "text": "Portfolio — Bajgart Office (Creative): Architectural web experiences. Services: Web Design, Development. Link: /works/bajgart-office"
+    },
+    {
+      "id": "project-kinective",
+      "tags": [
+        "fitness",
+        "kinective",
+        "kinective",
+        "full",
+        "stack",
+        "development",
+        "ux",
+        "strategy",
+        "react",
+        "node.js",
+        "mindbody",
+        "api"
+      ],
+      "text": "Portfolio — Kinective (Fitness): Empowering movement through tech. Services: Full Stack Development, UX Strategy. Link: /works/kinective"
+    },
+    {
+      "id": "project-stampede-auto",
+      "tags": [
+        "ecommerce",
+        "stampede",
+        "auto",
+        "stampede-auto",
+        "ecommerce",
+        "strategy",
+        "custom",
+        "development",
+        "next.js",
+        "laravel",
+        "postgresql"
+      ],
+      "text": "Portfolio — Stampede Auto (Ecommerce): Accelerating automotive online sales. Services: eCommerce Strategy, Custom Development. Link: /works/stampede-auto"
+    },
+    {
+      "id": "project-masons",
+      "tags": [
+        "ecommerce",
+        "masons",
+        "masons",
+        "shopify",
+        "plus",
+        "development",
+        "ui",
+        "design",
+        "shopify",
+        "plus",
+        "liquid"
+      ],
+      "text": "Portfolio — Masons (Ecommerce): Italian luxury fashion online. Services: Shopify Plus Development, UI Design. Link: /works/masons"
+    },
+    {
+      "id": "project-tranquil",
+      "tags": [
+        "saas",
+        "tranquil",
+        "tranquil",
+        "web",
+        "design",
+        "frontend",
+        "development",
+        "react",
+        "framer",
+        "motion"
+      ],
+      "text": "Portfolio — Tranquil (SaaS): Simplifying SaaS marketing. Services: Web Design, Frontend Development. Link: /works/tranquil"
+    },
+    {
+      "id": "project-eclectic-lifestyle-co",
+      "tags": [
+        "lifestyle",
+        "eclectic",
+        "lifestyle",
+        "co.",
+        "eclectic-lifestyle-co",
+        "web",
+        "branding",
+        "design",
+        "wordpress",
+        "custom",
+        "theme"
+      ],
+      "text": "Portfolio — Eclectic Lifestyle Co. (Lifestyle): Curating modern living. Services: Web Branding, Design. Link: /works/eclectic-lifestyle-co"
+    },
+    {
+      "id": "project-solstice-design",
+      "tags": [
+        "portfolio",
+        "solstice",
+        "design",
+        "solstice-design",
+        "portfolio",
+        "strategy",
+        "webflow",
+        "dev",
+        "webflow",
+        "javascript"
+      ],
+      "text": "Portfolio — Solstice Design (Portfolio): Highlighting creative brilliance. Services: Portfolio Strategy, Webflow Dev. Link: /works/solstice-design"
+    },
+    {
+      "id": "project-fmig",
+      "tags": [
+        "healthcare",
+        "fmig",
+        "fmig",
+        "corporate",
+        "website",
+        "b2b",
+        "solutions",
+        "next.js",
+        "sanity",
+        "cms",
+        "tailwind"
+      ],
+      "text": "Portfolio — FMIG (Healthcare): Advancing healthcare technology. Services: Corporate Website, B2B Solutions. Link: /works/fmig"
+    },
+    {
+      "id": "project-austo-entertainment",
+      "tags": [
+        "lifestyle",
+        "austo",
+        "entertainment",
+        "austo-entertainment",
+        "immersive",
+        "design",
+        "video",
+        "integration",
+        "react",
+        "html5",
+        "video",
+        "gsap"
+      ],
+      "text": "Portfolio — Austo Entertainment (Lifestyle): Event production amplified. Services: Immersive Design, Video Integration. Link: /works/austo-entertainment"
+    },
+    {
+      "id": "project-bartosz-kolenda",
+      "tags": [
+        "portfolio",
+        "bartosz",
+        "kolenda",
+        "bartosz-kolenda",
+        "personal",
+        "branding",
+        "development",
+        "next.js",
+        "tailwind",
+        "css"
+      ],
+      "text": "Portfolio — Bartosz Kolenda (Portfolio): A developer portfolio that speaks. Services: Personal Branding, Development. Link: /works/bartosz-kolenda"
+    },
+    {
+      "id": "project-doze-studio",
+      "tags": [
+        "creative",
+        "doze",
+        "studio",
+        "doze-studio",
+        "webgl",
+        "integration",
+        "frontend",
+        "dev",
+        "three.js",
+        "web",
+        "gl",
+        "react"
+      ],
+      "text": "Portfolio — Doze Studio (Creative): Interactive 3D storytelling. Services: WebGL Integration, Frontend Dev. Link: /works/doze-studio"
+    },
+    {
+      "id": "project-brewitty",
+      "tags": [
+        "creative",
+        "brewitty",
+        "brewitty",
+        "web",
+        "design",
+        "copywriting",
+        "webflow",
+        "lottie"
+      ],
+      "text": "Portfolio — Brewitty (Creative): Crafting digital narratives. Services: Web Design, Copywriting. Link: /works/brewitty"
+    },
+    {
+      "id": "project-jamm",
+      "tags": [
+        "food",
+        "restaurant",
+        "jamm",
+        "jamm",
+        "ui",
+        "design",
+        "development",
+        "react",
+        "framer",
+        "motion"
+      ],
+      "text": "Portfolio — Jamm (Food & Restaurant): Deliciously simple design. Services: UI Design, Development. Link: /works/jamm"
+    },
+    {
+      "id": "project-solidroad",
+      "tags": [
+        "saas",
+        "solidroad",
+        "solidroad",
+        "saas",
+        "marketing",
+        "site",
+        "lottie",
+        "animations",
+        "next.js",
+        "radix",
+        "ui",
+        "gsap"
+      ],
+      "text": "Portfolio — Solidroad (SaaS): Paving the way for AI training. Services: SaaS Marketing Site, Lottie Animations. Link: /works/solidroad"
+    },
+    {
+      "id": "project-general-intelligence-co",
+      "tags": [
+        "portfolio",
+        "general",
+        "intelligence",
+        "co.",
+        "general-intelligence-co",
+        "brand",
+        "identity",
+        "web",
+        "design",
+        "react",
+        "tailwind",
+        "css"
+      ],
+      "text": "Portfolio — General Intelligence Co. (Portfolio): Forward-thinking digital infrastructure. Services: Brand Identity, Web Design. Link: /works/general-intelligence-co"
+    },
+    {
+      "id": "project-epiminds",
+      "tags": [
+        "agency",
+        "epiminds",
+        "epiminds",
+        "full",
+        "stack",
+        "development",
+        "cms",
+        "next.js",
+        "sanity",
+        "cms"
+      ],
+      "text": "Portfolio — Epiminds (Agency): Digital minds, connected. Services: Full Stack Development, CMS. Link: /works/epiminds"
+    },
+    {
+      "id": "project-uptura",
+      "tags": [
+        "agency",
+        "uptura",
+        "uptura",
+        "web",
+        "design",
+        "development",
+        "react",
+        "framer",
+        "motion"
+      ],
+      "text": "Portfolio — Uptura (Agency): Elevating digital presence. Services: Web Design, Development. Link: /works/uptura"
+    },
+    {
+      "id": "project-well-designed",
+      "tags": [
+        "lifestyle",
+        "well",
+        "designed",
+        "well-designed",
+        "ecommerce",
+        "strategy",
+        "web",
+        "design",
+        "shopify",
+        "liquid",
+        "react"
+      ],
+      "text": "Portfolio — Well Designed (Lifestyle): Greek lifestyle online. Services: eCommerce Strategy, Web Design. Link: /works/well-designed"
+    },
+    {
+      "id": "blog-strategic-discovery-web-development",
+      "tags": [
+        "strategy",
+        "the",
+        "power",
+        "of",
+        "strategic",
+        "discovery",
+        "in",
+        "web",
+        "development",
+        "strategic-discovery-web-development",
+        "afsheen",
+        "sandhu"
+      ],
+      "text": "Blog — \"The Power of Strategic Discovery in Web Development\" (Strategy): Why understanding your audience and brand voice is the most critical step before writing a single line of code. Link: /blogs/strategic-discovery-web-development"
+    },
+    {
+      "id": "blog-mobile-first-design-requirement",
+      "tags": [
+        "design",
+        "mobile-first",
+        "design:",
+        "a",
+        "requirement",
+        "not",
+        "an",
+        "option",
+        "mobile-first-design-requirement",
+        "junaid",
+        "khan"
+      ],
+      "text": "Blog — \"Mobile-First Design: A Requirement, Not an Option\" (Design): Exploring the technical and psychological reasons why mobile optimization is now the foundation of every high-performing website. Link: /blogs/mobile-first-design-requirement"
+    },
+    {
+      "id": "blog-maximizing-roi-conversion-strategy",
+      "tags": [
+        "marketing",
+        "maximizing",
+        "roi",
+        "through",
+        "data-driven",
+        "conversion",
+        "strategy",
+        "maximizing-roi-conversion-strategy",
+        "afsheen",
+        "sandhu"
+      ],
+      "text": "Blog — \"Maximizing ROI Through Data-Driven Conversion Strategy\" (Marketing): How to combine high-end aesthetics with strategic user behavior data to turn casual visitors into loyal customers. Link: /blogs/maximizing-roi-conversion-strategy"
+    },
+    {
+      "id": "blog-art-of-pixel-perfect-development",
+      "tags": [
+        "development",
+        "the",
+        "art",
+        "of",
+        "pixel-perfect",
+        "development",
+        "art-of-pixel-perfect-development",
+        "technical",
+        "team"
+      ],
+      "text": "Blog — \"The Art of Pixel-Perfect Development\" (Development): A deep dive into the precision engineering required to translate high-end designs into fast, accessible digital products. Link: /blogs/art-of-pixel-perfect-development"
+    },
+    {
+      "id": "blog-scaling-cms-best-practices",
+      "tags": [
+        "cms",
+        "scaling",
+        "effortlessly:",
+        "cms",
+        "best",
+        "practices",
+        "for",
+        "growth",
+        "scaling-cms-best-practices",
+        "junaid",
+        "khan"
+      ],
+      "text": "Blog — \"Scaling Effortlessly: CMS Best Practices for Growth\" (CMS): How a robust, intuitive CMS allows your marketing team to launch content at the speed of business. Link: /blogs/scaling-cms-best-practices"
+    },
+    {
+      "id": "blog-future-proofing-digital-infrastructure",
+      "tags": [
+        "tech",
+        "future-proofing",
+        "your",
+        "digital",
+        "infrastructure",
+        "future-proofing-digital-infrastructure",
+        "afsheen",
+        "sandhu"
+      ],
+      "text": "Blog — \"Future-Proofing Your Digital Infrastructure\" (Tech): Strategies for building scalable architectures that adapt seamlessly as your business and technology evolve. Link: /blogs/future-proofing-digital-infrastructure"
+    }
+  ],
+  "faqCache": [
+    {
+      "key": "how do i get started",
+      "answer": "Reach out via the contact form or WhatsApp. We schedule a discovery call, then provide a tailored proposal and roadmap."
+    },
+    {
+      "key": "how involved do i need to be",
+      "answer": "Collaborative partnership. We handle design and dev; your feedback at strategy, design approval, and final review is key."
+    },
+    {
+      "key": "how long does it take to build a website",
+      "answer": "Standard corporate sites: 4–8 weeks. Complex eCommerce or custom apps: 10–16 weeks. Timeline depends on scope."
+    },
+    {
+      "key": "do you provide support after launch",
+      "answer": "Yes. We offer maintenance and support packages for security, updates, and performance."
+    },
+    {
+      "key": "responsive and ecommerce websites",
+      "answer": "Every site is fully responsive. We build high-converting eCommerce on Shopify, WooCommerce, and headless solutions."
+    }
+  ]
+}

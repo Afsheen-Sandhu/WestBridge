@@ -1,7 +1,9 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, lazy, Suspense } from 'react';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import WhatsAppIcon from './components/WhatsAppIcon';
+
+const ChatWidget = lazy(() => import('./components/ChatWidget'));
 
 const Layout = ({ children }) => {
   useEffect(() => {
@@ -20,6 +22,9 @@ const Layout = ({ children }) => {
       </main>
 
       <Footer />
+      <Suspense fallback={null}>
+        <ChatWidget />
+      </Suspense>
       <WhatsAppIcon />
     </div>
   );
